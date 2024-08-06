@@ -485,7 +485,7 @@ body{
   
   #canvas{
       flex: 2;
-      background-color: blue;
+      background-color: red;
       padding: 0 2vw;
   }
 
