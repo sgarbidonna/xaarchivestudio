@@ -1,0 +1,779 @@
+/* TEXTO E IMAGENES */
+/* Móvil */
+@media only screen and (max-width: 767px) {
+
+  .fixed img {
+    position: fixed;
+    max-width: 90%;
+    height: auto;
+    margin-right: 0;
+    z-index: 1;
+    top: 20px;
+    right: 5%;
+  }
+
+  .text-container {
+    width: 93%; /* Ocupa el ancho completo de la pantalla */
+    text-align: justify;
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+    z-index: 3;
+    padding: 0 10px; /* Añade padding para el contenido */
+    padding-left: 47px; /* Añade padding para el contenido */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+    height: auto; /* La altura se ajusta automáticamente al contenido del texto */
+  }
+
+  .text {
+    font-family: 'hola', arial;
+    font-size: 14px;
+  }
+
+  .highlight {
+    font-size: 16px;
+  }
+
+  .superlight {
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: calc(100% - 20px); /* Reduce el ancho total para dejar espacio de 20px a los lados */
+    margin: 10px auto 0; /* Ajusta el margen superior para que empiece justo después del texto */
+    padding: 0 10px; /* Añade padding para alinear con el texto */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+    padding-left: 40px; /* Añade padding para el contenido */
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item.horizontal img,
+  .grid-item.vertical img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .fancybox-button--arrow_left:before,
+  .fancybox-button--arrow_right:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px; /* Tamaño más pequeño para móviles */
+    color: white;
+    background: none;
+  }
+
+  .fancybox-toolbar {
+    bottom: 10px;
+  }
+
+  .fancybox-container {
+    backdrop-filter: blur(5px);
+    touch-action: pan-y;
+    overflow: hidden;
+  }
+
+  .fancybox-content {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .image-container {
+    z-index: -3;
+    width: 100vw; /* Ocupa el ancho completo de la pantalla */
+    height: auto;
+    margin-left: 0;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .image-container .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .see-more {
+    color: black;
+    font-size: 14px;
+  }
+
+  .see-more:hover {
+    color: #50fd50;
+  }
+
+  .botones-container {
+    margin-right: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 20;
+  }
+
+  .boton-prev,
+  .boton-next,
+  .boton-index {
+    display: inline-block;
+    padding: 0px 15px; /* Ajusta el padding para móviles */
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    font-family: 'hola', arial;
+    font-size: 15px; /* Ajusta el tamaño de fuente para móviles */
+    z-index: 4;
+  }
+
+  .boton-prev:hover,
+  .boton-next:hover,
+  .boton-index:hover {
+    color: #50fd50;
+  }
+
+  .boton-prev {
+    top: 75px; /* Ajusta la posición superior para móviles */
+    position: fixed;
+    margin-right: 10px;
+    right: 60px;
+  }
+
+  .boton-next {
+    top: 75px; /* Ajusta la posición superior para móviles */
+    position: fixed;
+    margin-right: 7px;
+    right: 10px;
+  }
+
+  .boton-index {
+    top: 75px; /* Ajusta la posición superior para móviles */
+    position: fixed;
+    margin-right: 20px;
+    right: 35px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+/* Estilo para la caja del fancybox en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .fancybox-container {
+    touch-action: pan-y;
+    overflow: hidden; /* Oculta el scroll predeterminado */
+  }
+
+  .fancybox-content {
+    max-height: 100vh;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en iOS */
+  }
+}
+
+  /*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: black;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    font-family: 'hola', arial;
+    font-size: 25px;
+  }
+
+  .scroll-top:hover {
+    color: #50fd50;
+  }
+/*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+
+
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .fixed img {
+    position: fixed;
+    max-width: 80%; /* Reduce el tamaño para tablets */
+    height: auto;
+    margin-right: 0;
+    z-index: 1;
+    top: 30px; /* Ajusta la posición superior */
+    right: 10%;
+  }
+
+  .text-container {
+    width: 85%; /* Reduce el ancho para tablets */
+    text-align: justify;
+    margin-right: 0;
+    margin-top: 120px; /* Ajusta el margen superior */
+    z-index: 3;
+    padding: 0 20px; /* Aumenta el padding */
+    padding-left: 8%;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .text {
+    font-family: 'hola', arial;
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+  }
+
+  .highlight {
+    font-size: 18px; /* Aumenta el tamaño de la fuente destacada */
+  }
+
+  .superlight {
+    font-size: 12px; /* Ajusta el tamaño de la fuente más ligera */
+    line-height: 1.2;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Muestra dos columnas */
+    gap: 20px;
+    width: calc(100% - 20px);
+    margin: 20px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-left: 8%;
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .fancybox-button--arrow_left:before,
+  .fancybox-button--arrow_right:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 40px; /* Tamaño mayor para tablets */
+    color: white;
+    background: none;
+  }
+
+  .fancybox-toolbar {
+    bottom: 20px; /* Ajusta la posición inferior */
+  }
+
+  .fancybox-container {
+    backdrop-filter: blur(5px);
+    touch-action: auto; /* Permite la acción de toque */
+    overflow: hidden;
+  }
+
+  .fancybox-content {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .image-container {
+    z-index: -3;
+    width: 90vw; /* Ajusta el ancho */
+    height: auto;
+    margin-left: 5vw;
+    margin-top: 10vh; /* Ajusta el margen superior */
+    overflow: hidden;
+  }
+
+  .image-container .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .see-more {
+    color: black;
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .see-more:hover {
+    color: #50fd50;
+  }
+
+  .botones-container {
+    margin-right: 5%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+  }
+
+  .boton-prev,
+  .boton-next,
+  .boton-index {
+    display: inline-block;
+    padding: 0px 10px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'hola', arial;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    z-index: 3;
+  }
+
+  .boton-prev:hover,
+  .boton-next:hover,
+  .boton-index:hover {
+    color: #50fd50;
+  }
+
+  .boton-prev {
+    top: 130px;
+    position: fixed;
+    margin-right: 5%;
+    right: 70px; /* Ajusta la posición del botón prev */
+  }
+
+  .boton-next {
+    top: 130px;
+    position: fixed;
+    margin-right: 5%;
+    right: 10px; /* Ajusta la posición del botón next */
+  }
+
+  .boton-index {
+    top: 130px;
+    position: fixed;
+    margin-right: 5%;
+    right: 55px; /* Ajusta la posición del botón index */
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+  /*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: #000000;
+    background-color: #00000000;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: 'hola', arial;
+    font-size: 27px;
+  }
+
+.scroll-top:hover {
+  color: #50fd50;
+}
+/*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+
+
+/* Laptop */
+@media only screen and (min-width: 1025px) {
+  .fixed img {
+    position: fixed;
+    max-width: 70%;
+    height: auto;
+    margin-right: 0;
+    z-index: -1;
+    top: 0%;
+    right: 12%;
+  }
+
+  .text-container {
+    width: 30%-3%; /* La mitad de la pantalla */
+    text-align: justify;
+    margin-left: 67%;
+    margin-right: 3%;
+    margin-top: 3vh;
+    z-index: 3;
+    height: 50vh;
+    position: fixed;
+  }
+  
+  .text {
+    font-family: 'hola', arial;
+    font-size: 18px;
+    display: fixed;
+  }
+
+  .highlight {
+    font-size: 22px; /* Tamaño de texto más grande */
+  }
+
+  .superlight {
+    font-size: 14px; /* Tamaño de texto más chico */
+    line-height: 0.1; /* Interlineado más pequeño */
+  }
+
+
+  /* GRILLA DE FOTOS POR PROYECTO */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Dos columnas con un ancho mínimo de 200px */
+    gap: 20px; /* Espacio entre las imágenes */
+    max-width: 55%; /* Ancho máximo del 50% del ancho de la pantalla */
+    margin: 0 0 0 7%; /* Mueve el contenedor hacia la izquierda */
+    margin-top: 20vh;
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  /* Ajusta el ancho de las imágenes horizontales para ocupar dos columnas */
+  .grid-item.horizontal img {
+    width: auto; /* Ajusta el ancho de la imagen automáticamente */
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    grid-column-end: span 2; /* Ocupa dos columnas */
+  }
+
+  /* Ajusta el ancho de las imágenes verticales para ocupar una columna */
+  .grid-item.vertical img {
+    width: auto; /* Ajusta el ancho de la imagen automáticamente */
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+
+
+
+          
+        /* FOTOS APARTADAS */
+
+
+  /* Estilo para las flechas */
+  .fancybox-button--arrow_left:before,
+  .fancybox-button--arrow_right:before {
+    font-family: "Font Awesome 5 Free"; /* Utilizando Font Awesome para los iconos */
+    font-weight: 900;
+    font-size: 40px; /* Tamaño grande */
+    color: white; /* Color blanco */
+    background: none; /* Elimina el fondo */
+  }
+
+  /* Estilos para las flechas en la parte inferior de la pantalla */
+  .fancybox-toolbar {
+    bottom: 10px;
+  }
+
+  /* Estilo de desenfoque para el fondo */
+  .fancybox-container {
+    backdrop-filter: blur(5px); /* Ajusta el desenfoque del fondo */
+  }
+
+  /* Ajustes para la imagen */
+  .image-container {
+    z-index: -3;
+    width: 70vw; /* Ancho máximo de la pantalla */
+    height: auto; /* Altura automática según la proporción de la imagen */
+    margin-left: 2vw;
+    margin-top: 20vh;
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+  }
+
+  .image-container .image img {
+    width: 100%; /* Ancho al 100% */
+    height: auto; /* Ajustar la imagen al alto máximo del contenedor */
+    object-fit: cover; /* Redimensionar y recortar la imagen para ajustarse al contenedor */
+  }
+
+
+                    .see-more {
+                      color: black;
+                      font-size: 18px;
+                    }
+                    
+                    .see-more:hover {
+                      color: #50fd50;
+                    }  
+
+                    .botones-container {
+                      margin-right: 3%;
+                      margin-top: 5vh;
+                      text-align: center;
+                      position: fixed;
+                      z-index:20
+                    }
+                    
+                    .boton-prev,
+                    .boton-next,
+                    .boton-index {
+                      position: fixed;
+                      display: inline-block;
+                      padding: 0px 20px;
+                      background-color: transparent;
+                      color: black;
+                      text-decoration: none;
+                      font-family: 'hola', arial;
+                      font-size: 22px;
+                    }
+                    
+                    .boton-prev:hover,
+                    .boton-next:hover,
+                    .boton-index:hover {
+                      color: #50fd50; /* Cambia el color de fondo a verde al pasar el mouse sobre los botones */
+                    }
+                    
+                    .boton-prev {
+                      top: 21.6vh;
+                      position: fixed;
+                      margin-right: 3%;
+                      right: 78px; /* Posiciona el botón Previous a la izquierda */  
+                    }
+                    
+                    .boton-next {
+                      top: 21.6vh;
+                      position: fixed;
+                      margin-right: 3%;
+                      right: -15px; /* Posiciona el botón Next a la derecha */
+                    }
+                    
+                    .boton-index {
+                      top: 22.1vh;
+                      position: fixed;
+                      margin-right: 3%;
+                      right: 53px; /* Posiciona el botón Next a la derecha */
+                      font-size: 14px;
+                      font-weight: bold;
+                    }
+
+  /*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  display: none;
+  color: #000000;
+  background-color: #00000000;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  z-index: 1000;
+  font-family: 'hola', arial;
+  font-size: 35px;
+}
+
+.scroll-top:hover {
+  color: #50fd50;
+}
+/*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+
+}
+
+/*---------------------------------------------------- MENU FLOTANTE INICIO ------------------------------------------------------*/
+
+  nav {
+    z-index: 50;
+    transform: rotate(-90deg); /* Rotar el menú 90 grados hacia la izquierda */
+    transform-origin: top left; /* Establecer el punto de origen de la rotación en la esquina superior izquierda */
+    position: fixed; /* Hacer que el menú quede fijo */
+    top: 97%; /* Posicionar el menú en la parte superior de la página */
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-top: 1%;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    font-family: Arial, sans-serif;
+    /* otros estilos de tu menú */
+    display: block;
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #50fd50;
+  }
+
+  .logo {
+    position: fixed;
+    top: 28px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    z-index: 100;
+    cursor: pointer;
+  }
+/*---------------------------------------------------- MENU FLOTANTE FIN ------------------------------------------------------*/
+
+/*-------------------------------------------------- DERECHOS Y LINKS INICIO -----------------------------------------------------*/
+
+  @media only screen and (max-width: 767px) {
+    /* Estilos para dispositivos móviles */
+
+  .footer {
+    padding: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+    margin-bottom: 10%;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    font-size: 40px;
+    color: #50fd50;
+    background-color: #ffffff;
+    border: none;
+    padding: 0px 5px;
+    padding-top: 50%;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    color: #000000;
+  }
+
+  .fa-instagram,
+  .fa-linkedin,
+  .fa-envelope {
+    font-size: 25px;
+  }
+  
+  .footer-text {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 1px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para dispositivos móviles */
+
+.footer {
+  padding: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  margin-bottom: 10%;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+button {
+  font-size: 20px;
+  color: #50fd50;
+  background-color: #ffffff;
+  border: none;
+  padding: 0px 5px;
+  padding-top: 50%;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: #000000;
+}
+
+.fa-instagram,
+.fa-linkedin,
+.fa-envelope {
+  font-size: 30px;
+}
+
+.footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 11px;
+}
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Estilos para dispositivos laptops */
+
+.footer {
+  padding: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  margin-bottom: 10%;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+button {
+  font-size: 20px;
+  color: #50fd50;
+  background-color: #ffffff00;
+  border: none;
+  padding: 0px 5px;
+  padding-top: 50%;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: #000000;
+}
+
+.fa-instagram,
+.fa-linkedin,
+.fa-envelope {
+  font-size: 30px;
+}
+
+.footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+}
+
+/*-------------------------------------------------- DERECHOS Y LINKS FIN -----------------------------------------------------*/

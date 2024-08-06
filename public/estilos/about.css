@@ -1,0 +1,513 @@
+
+/* TEXTO E IMAGENES */
+/* Móvil */
+@media only screen and (max-width: 767px) {
+
+  .fixed img {
+    position: fixed;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    height: auto;
+    margin-LEFT: 0%;
+    z-index: -1;
+  }
+
+  .text-container {
+    width: 80%; /* La mitad de la pantalla */
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 50vh;
+    margin-top: 4%;
+    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+    height: 140vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+  }
+  
+  .text {
+    font-family: 'hola', arial;
+    font-size: 15px;
+    list-style: 0.5;
+    color: black; /* Hacer el texto transparente */
+  }
+  
+  .textbold {
+    font-family: 'hola', arial;
+    list-style: 0.5;
+    font-size: 17px; /* Tamaño de texto más grande */
+    color: black; /* Hacer el texto transparente */
+    font-weight: bold;
+  }
+
+  .green-link {
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    font-family: 'hola', arial;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .green-link:hover {
+    -webkit-text-fill-color: WHITE;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .format2 {
+    -webkit-text-fill-color: BLACK;
+    -webkit-text-stroke-width: 1.0px;
+    -webkit-text-stroke-color: black;
+    color: black;
+    font-family: 'hola', arial;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .format2:hover {
+    -webkit-text-fill-color:WHITE;
+    -webkit-text-stroke-width: 1.0px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .format3 {
+    font-family: 'hola', arial;
+    font-size: 50px;
+    list-style: 0.5;
+    font-size: 14px; /* Tamaño de texto más grande */
+    color: black; /* Hacer el texto transparente */
+    font-weight: bold;
+  }
+
+  .image-container {
+    z-index: 0;
+    width: 85%; /* Ancho máximo de la pantalla */
+    height: auto; /* Altura automática según la proporción de la imagen */
+    margin-left: 30%;
+    margin-right: 0vh;
+    top: 100px;
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+    position: relative;
+  }
+  
+  .image-container img {
+    height: 50vh; /* Ajustar la imagen al alto máximo del contenedor */
+    object-fit: cover; /* Redimensionar y recortar la imagen para ajustarse al contenedor */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+  }
+
+  .text-container2 {
+    width: 85%; /* La mitad de la pantalla */
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 50vh;
+    margin-top: 20vh;
+    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+    height: 1vh;
+    position: relative;
+background-color: rgba(255, 255, 255, 0.719);
+  }
+  
+  .text2 {
+    font-family: 'hola', arial;
+    font-size: 15px;
+    list-style: 0.5;
+    color: black; /* Hacer el texto transparente */
+  }
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .fixed img {
+    position: fixed;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    height: auto;
+    margin-LEFT: 0%;
+    z-index: -1;
+  }
+
+  .text-container {
+    width: 85%; /* La mitad de la pantalla */
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 50vh;
+    margin-top: 0;
+    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+  }
+  
+  .text {
+    font-family: 'hola', arial;
+    font-size: 15px;
+    list-style: 0.5;
+    color: black; /* Hacer el texto transparente */
+  }
+  
+  .green-link {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    font-family: 'hola', arial;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .green-link:hover {
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  .image-container {
+    z-index: 0;
+    width: 85%; /* Ancho máximo de la pantalla */
+    height: auto; /* Altura automática según la proporción de la imagen */
+    margin-left: 15%;
+    margin-right: 0vh;
+    top: 30px;
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+    position: relative;
+  }
+  
+  .image-container img {
+    height: 50vh; /* Ajustar la imagen al alto máximo del contenedor */
+    object-fit: cover; /* Redimensionar y recortar la imagen para ajustarse al contenedor */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+  }
+
+  .text-container2 {
+    width: 85%; /* La mitad de la pantalla */
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 50vh;
+    margin-top: 15vh;
+    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+    height: 1vh;
+    position: relative;
+background-color: rgba(255, 255, 255, 0.719);
+  }
+  
+  .text2 {
+    font-family: 'hola', arial;
+    font-size: 15px;
+    list-style: 0.5;
+    color: black; /* Hacer el texto transparente */
+  }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1025px) {
+
+  .fixed img {
+    position: fixed;
+    max-width: AUTO;
+    height: 100%;
+    margin-LEFT: 15%;
+    z-index: -1;
+  }
+
+  .text-container {
+    width: 30% - 3%; /* La mitad de la pantalla */
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 50vh;
+    margin-top: 2%;
+    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+    height: 130vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+  }
+  
+  .text {
+    font-family: 'hola', arial;
+    font-size: 50px;
+    list-style: 0.5;
+    font-size: 30px; /* Tamaño de texto más grande */
+    color: black; /* Hacer el texto transparente */
+  }
+
+  .textbold {
+    font-family: 'hola', arial;
+    font-size: 50px;
+    list-style: 0.5;
+    font-size: 30px; /* Tamaño de texto más grande */
+    color: black; /* Hacer el texto transparente */
+    font-weight: bold;
+  }
+  
+  .green-link {
+    -webkit-text-fill-color: BLACK;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+    color: black;
+    font-family: 'hola', arial;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .green-link:hover {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .format2 {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+    color: black;
+    font-family: 'hola', arial;
+    font-size: 27px;
+    text-decoration: none;
+  }
+
+  .format2:hover {
+    -webkit-text-fill-color:black;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .format3 {
+    font-family: 'hola', arial;
+    font-size: 50px;
+    list-style: 0.5;
+    font-size: 20px; /* Tamaño de texto más grande */
+    color: black; /* Hacer el texto transparente */
+    font-weight: bold;
+  }
+
+  
+  .image-container {
+    z-index: 0;
+    width: 30%-3%; /* Ancho máximo de la pantalla */
+    height: auto; /* Altura automática según la proporción de la imagen */
+    margin-left: 2vw;
+    margin-right: 50vh;
+    top: -300px;
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 93vw; /* Ancho automático según la proporción de la imagen */
+    height: auto; /* Ajustar la imagen al alto máximo del contenedor */
+    object-fit: cover; /* Redimensionar y recortar la imagen para ajustarse al contenedor */
+    overflow: hidden; /* Ocultar cualquier parte de la imagen que se salga del contenedor */
+  }
+
+  .text-container2 {
+    width: 30% - 3%; /* La mitad de la pantalla */
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 50vh;
+    margin-top: -30PX;
+    right: 0;
+    z-index: 1; /* Asegurar que el texto esté por encima de la imagen */
+    height: 1vh;
+    position: relative;
+background-color: rgba(255, 255, 255, 0.719);
+  }
+  
+  .text2 {
+    font-family: 'hola', arial;
+    font-size: 20px;
+    list-style: 0.5;
+    color: black; /* Hacer el texto transparente */
+  }
+}
+
+/*---------------------------------------------------- MENU FLOTANTE INICIO ------------------------------------------------------*/
+
+nav {
+  z-index: 50;
+  transform: rotate(-90deg); /* Rotar el menú 90 grados hacia la izquierda */
+  transform-origin: top left; /* Establecer el punto de origen de la rotación en la esquina superior izquierda */
+  position: fixed; /* Hacer que el menú quede fijo */
+  top: 97%; /* Posicionar el menú en la parte superior de la página */
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 1%;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-family: Arial, sans-serif;
+  /* otros estilos de tu menú */
+  display: block;
+  padding: 10px;
+  color: #000000;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #50fd50;
+}
+
+.logo {
+  position: fixed;
+  top: 28px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/*---------------------------------------------------- MENU FLOTANTE FIN ------------------------------------------------------*/
+
+  /*-------------------------------------------------- DERECHOS Y LINKS INICIO -----------------------------------------------------*/
+  
+  @media only screen and (max-width: 767px) {
+    /* Estilos para dispositivos móviles */
+  
+  .footer {
+    padding: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+    margin-bottom: 10%;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  button {
+    font-size: 40px;
+    color: #ff0000;
+    background-color: #ffffff;
+    border: none;
+    padding: 0px 5px;
+    padding-top: 00%;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    color: #000000;
+  }
+  
+  .fa-instagram,
+  .fa-linkedin,
+  .fa-envelope {
+    font-size: 25px;
+  }
+  
+  .footer-text {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 1px;
+  }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para dispositivos móviles */
+  
+  .footer {
+  padding: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  margin-bottom: 10%;
+  }
+  
+  .footer-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  }
+  
+  button {
+  font-size: 20px;
+  color: #ff0000;
+  background-color: #ffffff;
+  border: none;
+  padding: 0px 5px;
+  padding-top: 00%;
+  border-radius: 5px;
+  }
+  
+  button:hover {
+  color: #000000;
+  }
+  
+  .fa-instagram,
+  .fa-linkedin,
+  .fa-envelope {
+  font-size: 30px;
+  }
+  
+  .footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 11px;
+  }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+  /* Estilos para dispositivos laptops */
+  
+  .footer {
+  padding: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  margin-bottom: 10%;
+  }
+  
+  .footer-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  }
+  
+  button {
+  font-size: 20px;
+  color: #ff0000;
+  background-color: #ffffff00;
+  border: none;
+  padding: 0px 5px;
+  padding-top: 00%;
+  border-radius: 5px;
+  }
+  
+  button:hover {
+  color: #000000;
+  }
+  
+  .fa-instagram,
+  .fa-linkedin,
+  .fa-envelope {
+  font-size: 35px;
+  }
+  
+  .footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  }
+  }
+  
+  /*-------------------------------------------------- DERECHOS Y LINKS FIN -----------------------------------------------------*/
+  

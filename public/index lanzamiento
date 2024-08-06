@@ -1,0 +1,39 @@
+<style>
+  /* Estilos para laptops y pantallas más grandes */
+  @media only screen and (min-width: 1024px) {
+    body {
+      background-image: url('contenido/Lanzamiento/01.gif');
+      background-repeat: repeat;
+      background-size: auto 100vh; /* Ajustar el alto de la imagen al 100% del viewport */
+      background-position: center center;
+      background-position-y: calc(50% + 50vh); /* Mover la imagen hacia abajo */
+    }
+  }
+
+  /* Estilos para tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+      background-image: url('contenido/Lanzamiento/02.gif');
+      background-repeat: repeat;
+      background-size: 100vw auto; /* Ajustar el ancho de la imagen al 100% del viewport */
+      background-position: center center;
+      background-position-y: calc(50% + 45vh); /* Mover la imagen hacia abajo */
+    }
+  }
+
+  /* Estilos para móviles */
+  @media only screen and (max-width: 767px) {
+    body {
+      background-image: url('contenido/Lanzamiento/02.gif');
+      background-repeat: repeat;
+      background-size: 100vw auto; /* Ajustar el ancho de la imagen al 100% del viewport */
+      background-position: center center;
+      background-position-y: calc(50% + 45vh); /* Mover la imagen hacia abajo */
+    }
+  }
+</style>
+
+    
+
+
+</html>

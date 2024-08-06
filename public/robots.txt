@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+
+# Allow all images in the 'contenido/proyectos' directory
+Allow: /contenido/proyectos/

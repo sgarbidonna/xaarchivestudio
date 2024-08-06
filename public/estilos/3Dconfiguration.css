@@ -1,0 +1,921 @@
+body{
+  margin: 0;
+  background-color: #f1f1f1;
+}
+/* TEXTO E IMAGENES */
+/* Móvil */
+@media only screen and (max-width: 767px) {
+
+  .fixed img {
+    position: fixed;
+    max-width: 90%;
+    height: auto;
+    margin-right: 0;
+    z-index: 1;
+    top: 20px;
+    right: 5%;
+  }
+
+  .text-container {
+    width: 93%; /* Ocupa el ancho completo de la pantalla */
+    text-align: justify;
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+    z-index: 3;
+    padding: 0 10px; /* Añade padding para el contenido */
+    padding-left: 47px; /* Añade padding para el contenido */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+    height: auto; /* La altura se ajusta automáticamente al contenido del texto */
+  }
+
+  .text {
+    font-family: 'hola', arial;
+    font-size: 14px;
+  }
+
+  .highlight {
+    font-size: 16px;
+  }
+
+  .superlight {
+    font-size: 11px;
+    line-height: 1;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: calc(100% - 20px); /* Reduce el ancho total para dejar espacio de 20px a los lados */
+    margin: 10px auto 0; /* Ajusta el margen superior para que empiece justo después del texto */
+    padding: 0 10px; /* Añade padding para alinear con el texto */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+    padding-left: 40px; /* Añade padding para el contenido */
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .grid-item.horizontal img,
+  .grid-item.vertical img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .fancybox-button--arrow_left:before,
+  .fancybox-button--arrow_right:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 30px; /* Tamaño más pequeño para móviles */
+    color: white;
+    background: none;
+  }
+
+  .fancybox-toolbar {
+    bottom: 10px;
+  }
+
+  .fancybox-container {
+    backdrop-filter: blur(5px);
+    touch-action: pan-y;
+    overflow: hidden;
+  }
+
+  .fancybox-content {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .image-container {
+    z-index: -3;
+    width: 100vw; /* Ocupa el ancho completo de la pantalla */
+    height: auto;
+    margin-left: 0;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .image-container .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .see-more {
+    color: black;
+    font-size: 14px;
+  }
+
+  .see-more:hover {
+    color: #50fd50;
+  }
+
+  .botones-container {
+    margin-right: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 20;
+  }
+
+  .boton-prev,
+  .boton-next,
+  .boton-index {
+    display: inline-block;
+    padding: 0px 15px; /* Ajusta el padding para móviles */
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    font-family: 'hola', arial;
+    font-size: 15px; /* Ajusta el tamaño de fuente para móviles */
+    z-index: 4;
+  }
+
+  .boton-prev:hover,
+  .boton-next:hover,
+  .boton-index:hover {
+    color: #50fd50;
+  }
+
+  .boton-prev {
+    top: 75px; /* Ajusta la posición superior para móviles */
+    position: fixed;
+    margin-right: 10px;
+    right: 60px;
+  }
+
+  .boton-next {
+    top: 75px; /* Ajusta la posición superior para móviles */
+    position: fixed;
+    margin-right: 7px;
+    right: 10px;
+  }
+
+  .boton-index {
+    top: 75px; /* Ajusta la posición superior para móviles */
+    position: fixed;
+    margin-right: 20px;
+    right: 35px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+/* Estilo para la caja del fancybox en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+  .fancybox-container {
+    touch-action: pan-y;
+    overflow: hidden; /* Oculta el scroll predeterminado */
+  }
+
+  .fancybox-content {
+    max-height: 100vh;
+    overflow-y: auto; /* Habilita el scroll vertical */
+    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en iOS */
+  }
+}
+
+  /*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: black;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: transparent;
+    font-family: 'hola', arial;
+    font-size: 25px;
+  }
+
+  .scroll-top:hover {
+    color: #50fd50;
+  }
+/*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+
+
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .fixed img {
+    position: fixed;
+    max-width: 80%; /* Reduce el tamaño para tablets */
+    height: auto;
+    margin-right: 0;
+    z-index: 1;
+    top: 30px; /* Ajusta la posición superior */
+    right: 10%;
+  }
+
+  .text-container {
+    width: 85%; /* Reduce el ancho para tablets */
+    text-align: justify;
+    margin-right: 0;
+    margin-top: 120px; /* Ajusta el margen superior */
+    z-index: 3;
+    padding: 0 20px; /* Aumenta el padding */
+    padding-left: 8%;
+    box-sizing: border-box;
+    height: auto;
+  }
+
+  .text {
+    font-family: 'hola', arial;
+    font-size: 16px; /* Aumenta el tamaño de la fuente */
+  }
+
+  .highlight {
+    font-size: 18px; /* Aumenta el tamaño de la fuente destacada */
+  }
+
+  .superlight {
+    font-size: 12px; /* Ajusta el tamaño de la fuente más ligera */
+    line-height: 1.2;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Muestra dos columnas */
+    gap: 20px;
+    width: calc(100% - 20px);
+    margin: 20px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-left: 8%;
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .fancybox-button--arrow_left:before,
+  .fancybox-button--arrow_right:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 40px; /* Tamaño mayor para tablets */
+    color: white;
+    background: none;
+  }
+
+  .fancybox-toolbar {
+    bottom: 20px; /* Ajusta la posición inferior */
+  }
+
+  .fancybox-container {
+    backdrop-filter: blur(5px);
+    touch-action: auto; /* Permite la acción de toque */
+    overflow: hidden;
+  }
+
+  .fancybox-content {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .image-container {
+    z-index: -3;
+    width: 90vw; /* Ajusta el ancho */
+    height: auto;
+    margin-left: 5vw;
+    margin-top: 10vh; /* Ajusta el margen superior */
+    overflow: hidden;
+  }
+
+  .image-container .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .see-more {
+    color: black;
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+  }
+
+  .see-more:hover {
+    color: #50fd50;
+  }
+
+  .botones-container {
+    margin-right: 5%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+  }
+
+  .boton-prev,
+  .boton-next,
+  .boton-index {
+    display: inline-block;
+    padding: 0px 10px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'hola', arial;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    z-index: 3;
+  }
+
+  .boton-prev:hover,
+  .boton-next:hover,
+  .boton-index:hover {
+    color: #50fd50;
+  }
+
+  .boton-prev {
+    top: 130px;
+    position: fixed;
+    margin-right: 5%;
+    right: 70px; /* Ajusta la posición del botón prev */
+  }
+
+  .boton-next {
+    top: 130px;
+    position: fixed;
+    margin-right: 5%;
+    right: 10px; /* Ajusta la posición del botón next */
+  }
+
+  .boton-index {
+    top: 130px;
+    position: fixed;
+    margin-right: 5%;
+    right: 55px; /* Ajusta la posición del botón index */
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+  /*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    color: #000000;
+    background-color: #00000000;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 1000;
+    font-family: 'hola', arial;
+    font-size: 27px;
+  }
+
+.scroll-top:hover {
+  color: #50fd50;
+}
+/*---------------------------------------------------- SCROLL TO THE TOP ------------------------------------------------------*/
+
+
+/* Laptop */
+@media only screen and (min-width: 1025px) {
+ 
+/*---------------------------------------------------- NAVBAR ------------------------------------------------------*/
+
+  nav {
+      z-index: 50;
+      position: fixed;
+      width: 100%;
+      height: 7vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      padding-block: 2.5vh;
+      text-transform: uppercase;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+  }
+  
+  .navbar-separator-languages{
+      margin-right: -1vh;
+  }
+  .languages{
+      margin-left: -2vh;
+  }
+  .contact-us{
+      margin: 0 3vh;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #50fd50;
+  }
+
+  .logo {
+    position: fixed;
+    top: 28px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+/*--------------------------------------------------  SECTION INTRO  -----------------------------------------------------*/
+
+  .section-intro{
+      position:relative;
+      max-width: 100vw;
+      height: 90vh;
+      padding: 5vh 6vw 0px 6vw;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      background: linear-gradient(to bottom, #ffffff, #929292);
+  }
+  .intro-text{
+    flex: 1;
+    padding: 0 3vw;
+  }
+  
+  h1{  
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: xxx-large;
+      letter-spacing: 1px;
+      word-spacing: 3px;
+  }
+  
+  p{
+      
+      font-family: "Montserrat", sans-serif;
+      font-weight: 550;
+      font-style: normal;
+      text-align: justify;
+      font-size: medium;
+  }
+  
+  #canvas{
+      flex: 2;
+      background-color: blue;
+      padding: 0 2vw;
+  }
+
+
+/*--------------------------------------------------  SECTIONS INFO  -----------------------------------------------------*/
+
+  .separator-line{
+      width: 100%;
+      height: 5vh;
+      background-color: #4B4B4B;
+  }
+
+  .arrows{
+      width:4vh;
+      height: 5vh;
+      background-color: #939393;
+      transform: rotate(180deg);
+      position:absolute;
+      top: 92vh;
+      right: 50vw;
+      padding: 2vh 1vh;
+      border-radius: 150px;
+      box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.4), 0 -2px 5px 0 rgba(0, 0, 0, 0.9);
+  }
+  
+
+
+  .section-clients{
+    height: 15vh;
+    background-color: #F1F1F1;
+  }
+  .clients-text{
+    padding: 0px 0 2vh 20vw;
+    background-color: #F1F1F1;
+  }
+  .clients {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 24vh;
+    background-color: #F1F1F1;
+    padding: 0vh 20vw 0px 20vw;
+      
+  }
+  .client {
+    text-align: center;
+    margin: 20px;
+  }
+  .client img {
+    filter: grayscale(1);
+    mix-blend-mode: darken;
+  }
+
+  #bern-image{
+    height: 8vh;
+  }
+  #abiya-image{
+    height: 5vh;
+    margin: 1vh;
+  }
+  #milano-image{
+    height: 12vh;
+    margin: -3.5vh 0;
+  }
+  #stockholm-image{
+    height: 8vh;
+  }
+  .client h5 {
+      font-size: px;
+      color: #333;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 550;
+  }
+
+
+
+/*-------------------------------------------------- SECTIONS GENERAL PLATFORM AR  -----------------------------------------------------*/
+  .section-general{
+    max-width: 100vw;
+    height: -webkit-fill-available;
+    background: #E0E0E0;
+    padding: 5vh 13vw;
+      
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .general-text,
+  .ar-image,
+  .contact-us-space,
+  .general-image    {
+    flex: 1;
+  }
+  
+  #general-1-image{
+    height: 33vw;
+  }
+
+
+  #parametric-image{
+    height: 30vw;
+    margin-left: -5vw;
+  }
+  
+  #augmented-reality-image{
+    height: 70vh;
+    top: 301.5vh;
+    position: absolute;
+    left: 41vw;
+  }
+
+
+  .parametric-text{
+    width: 40%;
+    padding: 0 1vh;
+  }
+
+
+  h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 41px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+  }
+
+  h4{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
+    font-size: medium;
+  }
+
+
+  .separator-section-white{
+    width: 100%;
+    height: 15vh;
+    background-color: #F1F1F1;
+  }
+
+
+
+/*-------------------------------------------------- FORM   -----------------------------------------------------*/
+
+.section-form{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  place-items: center;
+  background:  #E0E0E0;
+}
+
+input{
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+}
+.form-container {
+  width: 50%;
+  margin: 0 150px 0 0;
+  padding: 20px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+.form-group label {
+  flex: 1;
+  font-size: 18px;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: small;
+  text-align: right;
+  margin: 0 2vh;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  flex: 2;
+  padding: 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.form-group input[type="checkbox"] {
+  height: 20px;
+  /* flex: 2; */
+
+}
+.form-group textarea {
+  height: 100px;
+}
+
+form input{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: left;
+  
+}  
+form textarea{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: left;
+}  
+input::placeholder, 
+textarea::placeholder {
+  color: transparent;
+}
+
+/*--------------------------------------------------  SUBMIT BUTTOM ANIMATION   -----------------------------------------------------*/
+
+.btn-1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-around;
+  flex-wrap: nowrap;
+  margin-top: 2vh;
+  
+}
+
+.btn-1 .submit-a {
+  text-decoration: none;
+  border: 1px solid #010100;
+  border-radius: 5px;
+  padding: 15px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  
+}
+
+span {
+  position: relative;
+  z-index: 3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: small; 
+}
+
+.btn-1 .submit-a::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  width: calc(100% + 6px);
+  height: calc(100% - 10px);
+  background-color: #E0E0E0;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+
+.btn-1 .submit-a:hover::before{
+  transform: scaleY(0);
+}
+
+.btn-1 .submit-a::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
+  background-color: #E0E0E0;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+  
+}
+
+.btn-1 .submit-a:hover::after {
+  transform: scaleX(0);
+}
+
+/*-------------------------------------------------- DERECHOS Y LINKS INICIO -----------------------------------------------------*/
+
+  @media only screen and (max-width: 767px) {
+    /* Estilos para dispositivos móviles */
+
+  .footer {
+    padding: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+    margin-bottom: 10%;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .footer-social-button {
+    font-size: 40px;
+    color: #50fd50;
+    background-color: #ffffff;
+    border: none;
+    padding: 0px 5px;
+    padding-top: 50%;
+    border-radius: 5px;
+  }
+  
+  .footer-social-button:hover {
+    color: #000000;
+  }
+
+  .fa-instagram,
+  .fa-linkedin,
+  .fa-envelope {
+    font-size: 25px;
+  }
+  
+  .footer-text {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 1px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para dispositivos móviles */
+
+.footer {
+  padding: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  margin-bottom: 10%;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+ .footer-social-button {
+  font-size: 20px;
+  color: #50fd50;
+  background-color: #ffffff;
+  border: none;
+  padding: 0px 5px;
+  padding-top: 50%;
+  border-radius: 5px;
+}
+
+ .footer-social-button:hover {
+  color: #000000;
+}
+
+.fa-instagram,
+.fa-linkedin,
+.fa-envelope {
+  font-size: 30px;
+}
+
+.footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 11px;
+}
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Estilos para dispositivos laptops */
+
+.footer {
+  padding: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  margin-bottom: 10%;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+ .footer-social-button {
+  font-size: 20px;
+  color: #50fd50;
+  background-color: #ffffff00;
+  border: none;
+  padding: 0px 5px;
+  padding-top: 50%;
+  border-radius: 5px;
+}
+
+ .footer-social-button:hover {
+  color: #000000;
+}
+
+.fa-instagram,
+.fa-linkedin,
+.fa-envelope {
+  font-size: 30px;
+}
+
+.footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+}
+
+
+/*-------------------------------------------------- DERECHOS Y LINKS FIN -----------------------------------------------------*/
+}
