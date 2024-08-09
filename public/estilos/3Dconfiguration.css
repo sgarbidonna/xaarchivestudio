@@ -485,7 +485,8 @@ body{
   
   #canvas{
       flex: 2;
-      padding: 0 2vw;
+      max-width: 40vw !important;
+      height: auto !important;
   }
 
 
