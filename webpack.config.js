@@ -4,8 +4,11 @@ const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './public/index.ts',
+  entry: './public/3dconfiguration.ts',
   mode: 'production',
+  performance: {
+    hints: false
+  },
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin({
@@ -30,8 +33,9 @@ module.exports = {
   },
   plugins: [
       new HtmlWebpackPlugin({
-          template: './public/index.html'
-      })
+        template: 'public/3Dconfiguration.html',
+        filename: '3Dconfiguration.html',
+      }),
   ]
 };
 
