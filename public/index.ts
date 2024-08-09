@@ -1,1 +1,2 @@
-console.log("sdfsdfsdfsdf");
+
+console.log('entro en index.ts');

@@ -76,7 +76,7 @@
             display: none; /* Oculta el contenido hasta que se haya cargado */
         }
     </style>
-    
+
 </head>
 <body id="root">
 
@@ -292,8 +292,6 @@
     <img src="contenido\logos\icon.png" alt="Logo" class="logo">
   </a>
 
-  <div id="canvas"></div>
-
   <nav>
       <ul>
         <li><a href="index.html">XAARCHIVE</a></li>
@@ -323,11 +321,14 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // Simula un tiempo de carga (puedes eliminar esto en tu versión final)
         setTimeout(function() {
-            document.getElementById("preload-screen").style.display = "none"; }, 3000); // Cambia este valor al tiempo de carga real de tu página
+           document.getElementById("preload-screen").style.display = "none";
+            // Muestra el contenido de la página
+            //document.getElementById("content").style.display = "block";
+        }, 3000); // Cambia este valor al tiempo de carga real de tu página
     });
 </script>
-
-</body>
+  </body>
 
 </html>

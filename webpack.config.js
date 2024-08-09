@@ -1,8 +1,19 @@
-
 const path = require('path');
+const TerserPlugin = require("terser-webpack-plugin");
+
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   entry: './public/index.ts',
   mode: 'production',
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin({
+      terserOptions: {
+        safari10: true
+      }
+    })],
+  },
   module: {
     rules: [{
       test: /\.tsx?$/,
@@ -14,9 +25,14 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: 'bundle.js',
+    filename: './bundle.js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  plugins: [
+      new HtmlWebpackPlugin({
+          template: './public/index.html'
+      })
+  ]
 };
 
 /*

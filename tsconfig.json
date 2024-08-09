@@ -1,8 +1,14 @@
 {
     "compilerOptions": {
-      "outDir": "./dist/",
-      "module": "es6",
-      "target": "es2015",
+      "outDir": "dist",
+      "module": "CommonJS",
+      "target": "ES5",
       "moduleResolution": "node"
-    }
+    },
+    "include": [
+      "public/3Dconfiguration.ts"
+    ],
   } 
+
+
+  

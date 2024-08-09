@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fondamento:ital@0;1&family=Kode+Mono&family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="estilos\3Dconfiguration.css">
-    
+      
+      
 </head>
     <body>
 
@@ -218,90 +219,13 @@
       </div>
       <br>
       </footer>
-      
+      <!-- HANDLE DE .ts -->
       <script src="https://viewer.shapediver.com/v3/2.3.5/bundle.js"></script>
+    
+<script src="./3Dconfiguration.ts"></script>
+
       <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script src="./contenido/3Dconfiguration/form.js"></script>
 
-      <!--
-      <script>
-        document.getElementById('submit-link').addEventListener('click', function(event) {
-          
-          event.preventDefault(); 
-          document.querySelector("#form").dispatchEvent(new Event('submit', { cancelable: true })); //ver
-          
-          const form = document.getElementById('form');
-          // const submitLink = document.getElementById('submit-link');
-          
-          if (validateForm()) {
-            form.submit();
-          } 
-
-
-          function cantBeBlankPlaceholder(elements, color) {
-            elements.forEach(element => {
-              element.style.setProperty('box-shadow', color, 'important');
-            });
-          }
-
-          function validateEmail(email) {
-                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return regex.test(email);
-          }
-
-          function validateForm() {
-            let isValid = true;
-            const requiredFields = document.querySelectorAll('input[required], textarea[required]');
-            
-            requiredFields.forEach(field => {
-                  if (!field.value) {
-                      cantBeBlankPlaceholder([field], '0 0px 12px 0 red');
-                      setPlaceholderColor(field, 'red');
-                      isValid = false;
-                  } else {
-                      cantBeBlankPlaceholder([field], '0 0px 0px 0 #ffffff');
-                      setPlaceholderColor(field, 'transparent');
-                  }
-              });
-
-              const emailField = document.getElementById('email');
-
-              if (!validateEmail(emailField.value)) {
-                  cantBeBlankPlaceholder([emailField], '0 0px 12px 0 red');
-                  setPlaceholderColor(emailField, 'red');
-                  setPlaceholderMessage(emailField, 'Invalid email address');
-                  isValid = false;
-              } else {
-                cantBeBlankPlaceholder([emailField], '0 0px 0px 0 #ffffff');
-                setPlaceholderColor(emailField, 'transparent');
-                
-              }
-
-              return isValid;
-           }
-
-            
-
-            function setPlaceholderColor(element, color) {
-                if (element.tagName.toLowerCase() === 'input' || element.tagName.toLowerCase() === 'textarea') {
-                    const placeholderStyle = document.createElement('style');
-                    placeholderStyle.innerHTML = `
-                        #${element.id}::placeholder {
-                            color: ${color} !important;
-                        }
-                    `;
-                    document.head.appendChild(placeholderStyle);
-                }
-            }
-
-            function setPlaceholderMessage(element, message) {
-                element.value=' ' ;
-                element.setAttribute('placeholder', message);
-            }
-
-            
-        });
-    </script>
--->
-</body>
+    </body>
 </html>
