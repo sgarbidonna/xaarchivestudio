@@ -482,14 +482,69 @@ body{
       text-align: justify;
       font-size: medium;
   }
+
+  #intro-3d{
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+  
+    width: 60vw !important;
+    max-width: 60vw !important;
+    height: 15vh;
+  }
   
   #canvas{
-      flex: 2;
-      max-width: 40vw !important;
-      height: auto !important;
+    width: 40vw !important;
+    max-width: 40vw !important;
+    height: 45vh !important;
+    aspect-ratio: 4 / 5 !important;
+  
+  }
+
+  #menu-container{
+    width: 40vw !important;
+    max-width: 40vw !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #info-menu{
+    width: 50vw;
+    max-width: 50vw;
+    height: 8vh;
+  }
+
+  #menu{
+    width: 50vw;
+    max-width: 50vw;
+    height: 18vh;  
+  }
+
+  .pattern-box{
+    width: 2vw;
+    height: 2vh;
+    border-radius: 15px;
   }
 
 
+  #iron-gray{
+    background-color: black;
+  }
+
+  #pearl-gray{
+background-color: #4B4B4B;
+  }
+
+  #gold{
+background-color: gold;
+  }
+
+  #white{
+background-color: white;
+  }
 /*--------------------------------------------------  SECTIONS INFO  -----------------------------------------------------*/
 
   .separator-line{
