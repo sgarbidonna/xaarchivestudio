@@ -2,6 +2,7 @@ import { IParameterApi, ISessionApi } from "@shapediver/viewer";
 import { createParameterDiv } from "../menu/createParamDiv";
 import { collapsibleManager } from "../utils/collapsableLogic";
 
+
 export const createDimensionsElement = (
   session: ISessionApi,
   parameterObject: IParameterApi<string>[],
@@ -12,11 +13,16 @@ export const createDimensionsElement = (
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
+  contentElement.style.display = "grid";
+  contentElement.style.gridTemplateRows = "auto auto auto";
+  contentElement.style.gap = "10px";
   parentDiv.appendChild(contentElement);
 
   const filterSides = Object.values(parameterObject).filter(
     (param) => param.type === "Bool"
   );
+  /*
+  // SIDES 
   const sidesContainer = document.createElement("div");
   sidesContainer.className = "sides-container";
   
@@ -51,77 +57,129 @@ export const createDimensionsElement = (
   });
 
   contentElement.appendChild(sidesContainer);
+*/
+
 
   const dimensionsParams = Object.values(parameterObject).filter(
     (param) => param.type === "Float" || param.type === "Int"
   );
 
   dimensionsParams.forEach((param) => {
-    const lengthElement = document.createElement("div");
-    lengthElement.className = "sd-control spacer";
 
-    const sliderInfoElement = document.createElement("div");
-    sliderInfoElement.className = "sd-slider-info";
+    if (param.name != 'Side Height' ){
 
-    const labelElement = document.createElement("label");
-    labelElement.className = "sd-slider-label";
-    labelElement.textContent = param.name;
+      const lengthElement = document.createElement("div");
+      lengthElement.className = "sd-control spacer";
+      lengthElement.style.display="grid";
+      lengthElement.style.gridTemplateColumns="20% 60% 20%"
+      lengthElement.style.gap="10px";
+      lengthElement.style.alignItems="center";
 
-    const unitsElement = document.createElement("div");
-    unitsElement.className = "sd-units length";
-    unitsElement.textContent = "cm";
+      
 
-    const numberInputElement = document.createElement("input");
-    numberInputElement.className = "sd-slider-value length";
-    numberInputElement.type = "number";
-    numberInputElement.min = String(param.min) || "150";
-    numberInputElement.max = String(param.max) || "1000";
-    numberInputElement.step = "1";
-    numberInputElement.value = param.value || "100";
+      const sliderInfoElement = document.createElement("div");
+      sliderInfoElement.className = "sd-slider-info";
+      sliderInfoElement.style.padding="0 1vw";
+      sliderInfoElement.style.fontSize="small";
+      sliderInfoElement.style.width="25vw";
+      sliderInfoElement.style.textTransform="uppercase";
+      sliderInfoElement.style.display="flex";
+      sliderInfoElement.style.justifyContent='center';
+      sliderInfoElement.style.width="20%";
+      sliderInfoElement.style.alignItems="center";
 
-    numberInputElement.onchange = async () => {
-      param.value = numberInputElement.value;
-      await session.customize().then((data) => {
-        const event = new CustomEvent('priceUpdated')
-        document.dispatchEvent(event);
-      })
-    };
 
-    const rangeInputElement = document.createElement("input");
-    rangeInputElement.className = "slider";
-    rangeInputElement.type = "range";
-    rangeInputElement.min = String(param.min);
-    rangeInputElement.max = String(param.max);
-    rangeInputElement.step = "1";
-    rangeInputElement.value = param.value || "100";
+      const labelElement = document.createElement("label");
+      labelElement.className = "sd-slider-label";
+      labelElement.textContent = param.name;
+      labelElement.style.display="flex";
+      labelElement.style.justifyContent='center';
+      labelElement.style.width="20%";
+      labelElement.style.alignItems="center";
 
-    rangeInputElement.addEventListener("input", () => {
-      numberInputElement.value = rangeInputElement.value;
+
+  /*
+      const unitsElement = document.createElement("div");
+      unitsElement.className = "sd-units length";
+      unitsElement.textContent = "cm";
+  */
+      const numberInputElement = document.createElement("div");
+      numberInputElement.className = "sd-slider-value length";
+      numberInputElement.textContent= param.value  + "  " + "cm";
+      //numberInputElement.type = "number";
+      //numberInputElement.min = String(param.min) || "150";
+      //numberInputElement.max = String(param.max) || "1000";
+      //numberInputElement.step = "1";
+      //numberInputElement.value = param.value || "100";
+      // numberInputElement.style.fontWeight="550";
+      //numberInputElement.style.background="transparent";
+      //numberInputElement.style.border="none";
+      numberInputElement.style.padding="0 1vw";
+      numberInputElement.style.fontSize="small";
+      numberInputElement.style.textTransform="uppercase";
+
+  /*
+      numberInputElement.onchange = async () => {
+        param.value = numberInputElement.value;
+        await session.customize().then((data) => {
+          const event = new CustomEvent('priceUpdated')
+          document.dispatchEvent(event);
+        })
+      };
+  
+    */
+
+      const rangeInputElement = document.createElement("input");
+      rangeInputElement.className = "slider";
+      rangeInputElement.id = "slider"
+      rangeInputElement.type = "range";
+      rangeInputElement.min = String(param.min);
+      rangeInputElement.max = String(param.max);
+      rangeInputElement.step = "1";
+      rangeInputElement.value = param.value || "100";
+      rangeInputElement.style.width="70%";
+      rangeInputElement.style.padding="0 5vw";
+      rangeInputElement.style.fontSize="small";
+      rangeInputElement.style.display="flex";
+      rangeInputElement.style.justifyContent='center';
+      rangeInputElement.style.alignItems="center";
+
+
+  
+      
+      rangeInputElement.addEventListener("input", () => {
+        numberInputElement.textContent = rangeInputElement.value  + " " + "cm";
+
+      });
+  
+   
+      rangeInputElement.onchange = async () => {
+        param.value = rangeInputElement.value;
+        await session.customize().then((data) => {
+          const event = new CustomEvent('priceUpdated')
+          document.dispatchEvent(event);
+        })
+      };
+  
+      sliderInfoElement.appendChild(labelElement);
+      //sliderInfoElement.appendChild(unitsElement);
+  
+      lengthElement.appendChild(sliderInfoElement);
+      lengthElement.appendChild(rangeInputElement);
+  
+      lengthElement.appendChild(numberInputElement);
+      contentElement.appendChild(lengthElement);
+
+
+
+
+      parameterDiv.addEventListener("click", function (event) {
+        collapsibleManager.toggleCollapsible(parameterDiv);
+
     });
 
-    numberInputElement.addEventListener("input", () => {
-      rangeInputElement.value = numberInputElement.value;
-    });
+    }
 
-    rangeInputElement.onchange = async () => {
-      param.value = rangeInputElement.value;
-      await session.customize().then((data) => {
-        const event = new CustomEvent('priceUpdated')
-        document.dispatchEvent(event);
-      })
-    };
 
-    sliderInfoElement.appendChild(labelElement);
-    sliderInfoElement.appendChild(unitsElement);
-    sliderInfoElement.appendChild(numberInputElement);
-
-    lengthElement.appendChild(sliderInfoElement);
-    lengthElement.appendChild(rangeInputElement);
-
-    contentElement.appendChild(lengthElement);
-  });
-
-  parameterDiv.addEventListener("click", function (event) {
-    collapsibleManager.toggleCollapsible(parameterDiv);
 });
 };

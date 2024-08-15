@@ -10,8 +10,7 @@ export const createParameterDiv = (
 
   const label = document.createElement("p");
   label.innerText = (parameterObject.group?.name || groupName || parameterObject.name || "").toUpperCase();
-  collapsibleDiv.appendChild(label);
-
+  
   parentDiv.appendChild(collapsibleDiv);
   collapsibleDiv.appendChild(document.createElement("span"));
 

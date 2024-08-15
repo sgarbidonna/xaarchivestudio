@@ -31,21 +31,16 @@ export const createParameterMenu = async (
 
   const conversionRate = 3.67; // AED DEFAULT
 
-  createMenu(session, conversionRate, viewport);
+  //createMenu(session, conversionRate, viewport);
 
   const orderedParameters = getOrderedParameters(session);
   const groupedParameters = groupParameters(orderedParameters);
   const menuDiv = document.getElementById("menu") as HTMLDivElement;
 
-  console.log('** groupedParameters ** ', groupedParameters);
-    
 
   for (const [groupName, parameters] of Object.entries(groupedParameters)) {
-
-    console.log('** dentro del for en parameters ** ', parameters);
     switch (groupName) {
       
-/*
       case "Pattern Color":
         parameters.forEach((parameterObject) =>
           createPatternColorElement(session, parameterObject, menuDiv)
@@ -54,7 +49,7 @@ export const createParameterMenu = async (
       case "Dimensions":
         createDimensionsElement(session, parameters, menuDiv, groupName);
         break;
-
+/*
       case "Base Shape":
         createBaseShape(session, parameters, menuDiv, groupName);
         break;
