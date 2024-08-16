@@ -1,7 +1,7 @@
 import { ISessionApi, IViewportApi } from "@shapediver/viewer";
 import { fetchConversionRate } from "../utils/currencyConversion";
 
-console.log('** estoy en menuCreation.ts **');
+
 
 interface PriceProp {
   name: string;
@@ -19,25 +19,23 @@ export function createMenu(
   viewport: IViewportApi
 ): void {
 
-  /*
-  initialConversionRate=0.91;
-
-  const menuDiv = document.getElementById("menu") as HTMLDivElement;
+//  const menuDiv = document.getElementById("menu") as HTMLDivElement;
   const infoMenu = document.getElementById("info-menu") as HTMLDivElement;
 
   const unitPriceLabel = document.createElement("div");
-  unitPriceLabel.innerText = "PRICE:";
+  unitPriceLabel.innerText = "PRICE";
   unitPriceLabel.className = "unit-price-label";
   unitPriceLabel.style.fontFamily = "Montserrat";
   unitPriceLabel.style.fontWeight = "400";
   unitPriceLabel.style.fontSize = "small";
   unitPriceLabel.style.marginTop="5px" ; 
-  unitPriceLabel.style.display="flex";
-
+  unitPriceLabel.style.display="grid";
+  unitPriceLabel.style.gridTemplateColumns = "35% 30%";
   infoMenu.appendChild(unitPriceLabel);
 
   const quantityAndPriceContainer = document.createElement("div");
   quantityAndPriceContainer.className = "qty-price-container";
+  quantityAndPriceContainer.style.fontWeight="600";
   unitPriceLabel.appendChild(quantityAndPriceContainer);
 
   const labelWithPrice = document.createElement("div");
@@ -45,18 +43,17 @@ export function createMenu(
   quantityAndPriceContainer.appendChild(labelWithPrice);
 
 
-  //const priceSelect = createCurrencySelect(session, initialConversionRate);
+  const priceSelect = createCurrencySelect(session, initialConversionRate);
   const price = document.createElement("div");
   price.className = "price";
   price.id = "price-selector";
-
   labelWithPrice.appendChild(price);
+  
   //labelWithPrice.appendChild(priceSelect);
 
   const priceOutput = getPriceOutput(session);
   const qty = document.getElementById("qty-value") as HTMLInputElement;
   const qtyValue = Number(qty?.value) || 1;
-  
   
   updatePrice(initialConversionRate, priceOutput, price, labelWithPrice, qtyValue);
 
@@ -120,48 +117,46 @@ function createCurrencySelect(
 
   priceSelect.onchange = async (event) => {
     const valueToFind = (event.target as HTMLSelectElement).value;
-    const selectedCurrency = options.find(option => option.value === valueToFind)?.rate.toFixed(2).toString()
+    //const selectedCurrency = options.find(option => option.value === valueToFind)?.rate.toFixed(2).toString()
+    const selectedCurrency =  "EUR";
+
     if (!selectedCurrency) return
     try {
       const newConversionRate = selectedCurrency;
       const priceOutput = getPriceOutput(session);
       const price = document.querySelector(".price") as HTMLDivElement;
-      const labelWithPrice = document.querySelector(
-        ".label-price-container"
-      ) as HTMLDivElement;
+      const labelWithPrice = document.querySelector(".label-price-container") as HTMLDivElement;
       const qty = document.getElementById("qty-value") as HTMLInputElement;
-      const qtyValue = Number(qty.value)
+     // const qtyValue = Number(qty.value);
+      const qtyValue = Number(1);
       updatePrice(Number(newConversionRate), priceOutput, price, labelWithPrice,qtyValue);
     } catch (error) {
-      // Handle error and revert to USD
-      priceSelect.value = "USD";
+      priceSelect.value = "EUR";
       const usdConversionRate = 1;
       const priceOutput = getPriceOutput(session);
       const price = document.querySelector(".price") as HTMLDivElement;
-      const labelWithPrice = document.querySelector(
-        ".label-price-container"
-      ) as HTMLDivElement;
-      const qty = document.getElementById("qty-value") as HTMLInputElement;
-      const qtyValue = Number(qty.value)
-      console.log(' qtyValue2' ,qtyValue);
+      const labelWithPrice = document.querySelector(".label-price-container") as HTMLDivElement;
+      //const qty = document.getElementById("qty-value") as HTMLInputElement;
+      //const qtyValue = Number(qty.value);
+      const qtyValue = Number(1);
       updatePrice(usdConversionRate, priceOutput, price, labelWithPrice,qtyValue);
     }
   };
 
   document.addEventListener("priceUpdated", async (event) => {
-    const grabSelectElement = document.getElementById(
-      "currency-select"
-    ) as HTMLSelectElement;
-    const selectedCurrency = grabSelectElement.value;
-    const price = document.querySelector(".price") as HTMLDivElement;
-    const labelWithPrice = document.querySelector(
-      ".label-price-container"
-    ) as HTMLDivElement;
+    
+    //ESTO SIGUIENTE NO SE USA YA Q EL PRECIO ESTA EN EYURPS, NO NECESITA EL SELECTOR
+    //const grabSelectElement = document.getElementById("currency-select") as HTMLSelectElement;
+    //const selectedCurrency = grabSelectElement.value;
 
-    const newConversionRate = options.find(option => option.value === selectedCurrency)?.rate.toFixed(2).toString()
+    const selectedCurrency = "EUR";
+    const price = document.querySelector(".price") as HTMLDivElement;
+    const labelWithPrice = document.querySelector(".label-price-container") as HTMLDivElement;
+
+    const newConversionRate = options.find(option => option.value === selectedCurrency)?.rate.toFixed(2).toString();
     const priceOutput = getPriceOutput(session);
-    const qty = document.getElementById("qty-value") as HTMLInputElement;
-    const qtyValue = Number(qty.value)
+//    const qty = document.getElementById("qty-value") as HTMLInputElement;
+    const qtyValue = Number(1);
     updatePrice(Number(newConversionRate), priceOutput, price, labelWithPrice, qtyValue);
   });
 
@@ -175,7 +170,10 @@ export function getPriceOutput(
     (item) =>
       item[1].name === "Price" &&
       item[1].content?.some((prop) => prop.name === "Price")
+      
+ //esta funcion devuelv 1286fb4b49acee98a2bd1e5a8172924f
   ) as [string, OutputContent] | undefined;
+  
 }
 
 function updatePrice(
@@ -194,11 +192,16 @@ function updatePrice(
     );
     if (priceProp) {
       const convertedPrice = Number((priceProp.data * conversionRate) * Number(qty || 1)).toFixed(2);
-      priceElement.innerText = convertedPrice;
+      priceElement.innerText ="€ " + convertedPrice;
       labelWithPrice.appendChild(priceElement);
+      console.log('convertedPrice', convertedPrice); 
     }
   }
 }
+
+
+
+/*
 
 function createQuantityContainer() {
   const quantityContainer = document.createElement("div");
@@ -260,3 +263,4 @@ function createMaterialAndPanel(session: ISessionApi): HTMLDivElement {
 
   return materialAndPanel;
 }
+*/

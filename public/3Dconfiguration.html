@@ -21,16 +21,27 @@
       <!--- NAV BAR  -->
 
       <nav class="navbar navbar-light bg-light">
-          <a class="xaa-logo" href="index.html"> <img src="contenido\logos\icon.png" alt="Logo" class="logo"> </a>
-          <a class="package-and-services" href="#">Package & Services</a>
-          <a class="contact-us" href="#">Contact Us</a>
-          <a class="navbar-separator-languages">  </a>
-          <a class="languages" href="3Dconfiguration.html">ITA</a>
-          <a class="languages" > / </a>
-          <a class="languages" href="3Dconfiguration.html">ENG</a>
-          <a class="languages" > / </a>
-          <a class="languages" href="3Dconfiguration.html">ES</a>
-          <a class="navbar-separator-languages">  </a>
+          
+        <a class="xaa-logo" href="#intro"> <img src="contenido\logos\icon.png" alt="Logo" class="logo"> </a>
+
+        <a class="package-and-services" href="#">Package & Services</a>
+        <div class="links-navbar">
+          <a href="#">3D Configuration</a>
+          <a href="#">Parametric Modeling</a>
+          <a href="#">Downloadables</a>
+          <a href="#">XAARCHIVE® AR</a>
+          <a href="#">Contact Us</a>
+        </div>
+
+        <a class="contact-us" href="#">Contact Us</a>
+
+        <a class="navbar-separator-languages">  </a>
+        <a class="languages" href="3Dconfiguration.html">ITA</a>
+        <a class="languages" > / </a>
+        <a class="languages" href="3Dconfiguration.html">ENG</a>
+        <a class="languages" > / </a>
+        <a class="languages" href="3Dconfiguration.html">ES</a>
+        <a class="navbar-separator-languages">  </a>
       </nav>
 
 
@@ -56,12 +67,14 @@
               <!--  UNIT PRICE  -->
                 
                 <div id="info-menu" bis_skin_checked="1">
-                  <div class="product">  PRODUCT: PERGOLA  </div> 
+<!--                  <div class="product"></div> -->
                 </div>
               </div> 
                 
               
-              <div id="menu" bis_skin_checked="1"> </div>
+              <div id="menu" bis_skin_checked="1"> 
+                <div class="div" id="qty-value" hidden></div>
+              </div>
               <div id="menu-buttons" bis_skin_checked="1"> </div>
             
           
@@ -79,7 +92,7 @@
         <!-- CLIENTS -->
         
           <p class="clients-text"> We have worked with... </p>        
-          <div class="clients">
+          <div class="clients" id="clients">
             <div class="client">
               <img alt="Logo of a company based in Bern, Switzerland"  src="./contenido/3Dconfiguration/bern.jpeg"  id="bern-image"/>
               <h5> Bern, Switzerland. </h5>
@@ -134,36 +147,37 @@
         <div class="separator-section-white"> </div>
 
 
-         <!-- SECTION 3 AR  -->
+        <!-- SECTION 3 EXPORT TO PDF  -->
+        <section class="section-general" id="contact-us">
+          
+          <div class="general-text">
+            <h2> Export to PDF, DWG or others </h2>
+            <h4> Our platform can quickly create a downloadable 3D model with all the information of the iteration created by the user. It will include the pricing, dimensions and color requests so it can all be saved and the process of acquisition runs smoother than ever.</h4>
+            <h4> If desired, the DWG or 3D model iterations can be downloaded too, and added to on-going 3D plans and architecture renderings.</h4>
+          </div>
+          <div class="contact-us-space"> 
+            <img src="./contenido/3Dconfiguration/LAYOUT COMPU + PDF.png" id="contact-us-img"/>
+          </div>
+        </section>
+        <div class="separator-section-white"> </div>
+
+
+         <!-- SECTION 4 AR  -->
          <section class="section-general" id="augmented-reality">
+          <div class="ar-image">
+            <img src="./contenido/3Dconfiguration/phonw Ar.png" id="augmented-reality-image"/>
+          </div>
           <div class="general-text">
             <h2> XAARCHIVE® AR </h2>
             <h4> Imagine placing your ideal pergola exacty where you envision it. With XAARCHIVE® AR, you can easily position your custom pergolas in any outdoor environment. The photorealistic quality of XAARCHIVE®'s augmented reality makes a great way of seeing how they would look in reality.</h4>
             <h4> Plus, you can enhance your website with WebAR, allowing customers to see your pergolas in 3D and instantly visualize them in their own space using their phones. No download or app required.</h4>
           </div>
 
-          <div class="ar-image">
-            <img src="./contenido/3Dconfiguration/phonw Ar.png" id="augmented-reality-image"/>
-          </div>
+          
         </section>
 
         <div class="separator-section-white"> </div>
-         
-        
-        
-        <!-- SECTION 4 CONTACT US  -->
-         <section class="section-general" id="contact-us">
-          <div class="contact-us-space"> </div>
 
-          <div class="general-text">
-            <h2> Export to PDF, DWG or others </h2>
-            <h4> Our platform can quickly create a downloadable 3D model with all the information of the iteration created by the user. It will include the pricing, dimensions and color requests so it can all be saved and the process of acquisition runs smoother than ever.</h4>
-            <h4> If desired, the DWG or 3D model iterations can be downloaded too, and added to on-going 3D plans and architecture renderings.</h4>
-          </div>
-
-        </section>
-
-        <div class="separator-section-white"> </div>
 
 
         <!-- SECTION 5 FORM  -->

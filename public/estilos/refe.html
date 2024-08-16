@@ -1,0 +1,64 @@
+<div class="side-container">
+    <label class="form-check-label">
+      <input type="checkbox">
+      <div class="checkmark"></div>
+    </label>
+  </div>
+
+
+  
+  
+  <style>
+    .side-container input[type="checkbox"] {
+      visibility: hidden;
+      display: none;
+    }
+  
+    .side-container .form-check-label {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+    }
+  
+    .side-container .form-check-input {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 1.3em;
+      width: 1.3em;
+      background-color: #ccc;
+      border-radius: 100%;
+      background: #e8e8e8;
+      box-shadow: 3px 3px 5px #c5c5c5,
+                  -3px -3px 5px #ffffff;
+    }
+  
+    .side-container .form-check-label input:checked ~ .form-check-input {
+      box-shadow: inset 3px 3px 5px #c5c5c5,
+                  inset -3px -3px 5px #ffffff;
+    }
+  
+    .side-container .form-check-input:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+    }
+  
+    .side-container .form-check-label input:checked ~ .form-check-input:after {
+      opacity: 1;
+    }
+  
+    .side-container .form-check-label .form-check-input:after {
+      left: 0.45em;
+      top: 0.25em;
+      width: 0.25em;
+      height: 0.5em;
+      border: solid darkgray;
+      border-width: 0 0.15em 0.15em 0;
+      transform: rotate(45deg);
+      transition: all 250ms;
+    }
+  </style>
+  

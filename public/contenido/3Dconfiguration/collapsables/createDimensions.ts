@@ -1,15 +1,17 @@
-import { IParameterApi, ISessionApi } from "@shapediver/viewer";
+import { IParameterApi, ISessionApi,IViewportApi } from "@shapediver/viewer";
 import { createParameterDiv } from "../menu/createParamDiv";
 import { collapsibleManager } from "../utils/collapsableLogic";
 
+import { createMenu, getPriceOutput } from "../menu/menuCreation";
 
 export const createDimensionsElement = (
   session: ISessionApi,
   parameterObject: IParameterApi<string>[],
   parentDiv: HTMLDivElement,
-  groupName: string
+  groupName: string,
+  viewport:IViewportApi,
 ) => {
-  const parameterDiv = createParameterDiv(parameterObject[0], parentDiv, groupName);
+  const parameterDiv = createParameterDiv(parameterObject[0], parentDiv, groupName,);
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
@@ -21,45 +23,66 @@ export const createDimensionsElement = (
   const filterSides = Object.values(parameterObject).filter(
     (param) => param.type === "Bool"
   );
-  /*
+
+  // NOMBRE
+  const infoMenu = document.getElementById("info-menu");
+  const product = document.createElement("div");
+  product.className="product";
+  product.textContent="PRODUCT: PERGOLA";
+  infoMenu.appendChild(product);
+
+  // PRICE
+  const conversionRate = 0.91; // AED DEFAULT // lo cambie a EUR
+  createMenu(session, conversionRate, viewport);
+
+  
   // SIDES 
   const sidesContainer = document.createElement("div");
   sidesContainer.className = "sides-container";
-  
   const sidesLabel = document.createElement("div");
   sidesLabel.className = "sides-label";
-  sidesLabel.innerText = "SIDES:";
+  sidesLabel.innerText = "SIDES";
   sidesContainer.appendChild(sidesLabel);
-  
+
+  sidesContainer.style.display="grid";
+  sidesContainer.style.gridTemplateColumns="20% 20% 20% 20% 20%";
+  sidesContainer.style.gap="10px";
+  sidesContainer.style.alignItems="center";
+  sidesContainer.style.justifyContent="space-around";
+
   filterSides.forEach((side) => {
     const sideBox = document.createElement("div");
     sideBox.className = "form-check form-switch";
+    sideBox.style.display="grid";
+    sideBox.style.gridTemplateColumns="10% 15%";
+    sideBox.style.alignItems="center";
     
     const sideLabel = document.createElement("span");
     sideLabel.className = "form-check-label";
-    sideLabel.innerHTML = `${side.name.split(" ").pop()}:` || "";
+    sideLabel.innerHTML = `${side.name.split(" ").pop()}` || "";
     
     const sideInput = document.createElement("input");
     sideInput.type = "checkbox";
     sideInput.className = "form-check-input";
     sideInput.checked = Boolean(side.value) === true || side.value === "true";
+    
     sideInput.onchange = async () => {
       side.value = String(sideInput.checked);
       await session.customize().then((data) => {
-        const event = new CustomEvent('priceUpdated')
+        const event = new CustomEvent('priceUpdated');
         document.dispatchEvent(event);
       })
     };
-    
+
     sideBox.appendChild(sideLabel);
     sideBox.appendChild(sideInput);
     sidesContainer.appendChild(sideBox);
   });
 
   contentElement.appendChild(sidesContainer);
-*/
 
 
+  // PARAMETROS (LENGHT WIDTH HEIGHT)
   const dimensionsParams = Object.values(parameterObject).filter(
     (param) => param.type === "Float" || param.type === "Int"
   );
@@ -106,14 +129,6 @@ export const createDimensionsElement = (
       const numberInputElement = document.createElement("div");
       numberInputElement.className = "sd-slider-value length";
       numberInputElement.textContent= param.value  + "  " + "cm";
-      //numberInputElement.type = "number";
-      //numberInputElement.min = String(param.min) || "150";
-      //numberInputElement.max = String(param.max) || "1000";
-      //numberInputElement.step = "1";
-      //numberInputElement.value = param.value || "100";
-      // numberInputElement.style.fontWeight="550";
-      //numberInputElement.style.background="transparent";
-      //numberInputElement.style.border="none";
       numberInputElement.style.padding="0 1vw";
       numberInputElement.style.fontSize="small";
       numberInputElement.style.textTransform="uppercase";
@@ -143,15 +158,11 @@ export const createDimensionsElement = (
       rangeInputElement.style.display="flex";
       rangeInputElement.style.justifyContent='center';
       rangeInputElement.style.alignItems="center";
-
-
-  
       
       rangeInputElement.addEventListener("input", () => {
         numberInputElement.textContent = rangeInputElement.value  + " " + "cm";
 
       });
-  
    
       rangeInputElement.onchange = async () => {
         param.value = rangeInputElement.value;

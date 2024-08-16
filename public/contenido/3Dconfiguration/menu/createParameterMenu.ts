@@ -29,13 +29,13 @@ export const createParameterMenu = async (
 
 ) => {
 
-  const conversionRate = 3.67; // AED DEFAULT
-
-  //createMenu(session, conversionRate, viewport);
+//  const conversionRate = 0.91; // AED DEFAULT // lo cambie a EUR
+// createMenu(session, conversionRate, viewport);
 
   const orderedParameters = getOrderedParameters(session);
   const groupedParameters = groupParameters(orderedParameters);
   const menuDiv = document.getElementById("menu") as HTMLDivElement;
+
 
 
   for (const [groupName, parameters] of Object.entries(groupedParameters)) {
@@ -47,8 +47,9 @@ export const createParameterMenu = async (
         );
         break;
       case "Dimensions":
-        createDimensionsElement(session, parameters, menuDiv, groupName);
+        createDimensionsElement(session, parameters, menuDiv, groupName,viewport);
         break;
+
 /*
       case "Base Shape":
         createBaseShape(session, parameters, menuDiv, groupName);

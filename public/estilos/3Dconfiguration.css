@@ -1,7 +1,15 @@
 body{
   margin: 0;
   background-color: #f1f1f1;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 /* TEXTO E IMAGENES */
 /* Móvil */
 @media only screen and (max-width: 767px) {
@@ -526,6 +534,13 @@ body{
     width: 50vw;
     max-width: 50vw;
     height: 5vh;
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: stretch;
   }
 
   #menu{
@@ -542,13 +557,91 @@ body{
     padding: 1vh 0 !important;
   }
 
-    #img-brilliant-white{
-      mask-image: radial-gradient(circle, black 66%, rgba(0, 0, 0, 0) 0%) !important;
-    }
+  #img-brilliant-white{
+    mask-image: radial-gradient(circle, black 66%, rgba(0, 0, 0, 0) 0%) !important;
+  }
 
 
 
+  .links-navbar {
+    display: none;
+    position: absolute;
+    top: 12vh;
+    right: 18vw;
+    background-color: #f1f1f1;
+    z-index: 10;
+  }
+  .package-and-services:hover .links-navbar{
+    display: block !important; 
+  }
+  .links-navbar a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  
+  
+  
+/*--------------------------------------------------  INPUT SIDES  --------------------------------------------------*/
+/*
+  
+  .side-container input[type="checkbox"] {
+    visibility: hidden !important;
+    display: none !important;
+  }
 
+  .side-container .form-check-label {
+    display: block !important;
+    position: relative !important;
+    cursor: pointer !important;
+    font-size: 20px !important;
+    user-select: none !important;
+  }
+
+  .side-container .form-check-input {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 1.3em !important;
+    width: 1.3em !important;
+    background-color: #ccc !important;
+    border-radius: 100% !important;
+    background: #e8e8e8 !important;
+    box-shadow: 3px 3px 5px #c5c5c5,
+                -3px -3px 5px #ffffff !important;
+  }
+
+  .side-container .form-check-label input:checked ~ .form-check-input {
+    box-shadow: inset 3px 3px 5px #c5c5c5,
+                inset -3px -3px 5px #ffffff !important;
+  }
+
+  .side-container .form-check-input:after {
+    content: "" !important;
+    position: absolute !important;
+    opacity: 0 !important;
+  }
+
+  .side-container .form-check-label input:checked ~ .form-check-input:after {
+    opacity: 1 !important;
+  }
+
+  .side-container .form-check-label .form-check-input:after {
+    left: 0.45em !important;
+    top: 0.25em !important;
+    width: 0.25em !important;
+    height: 0.5em !important;
+    border: solid darkgray !important;
+    border-width: 0 0.15em 0.15em 0 !important;
+    transform: rotate(45deg) !important;
+    transition: all 250ms !important;
+  }
+*/
+
+/*--------------------------------------------------  SLIDER PARAMETERS  --------------------------------------------------*/
 
   input[type="range"] {
     font-size: 1.5rem;
@@ -816,7 +909,7 @@ input[type="range"]:disabled::-moz-range-thumb {
     padding: 5vh 13vw;
       
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -837,15 +930,27 @@ input[type="range"]:disabled::-moz-range-thumb {
     height: 30vw;
     margin-left: -5vw;
   }
-  
+
+  #contact-us-img{
+    height: 30vw;
+  }
+
   #augmented-reality-image{
-    height: 70vh;
+    height: 30vw;
+    margin-left: -5vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  /*
+  #augmented-reality-image{
+    height: 30vh;
     top: 301.5vh;
     position: absolute;
     left: 41vw;
   }
 
-
+*/
   .parametric-text{
     width: 40%;
     padding: 0 1vh;
@@ -942,6 +1047,11 @@ form input{
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   text-align: left;
+  border-radius: 6px;
+  background-color: #fff;
+  border: none;
+  height: 3vh;
+  padding: 0 1vw;
   
 }  
 form textarea{
