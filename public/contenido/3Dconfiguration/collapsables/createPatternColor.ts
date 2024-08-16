@@ -9,6 +9,7 @@ const colorLinks: { [key: string]: string } = {
   PearlxGrey: "/contenido/3Dconfiguration/assets/pearl-gray.png",
   FreshxBeige: "/contenido/3Dconfiguration/assets/gold.png",
   BrilliantxWhite: "/contenido/3Dconfiguration/assets/white.png",
+  
 };
 
 

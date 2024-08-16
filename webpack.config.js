@@ -4,7 +4,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './public/3dconfiguration.ts',
+  entry: '/public/3Dconfiguration.ts',
   mode: 'production',
   performance: {
     hints: false
