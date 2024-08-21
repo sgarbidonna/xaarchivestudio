@@ -597,6 +597,7 @@ ul li:hover ul.dropdown{
     max-width: 40vw !important;
     height: 45vh !important;
     aspect-ratio: 4 / 5 !important;
+    mix-blend-mode: multiply !important;
   
   }
 
