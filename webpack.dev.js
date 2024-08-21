@@ -2,14 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: './public/index.ts',
+    entry: '/public/3Dconfiguration.ts',
     mode: 'development',
-    devtool: 'inline-source-map',
+//    devtool: 'inline-source-map',
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: "ts-loader",
+                //loader: "ts-loader",
+                use: "ts-loader",
+                exclude: /node_modules/,
                 options: {
                     transpileOnly: true,
                     onlyCompileBundledFiles: true
@@ -27,7 +29,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html'
+            template: './public/3Dconfiguration.html',
+            filename: '3Dconfiguration.html',
         })
     ]
 };
