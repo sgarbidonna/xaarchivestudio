@@ -30,7 +30,7 @@ export function createMenu(
   unitPriceLabel.style.fontSize = "small";
   unitPriceLabel.style.marginTop="5px" ; 
   unitPriceLabel.style.display="grid";
-  unitPriceLabel.style.gridTemplateColumns = "35% 30%";
+  unitPriceLabel.style.gridTemplateColumns = "20% 30%";
   infoMenu.appendChild(unitPriceLabel);
 
   const quantityAndPriceContainer = document.createElement("div");
