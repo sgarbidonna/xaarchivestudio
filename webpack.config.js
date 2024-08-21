@@ -8,14 +8,14 @@ module.exports = {
   performance: {
     hints: false
   },
-  optimization: {
+  /*optimization: {
     minimize: true,
     minimizer: [new TerserPlugin({
       terserOptions: {
         safari10: true
       }
     })],
-  },
+  },*/
   module: {
     rules: [{
       test: /\.tsx?$/,
@@ -26,10 +26,11 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
   },
+  /*
   output: {
     filename: './bundle.js',
     path: path.resolve(__dirname, 'dist')
-  },
+  },*/
   plugins: [
       new HtmlWebpackPlugin({
         template: './public/3Dconfiguration.html',
