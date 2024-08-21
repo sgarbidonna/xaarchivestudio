@@ -405,71 +405,163 @@ body{
 @media only screen and (min-width: 1025px) {
  
 /*---------------------------------------------------- NAVBAR ------------------------------------------------------*/
+.logo {
+  position: fixed;
+  top: 28px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  z-index: 100;
+  cursor: pointer;
+}
 
-  nav {
-      z-index: 50;
-      position: fixed;
-      width: 100%;
-      height: 7vh;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
-      align-items: center;
-      padding-block: 2.5vh;
-      text-transform: uppercase;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 400;
-      background: linear-gradient(to bottom, #ffffff, #f3f3f3);
-  }
-  
-  .navbar-separator-languages{
-      margin-right: -1vh;
-  }
-  .languages{
-      margin-left: -2vh;
-  }
-  .contact-us{
-      margin: 0 3vh;
-  }
-
-  nav a {
-    display: block;
-    padding: 10px;
-    color: #000000;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    color: #50fd50;
-  }
-
-  .logo {
+nav {
+    z-index: 50;
     position: fixed;
-    top: 28px;
-    left: 15px;
-    width: 35px;
-    height: 35px;
-    z-index: 100;
-    cursor: pointer;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-block: 2.5vh;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+    top: 0;
+    left: 0;
+}
+
+.navbar-separator-languages{
+    margin-right: -1vh;
+}
+.languages{
+    margin-left: -2vh;
+}
+.contact-us{
+    margin: 0 3vh;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  color: #000000;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #50fd50;
+}
+
+ul{
+  list-style: none;
+}
+
+ul li{
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin: 0 0 0 -35px;
+}
+
+ul li a{
+  display: block;
+  padding: 15px;
+  text-align: center;
+}
+
+ul li ul.dropdwown.li{
+  display: block;
+  font-size: small;
+  
+}
+
+ul li ul.dropdown{
+  width: 100%;
+  position: absolute;
+  z-index: 9999;
+  display: none;
+  
+  background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+}
+
+
+ul li:hover ul.dropdown{
+  display: block;
+}
+/*--------------------------------------------------  SECTIONS TODOS JUNTOS ------------------------------------------------*/
+  .smooth-scroll-wrapper{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    
+    scroll-snap-type: y proximity;
+    /*scroll-snap-type: y mandatory;*/
   }
-
-/*--------------------------------------------------  SECTION INTRO  -----------------------------------------------------*/
-
   .section-intro{
-      position:relative;
-      max-width: 100vw;
-      height: 90vh;
-      padding: 5vh 2vw 0px 2vw;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content:space-around;
-      align-items: center;
-      background: linear-gradient(to bottom, #ffffff, #929292);
+    position:relative;
+    max-width: 100vw;
+    height: 90vh;
+    padding: 5vh 2vw 0px 2vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    align-items: center;
+    background: linear-gradient(to bottom, #ffffff, #929292);
+    
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    scroll-padding-top: 7vh;
   }
  
+
+  .section-clients{
+    height: 15vh;
+    background-color: #F1F1F1;
+
+    scroll-padding-top: 7vh;
+  }
+
+
+  .section-general{
+    max-width: 100vw;
+    height: -webkit-fill-available;
+    background: #E0E0E0;
+    padding: 5vh 13vw;
+      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    scroll-padding-top: 7vh;
+  }
   
+  .section-form{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    place-items: center;
+    background:  #E0E0E0;
+    
+    scroll-snap-align: start;
+    scroll-padding-top: 7vh;
+    scroll-snap-stop: always;
+  }
+
+  
+  /*--------------------------------------------------  SECTIONS INTRO ------------------------------------------------*/
+
   h1{  
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
@@ -541,6 +633,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
     justify-items: stretch;
+    
   }
 
   #menu{
@@ -850,15 +943,11 @@ input[type="range"]:disabled::-moz-range-thumb {
   }
   
 
-
-  .section-clients{
-    height: 15vh;
-    background-color: #F1F1F1;
-  }
   .clients-text{
     padding: 0px 0 2vh 20vw;
     background-color: #F1F1F1;
   }
+
   .clients {
     display: flex;
     justify-content: space-around;
@@ -867,12 +956,13 @@ input[type="range"]:disabled::-moz-range-thumb {
     height: 24vh;
     background-color: #F1F1F1;
     padding: 0vh 20vw 0px 20vw;
-      
   }
+
   .client {
     text-align: center;
     margin: 20px;
   }
+  
   .client img {
     filter: grayscale(1);
     mix-blend-mode: darken;
@@ -893,26 +983,15 @@ input[type="range"]:disabled::-moz-range-thumb {
     height: 8vh;
   }
   .client h5 {
-      font-size: px;
-      color: #333;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 550;
+    font-size: px;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 550;
   }
 
 
 
 /*-------------------------------------------------- SECTIONS GENERAL PLATFORM AR  -----------------------------------------------------*/
-  .section-general{
-    max-width: 100vw;
-    height: -webkit-fill-available;
-    background: #E0E0E0;
-    padding: 5vh 13vw;
-      
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
   
   .general-text,
   .ar-image,
@@ -985,16 +1064,6 @@ input[type="range"]:disabled::-moz-range-thumb {
 
 /*-------------------------------------------------- FORM   -----------------------------------------------------*/
 
-.section-form{
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  place-items: center;
-  background:  #E0E0E0;
-}
 
 input{
   color: #333;

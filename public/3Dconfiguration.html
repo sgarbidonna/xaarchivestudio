@@ -19,21 +19,32 @@
 
 
       <!--- NAV BAR   -->
-
+<ul>
       <nav class="navbar navbar-light bg-light">
-          
-        <a class="xaa-logo" href="#intro"> <img src="contenido\logos\icon.png" alt="Logo" class="logo"> </a>
-
-        <a class="package-and-services" href="#">Package & Services</a>
+          <li><a class="xaa-logo" href="#intro"> <img src="contenido\logos\icon.png" alt="Logo" class="logo"> </a></li>
+<!--
+        <a class="package-and-services" href="#">Package & Services ▼</a>
         <div class="links-navbar">
-          <a href="#">3D Configuration</a>
-          <a href="#">Parametric Modeling</a>
-          <a href="#">Downloadables</a>
-          <a href="#">XAARCHIVE® AR</a>
-          <a href="#">Contact Us</a>
+          <a href="#general-1">3D Configuration</a>
+          <a href="#parametric">Parametric Modeling</a>
+          <a href="#contact-us">Downloadables</a>
+          <a href="#augmented-reality">XAARCHIVE® AR</a>
         </div>
+      -->
+      <li>
+        <a class="package-and-services" href="#">Package & Services ▼</a>
+        <ul class="dropdown">
+          <li><a href="./3Dconfiguration.html#intro">What we do</a></li>
+          <li><a href="./3Dconfiguration.html#general-1">3D Configuration</a></li>
+          <li><a href="./3Dconfiguration.html#parametric">Parametric Modeling</a></li>
+          <li><a href="./3Dconfiguration.html#contact-us">Downloadables</a></li>
+          <li><a href="./3Dconfiguration.html#augmented-reality">XAARCHIVE® AR</a></li>
+        </ul>
+      </li>
 
-        <a class="contact-us" href="#">Contact Us</a>
+      <div class="links-navbar"> 
+      </div>
+        <a class="contact-us" href="#form">Contact Us</a>
 
         <a class="navbar-separator-languages">  </a>
         <a class="languages" href="3Dconfiguration.html">ITA</a>
@@ -43,11 +54,11 @@
         <a class="languages" href="3Dconfiguration.html">ES</a>
         <a class="navbar-separator-languages">  </a>
       </nav>
+    </ul>
 
 
 
-
-
+<div class="smooth-scroll-wrapper">
 
       <!--  SECTION INTRODUCTION  -->
         <section class="section-intro" id="intro">
@@ -125,7 +136,6 @@
             <img src="./contenido/3Dconfiguration/WEB COMPU + CELU PNG.png" id="general-1-image"/>
           </div>
         </section>
-
         <div class="separator-section-white"> </div>
 
 
@@ -143,7 +153,6 @@
             <h4> By leveraging our expertise, companies can enhance their product offerings, reduce maual design costs, and deliver a superior, personalized experience, ultimately driving increased customer satisfaction and higher sales. </h4>
           </div>
         </section>
-
         <div class="separator-section-white"> </div>
 
 
@@ -175,7 +184,6 @@
 
           
         </section>
-
         <div class="separator-section-white"> </div>
 
 
@@ -223,12 +231,6 @@
           </div>
         </section>
 
-        
-        <!--
-      
-        <div class="separator-section-white"> </div>
-      
-        -->
 
 
       <!-- FOOTER  -->
@@ -249,9 +251,14 @@
       <br>
       </footer>
     
+    </div>
 
+
+      <script  src="./contenido/3Dconfiguration/smooth-scroll.js"></script>
       <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script src="./contenido/3Dconfiguration/form.js"></script>
+
+
 
     </body>
 </html>
