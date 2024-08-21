@@ -1,3 +1,4 @@
+/*
 import { createSession, createViewport, VISIBILITY_MODE } from "@shapediver/viewer";
 import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createParameterMenu";
 //import { setupIcons } from "./contenido/3Dconfiguration/utils/setupIcons";
@@ -12,7 +13,7 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
     }
 
     console.log('entro al async de **3Dconfiguration.ts**');
-/*
+
     const viewport = await createViewport({
         canvas: canvasElement,
         visibility: VISIBILITY_MODE.MANUAL,
@@ -33,7 +34,7 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
     viewport.show = true;
     
      //setupIcons(canvasElement, viewport);
-*/
+
 })();
 
-
+*/
