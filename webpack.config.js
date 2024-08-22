@@ -3,7 +3,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: '/public/3Dconfiguration.ts',
+  //entry: '/public/3Dconfiguration.ts',
+  entry: './public/index.ts',
   mode: 'production',
   /*
   performance: {
