@@ -1,9 +1,11 @@
 const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: '/public/3dconfiguration.ts',
+  entry: '/public/3Dconfiguration.ts',
   mode: 'production',
   
   performance: {
@@ -38,9 +40,16 @@ module.exports = {
         template: './public/3Dconfiguration.html',
         filename: '3Dconfiguration.html',
       }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: "./public",
+            to: "", //to the dist root directory
+            globOptions: {
+              ignore: ["**/3Dconfiguration.html",],
+            },
+          },
+        ],
+      }),
   ]
 };
-
-/*
-
-*/
