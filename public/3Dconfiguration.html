@@ -250,67 +250,68 @@
       <script  src="./contenido/3Dconfiguration/smooth-scroll.js"></script>
       <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script src="./contenido/3Dconfiguration/form.js"></script>
+      <script src="./3Dconfiguration.ts"></script>
 
-<script>
+      <script>
 
-  // NAVBAR NAVIGATION q desde html no funciona
-        document.querySelectorAll('.dropdown a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: 'smooth'
+        // NAVBAR NAVIGATION q desde html no funciona
+              document.querySelectorAll('.dropdown a').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                  window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                  });
+                }
+              });
             });
-          }
-        });
-      });
 
 
 
-  // ELIMINA EL ID DELA URL DE L NAVEFAROR
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
+        // ELIMINA EL ID DELA URL DE L NAVEFAROR
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                e.preventDefault();
 
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
 
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: 'smooth'
+                if (targetElement) {
+                  window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                  });
+                  history.pushState(null, null, ' ');
+
+                }
+              });
             });
-            history.pushState(null, null, ' ');
 
-          }
+      </script>
+
+      <script>
+        const observer = new IntersectionObserver((entries) =>{
+          entries.forEach((entry) => {
+            //console.log(entry)
+            if (entry.isIntersecting){
+              entry.target.classList.add('show');
+            } else{
+              entry.target.classList.remove('show');
+            }
+          });
         });
-      });
 
-</script>
+        const hiddenElementsFR = document.querySelectorAll('.hiddenFromRight');
+        hiddenElementsFR.forEach((el) => observer.observe(el));
 
-<script>
-  const observer = new IntersectionObserver((entries) =>{
-    entries.forEach((entry) => {
-      //console.log(entry)
-      if (entry.isIntersecting){
-        entry.target.classList.add('show');
-      } else{
-        entry.target.classList.remove('show');
-      }
-    });
-  });
+        
+        const hiddenElementsFL = document.querySelectorAll('.hiddenFromLeft');
+        hiddenElementsFL.forEach((el) => observer.observe(el));
 
-  const hiddenElementsFR = document.querySelectorAll('.hiddenFromRight');
-  hiddenElementsFR.forEach((el) => observer.observe(el));
-
-  
-  const hiddenElementsFL = document.querySelectorAll('.hiddenFromLeft');
-  hiddenElementsFL.forEach((el) => observer.observe(el));
-
-</script>
+      </script>
 
     </body>
 </html>
