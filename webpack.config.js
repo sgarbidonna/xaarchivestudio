@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: '/public/3Dconfiguration.ts',
-  //entry: './public/index.ts',
   mode: 'production',
   
   performance: {
@@ -30,7 +29,7 @@ module.exports = {
   },
   
   output: {
-    filename: 'ybundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   

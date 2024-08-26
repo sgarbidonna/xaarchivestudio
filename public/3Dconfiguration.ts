@@ -33,6 +33,7 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
     createParameterMenu(session, viewport);
 
     viewport.show = true;
+    console.log('entro a 3Dconfiguration.ts');
     
      //setupIcons(canvasElement, viewport);
 

@@ -12,10 +12,10 @@ module.exports = {
                 //loader: "ts-loader",
                 use: "ts-loader",
                 exclude: /node_modules/,
-                options: {
+                /*options: {
                     transpileOnly: true,
                     onlyCompileBundledFiles: true
-                }
+                }*/
             }
         ]
     },
