@@ -1,3 +1,3 @@
 
 console.log('entro en index.ts');
-//import "./3Dconfiguration";
+import "./3Dconfiguration";
