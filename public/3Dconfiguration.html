@@ -82,8 +82,8 @@
 
         <!--  SEPARATOR  ARROWS   -->
         <div class="section-arrows">
-          <div class="separator-line"></div>
-            <img class="arrows" src="./contenido/3Dconfiguration/arrows.png"></img> 
+          <div class="separator-line" ></div>
+          <img href="#clients" id="arrows" class="arrows" src="./contenido/3Dconfiguration/arrows.png"></img> 
            <!--  <div class="arrows">> ></div>-->
         </div>
           
@@ -165,13 +165,13 @@
 
 
          <!-- SECTION 4 AR  -->
-         <section class="section-general-2" id="augmented-reality">
+         <section class="section-general-3" id="augmented-reality">
           <div class="ar-image">
             <div class="hiddenFromLeft">
               <img src="./contenido/3Dconfiguration/phonw Ar.png" id="augmented-reality-image"/>
             </div>
           </div>
-          <div class="general-text">
+          <div class="general-text" id="general-text-ar">
             <h2> XAARCHIVE® AR </h2>
             <h4> Imagine placing your ideal pergola exacty where you envision it. With XAARCHIVE® AR, you can easily position your custom pergolas in any outdoor environment. The photorealistic quality of XAARCHIVE®'s augmented reality makes a great way of seeing how they would look in reality.</h4>
             <h4> Plus, you can enhance your website with WebAR, allowing customers to see your pergolas in 3D and instantly visualize them in their own space using their phones. No download or app required.</h4>
@@ -184,39 +184,40 @@
         <!-- SECTION 5 FORM  -->
          <section class="section-form" id="form">
 
-          <h2> CONTACT US For Pricing and Packages </h2>
+          <h2 id="text-form"> CONTACT US For Pricing and Packages </h2>
 
           <div class="form-container">
 
-            <form id="form" action="#" method="POST" >
+            <form action="#" method="POST" >
 
-              <div class="form-group">
+              <div class="form-group" id="form-group-1">
                   <label for="company-name">Company Name</label>
                   <input type="text" id="company-name" name="company-name"  placeholder="Can't be blank" required>
                   
               </div>
               
-              <div class="form-group">
+              <div class="form-group" id="form-group-2">
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email"  placeholder="Can't be blank" required>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" id="form-group-3">
                   <label for="country">Country</label>
                   <input type="text" id="country" name="country"  placeholder="Can't be blank" required>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" id="form-group-4">
                   <label for="pricing-info">I want to receive Pricing information</label>
                   <input type="checkbox" id="pricing-info" name="pricing-info">
               </div>
 
-              <div class="form-group">
+              <div class="form-group" id="form-group-5">
                   <label for="message">Message</label>
                   <textarea id="message" name="message" placeholder="Can't be blank" required  ></textarea>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" id="form-group-6">
+                <label></label>
                 <div class="btn-1"> <a class="submit-a" href="#" id="submit-link"><span id='span-submit' type="submit">SUBMIT</span></a> </div>
               </div>
 
@@ -269,8 +270,21 @@
               });
             });
 
-
-
+        //navigation en arrows porq del html no funca
+        console.log('arrows',  document.getElementById('arrows'));
+          /*
+          document.getElementById('arrows').addEventListener('click', function(e){
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+          });
+*/
         // ELIMINA EL ID DELA URL DE L NAVEFAROR
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
               anchor.addEventListener('click', function(e) {

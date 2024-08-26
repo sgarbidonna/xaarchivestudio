@@ -26,7 +26,7 @@ export const createPatternColorElement = (
   contentElement.className = "content";
   contentElement.style.position="absolute";
   contentElement.style.top="34vh";
-  contentElement.style.right="8vw";
+  contentElement.style.right="2vw";
 
   parentDiv.appendChild(contentElement);
 

@@ -16,8 +16,10 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
     const viewport = await createViewport({
         canvas: canvasElement,
         visibility: VISIBILITY_MODE.MANUAL,
-        id: "Test-Donni-Viewport1" 
-    
+        id: "Test-Donni-Viewport1", 
+        branding:{
+            logo:'./contenido/logos/Loading.gif'
+        }
     
     })
 
@@ -31,9 +33,11 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
     })
 
     createParameterMenu(session, viewport);
-
-    viewport.show = true;
     viewport.automaticResizing = true;
+    viewport.show = true;
+
+    
+
      //setupIcons(canvasElement, viewport);
 
 })();
