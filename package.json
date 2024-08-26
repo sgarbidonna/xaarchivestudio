@@ -16,9 +16,7 @@
   },
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "build-dev": "webpack --config webpack.dev.js",
-    "build-prod": "webpack --config webpack.prod.js"
+    "build": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": [
