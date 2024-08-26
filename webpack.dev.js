@@ -22,6 +22,17 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
     },
+    output: {
+      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist')
+    },
+    
+    plugins: [
+        new HtmlWebpackPlugin({
+          template: './public/3Dconfiguration.html',
+          filename: '3Dconfiguration.html',
+        }),
+    ],
     devServer: {
         open: true,
         static: path.resolve(__dirname, 'dist-dev'),
