@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XAARCHIVE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fondamento:ital@0;1&family=Kode+Mono&family=Micro+5&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="estilos\3Dconfiguration.css">
+      
+      
+</head>
+<style>
+    body{
+  margin: 0;
+  background-color: #f1f1f1;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (min-width: 1025px) {
+ 
+ .logo {
+   position: fixed;
+   top: 28px;
+   left: 15px;
+   width: 35px;
+   height: 35px;
+   z-index: 100;
+   cursor: pointer;
+ }
+ 
+ nav {
+     z-index: 50;
+     position: fixed;
+     width: 100%;
+     height: 7vh;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: flex-end;
+     align-items: center;
+     padding-block: 2.5vh;
+     text-transform: uppercase;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 400;
+     background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+     top: 0;
+     left: 0;
+ }
+ 
+ .navbar-separator-languages{
+     margin-right: -1vh;
+ }
+ .languages{
+     margin-left: -2vh;
+ }
+ .contact-us{
+     margin: 0 3vh;
+ }
+ 
+ nav a {
+   display: block;
+   padding: 10px;
+   color: #000000;
+   text-decoration: none;
+ }
+ 
+ nav a:hover {
+   color: #50fd50;
+ }
+ 
+ ul{
+   list-style: none;
+ }
+ 
+ ul li{
+   position: relative;
+   text-align: center;
+   margin: 0 0 0 -35px;
+ }
+ 
+ ul li a{
+   display: block;
+   padding: 15px;
+   text-align: center;
+ }
+ 
+ ul li ul.dropdwown.li{
+   display: block;
+ }
+ 
+ ul li ul.dropdown{
+   width: 80%;
+   font-size: small;
+   position: absolute;
+   z-index: 9999;
+   display: none;
+   background: linear-gradient(to top, #ffffff, #f6f6f6);
+ }
+ 
+ 
+ ul li:hover ul.dropdown{
+   display: block;
+ }
+  .smooth-scroll-wrapper{
+     position: fixed;
+     z-index: 2;
+     top: 0;
+     left: 0;
+ 
+     overflow: hidden;
+     overflow-y: scroll;
+     scroll-snap-type: y mandatory;
+     scroll-behavior: smooth;
+   }
+   .section-intro{
+     position:relative;
+     max-width: 100vw;
+     height: 90vh;
+     padding: 5vh 2vw 0px 2vw;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content:space-around;
+     align-items: center;
+     background: linear-gradient(to bottom, #ffffff, #929292);
+ 
+     scroll-snap-align: center;
+     scroll-snap-stop: always; 
+   }
+  
+ 
+   .section-clients{
+     height: 15vh;
+     background-color: #F1F1F1;
+   }
+ 
+ 
+   .section-general{
+     max-width: 100vw;
+     height: 80vh;
+     background: #E0E0E0;
+     padding: 5vh 13vw;
+       
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+ 
+     scroll-snap-align: center;
+     scroll-snap-stop: always;
+  }
+   
+   .section-form{
+     width: 100%;
+     height: 80vh;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content: space-evenly;
+     place-items: center;
+     background:  #E0E0E0;
+     
+     
+     scroll-snap-align: end;
+     scroll-snap-stop: always;
+   }
+ 
+
+   h1{  
+       font-family: "Montserrat", sans-serif;
+       font-weight: 700;
+       font-style: normal;
+       font-size: xxx-large;
+       letter-spacing: 1px;
+       word-spacing: 3px;
+   }
+   
+   p{
+       
+       font-family: "Montserrat", sans-serif;
+       font-weight: 500;
+       font-style: normal;
+       text-align: justify;
+       font-size: small;
+   }
+ 
+   .intro-text{
+     padding: 0px 10vh;
+   }
+ 
+   #intro-3d{
+     flex: 1;
+     padding: 0 3vw;
+ 
+     display: flex !important;
+     flex-direction: column !important;
+     flex-wrap: nowrap !important;
+     align-items: center !important;
+     }
+   
+   #canvas{
+     width: 40vw !important;
+     max-width: 40vw !important;
+     height: 45vh !important;
+     aspect-ratio: 4 / 5 !important;
+     mix-blend-mode: multiply !important;
+   
+   }
+ 
+   .product{
+     font-family: "Montserrat", sans-serif !important;
+     font-weight: 500 !important;
+     font-style: normal !important;
+     text-align: justify !important;
+     font-size: small !important;
+     text-decoration: underline;
+     text-underline-offset: 3px;
+   }
+ 
+   #menu-container{
+     width: 40vw !important;
+     max-width: 40vw !important;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+     align-items: center;
+   }
+ 
+   #info-menu{
+     width: 50vw;
+     max-width: 50vw;
+     height: 5vh;
+ 
+     display: grid;
+     grid-template-columns: 62% 38%;
+     align-content: space-between;
+     justify-content: space-evenly;
+     align-items: center;
+     justify-items: stretch;
+     
+   }
+ 
+   #menu{
+     width: 41vw;
+     font-family: "Montserrat", sans-serif !important;
+     font-weight: 400 !important;
+     font-style: normal !important;
+     text-align: justify !important;
+     font-size: small !important;
+   
+   }
+ 
+   .pattern-box{
+     padding: 1vh 0 !important;
+   }
+ 
+   #img-brilliant-white{
+     mask-image: radial-gradient(circle, black 66%, rgba(0, 0, 0, 0) 0%) !important;
+   }
+ 
+ 
+ 
+   .links-navbar {
+     display: none;
+     position: absolute;
+     top: 12vh;
+     right: 18vw;
+     background-color: #f1f1f1;
+     z-index: 10;
+   }
+   .package-and-services:hover .links-navbar{
+     display: block !important; 
+   }
+   .links-navbar a {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+   }
+   
+
+   input[type="range"] {
+     font-size: 1.5rem;
+     width: 12.5em;
+     color: #4b4b4b;
+     --thumb-height: 0.7em;
+     --track-height: 0.1em;
+     --track-color: rgba(0, 0, 0, 0.2);
+     --brightness-hover: 180%;
+     --brightness-down: 80%;
+     --clip-edges: 0.125em;
+   }
+   
+   
+ @media (prefers-color-scheme: dark) {
+     html {
+         background-color: #000;
+     }
+ 
+     html::before {
+         background: radial-gradient(circle at center, #101112, #000);
+     }
+ 
+     input[type="range"] {
+         color: #f07167;
+         --track-color: rgba(255, 255, 255, 0.1);
+     }
+ 
+     input[type="range"].win10-thumb {
+         color: #3a86ff;
+     }
+ }
+ 
+ /* === range commons === */
+ input[type="range"] {
+     position: relative;
+     background: #fff0;
+     overflow: hidden;
+ }
+ 
+ input[type="range"]:active {
+     cursor: grabbing;
+ }
+ 
+ input[type="range"]:disabled {
+     filter: grayscale(1);
+     opacity: 0.3;
+     cursor: not-allowed;
+ }
+ 
+ input[type="range"].win10-thumb {
+     color: #2b2d42;
+ 
+     --thumb-height: 1.375em;
+     --thumb-width: 0.5em;
+     --clip-edges: 0.0125em;
+ }
+ 
+ /* === WebKit specific styles === */
+ input[type="range"],
+ input[type="range"]::-webkit-slider-runnable-track,
+ input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance: none;
+     transition: all ease 100ms;
+     height: var(--thumb-height);
+ }
+ 
+ input[type="range"]::-webkit-slider-runnable-track,
+ input[type="range"]::-webkit-slider-thumb {
+     position: relative;
+ }
+ 
+ input[type="range"]::-webkit-slider-thumb {
+     --thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+     --clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+     --clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+     --clip-further: calc(100% + 1px);
+     --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+         100vmax currentColor;
+ 
+     width: var(--thumb-width, var(--thumb-height));
+     background: linear-gradient(currentColor 0 0) scroll no-repeat left center /
+         50% calc(var(--track-height) + 1px);
+     background-color: currentColor;
+     box-shadow: var(--box-fill);
+     border-radius: var(--thumb-width, var(--thumb-height));
+ 
+     filter: brightness(100%);
+     clip-path: polygon(
+         100% -1px,
+         var(--clip-edges) -1px,
+         0 var(--clip-top),
+         -100vmax var(--clip-top),
+         -100vmax var(--clip-bottom),
+         0 var(--clip-bottom),
+         var(--clip-edges) 100%,
+         var(--clip-further) var(--clip-further)
+     );
+ }
+ 
+ input[type="range"]:hover::-webkit-slider-thumb {
+     filter: brightness(var(--brightness-hover));
+     cursor: grab;
+ }
+ 
+ input[type="range"]:active::-webkit-slider-thumb {
+     filter: brightness(var(--brightness-down));
+     cursor: grabbing;
+ }
+ 
+ input[type="range"]::-webkit-slider-runnable-track {
+     background: linear-gradient(var(--track-color) 0 0) scroll no-repeat center /
+         100% calc(var(--track-height) + 1px);
+ }
+ 
+ input[type="range"]:disabled::-webkit-slider-thumb {
+     cursor: not-allowed;
+ }
+ 
+ /* === Firefox specific styles === */
+ input[type="range"],
+ input[type="range"]::-moz-range-track,
+ input[type="range"]::-moz-range-thumb {
+     appearance: none;
+     transition: all ease 100ms;
+     height: var(--thumb-height);
+ }
+ 
+ input[type="range"]::-moz-range-track,
+ input[type="range"]::-moz-range-thumb,
+ input[type="range"]::-moz-range-progress {
+     background: #fff0;
+ }
+ 
+ input[type="range"]::-moz-range-thumb {
+     background: currentColor;
+     border: 0;
+     width: var(--thumb-width, var(--thumb-height));
+     border-radius: var(--thumb-width, var(--thumb-height));
+     cursor: grab;
+ }
+ 
+ input[type="range"]:active::-moz-range-thumb {
+     cursor: grabbing;
+ }
+ 
+ input[type="range"]::-moz-range-track {
+     width: 100%;
+     background: var(--track-color);
+ }
+ 
+ input[type="range"]::-moz-range-progress {
+     appearance: none;
+     background: currentColor;
+     transition-delay: 30ms;
+ }
+ 
+ input[type="range"]::-moz-range-track,
+ input[type="range"]::-moz-range-progress {
+     height: calc(var(--track-height) + 1px);
+     border-radius: var(--track-height);
+ }
+ 
+ input[type="range"]::-moz-range-thumb,
+ input[type="range"]::-moz-range-progress {
+     filter: brightness(100%);
+ }
+ 
+ input[type="range"]:hover::-moz-range-thumb,
+ input[type="range"]:hover::-moz-range-progress {
+     filter: brightness(var(--brightness-hover));
+ }
+ 
+ input[type="range"]:active::-moz-range-thumb,
+ input[type="range"]:active::-moz-range-progress {
+     filter: brightness(var(--brightness-down));
+ }
+ 
+ input[type="range"]:disabled::-moz-range-thumb {
+     cursor: not-allowed;
+ }
+ 
+
+   .separator-line{
+       width: 100%;
+       height: 5vh;
+       background-color: #4B4B4B;
+       display: relative;
+       left: 0;
+   }
+ 
+   .arrows{
+       width:4vh;
+       height: 5vh;
+       background-color: #939393;
+       transform: rotate(180deg);
+       position:absolute;
+       top: 92vh;
+       right: 50vw;
+       padding: 2vh 1vh;
+       border-radius: 150px;
+       box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.4), 0 -2px 5px 0 rgba(0, 0, 0, 0.9);
+   }
+   
+ 
+   .clients-text{
+     padding: 0px 0 2vh 20vw;
+     background-color: #F1F1F1;
+   }
+ 
+   .clients {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     height: 24vh;
+     background-color: #F1F1F1;
+     padding: 0vh 20vw 0px 20vw;
+   }
+ 
+   .client {
+     text-align: center;
+     margin: 20px;
+   }
+   
+   .client img {
+     filter: grayscale(1);
+     mix-blend-mode: darken;
+   }
+ 
+   #bern-image{
+     height: 8vh;
+   }
+   #abiya-image{
+     height: 5vh;
+     margin: 1vh;
+   }
+   #milano-image{
+     height: 12vh;
+     margin: -3.5vh 0;
+   }
+   #stockholm-image{
+     height: 8vh;
+   }
+   .client h5 {
+     font-size: px;
+     color: #333;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 550;
+   }
+ 
+   .general-text,
+   .ar-image,
+   .contact-us-space,
+   .general-image    {
+     flex: 1;
+   }
+   
+   #general-1-image{
+     height: 33vw;
+   }
+ 
+ 
+   #parametric-image{
+     height: 30vw;
+     margin-left: -5vw;
+   }
+ 
+   #contact-us-img{
+     height: 30vw;
+   }
+ 
+   #augmented-reality-image{
+     height: 30vw;
+     margin-left: -5vw;
+     -webkit-transform: scaleX(-1);
+     transform: scaleX(-1);
+   }
+ 
+
+   .parametric-text{
+     width: 40%;
+     padding: 0 1vh;
+   }
+ 
+ 
+   h2{
+     font-family: "Montserrat", sans-serif;
+     font-weight: 600;
+     font-style: normal;
+     font-size: 41px;
+     letter-spacing: 1px;
+     word-spacing: 3px;
+   }
+ 
+   h4{
+     font-family: "Montserrat", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     text-align: justify;
+     font-size: medium;
+   }
+ 
+ 
+   .separator-section-white{
+     width: 100%;
+     height: 15vh;
+     background-color: #F1F1F1;
+   }
+ 
+ 
+ 
+ /*-------------------------------------------------- FORM   -----------------------------------------------------*/
+ 
+ 
+ input{
+   color: #333;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 400;
+   font-size: 12px;
+   text-align: left;
+ }
+ .form-container {
+   width: 50%;
+   margin: 0 150px 0 0;
+   padding: 20px;
+ }
+ .form-group {
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+   justify-content: flex-end;
+ }
+ .form-group label {
+   flex: 1;
+   font-size: 18px;
+   color: #333;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+   font-size: small;
+   text-align: right;
+   margin: 0 2vh;
+ }
+ .form-group input[type="text"],
+ .form-group input[type="email"],
+ .form-group textarea {
+   flex: 2;
+   padding: 10px;
+   font-size: 12px;
+   border: none;
+   border-radius: 12px;
+   background-color: #fff;
+ }
+ .form-group input[type="checkbox"] {
+   height: 20px;
+   /* flex: 2; */
+ 
+ }
+ .form-group textarea {
+   height: 100px;
+ }
+ 
+ form input{
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+   text-align: left;
+   border-radius: 6px;
+   background-color: #fff;
+   border: none;
+   height: 3vh;
+   padding: 0 1vw;
+   
+ }  
+ form textarea{
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+   text-align: left;
+ }  
+ input::placeholder, 
+ textarea::placeholder {
+   color: transparent;
+ }
+ 
+ /*--------------------------------------------------  SUBMIT BUTTOM ANIMATION   -----------------------------------------------------*/
+ 
+ .btn-1{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   align-content: space-around;
+   flex-wrap: nowrap;
+   margin-top: 2vh;
+   
+ }
+ 
+ .btn-1 .submit-a {
+   text-decoration: none;
+   border: 1px solid #010100;
+   border-radius: 5px;
+   padding: 15px;
+   color: #000;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   position: relative;
+   display: inline-block;
+   
+ }
+ 
+ span {
+   position: relative;
+   z-index: 3;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+   font-size: small; 
+ }
+ 
+ .btn-1 .submit-a::before {
+   content: "";
+   position: absolute;
+   top: 5px;
+   left: -2px;
+   width: calc(100% + 6px);
+   height: calc(100% - 10px);
+   background-color: #E0E0E0;
+   transition: all 0.5s ease-in-out;
+   transform: scaleY(1);
+ }
+ 
+ .btn-1 .submit-a:hover::before{
+   transform: scaleY(0);
+ }
+ 
+ .btn-1 .submit-a::after {
+   content: "";
+   position: absolute;
+   left: 5px;
+   top: -5px;
+   width: calc(100% - 10px);
+   height: calc(100% + 10px);
+   background-color: #E0E0E0;
+   transition: all 0.5s ease-in-out;
+   transform: scaleX(1);
+   
+ }
+ 
+ .btn-1 .submit-a:hover::after {
+   transform: scaleX(0);
+ }
+}
+</style>
+    <body>
+
+      <!--- NAV BAR   -->
+      <ul>
+        <nav class="navbar navbar-light bg-light">
+            <li><a class="xaa-logo" href="#intro"> <img src="contenido\logos\icon.png" alt="Logo" class="logo"> </a></li>
+
+        <li>
+          <a class="package-and-services" href="#">Package & Services</a>
+<!--          <a class="package-and-services" href="#">Package & Services ▼ </a> -->
+          
+          <ul class="dropdown">
+            <li><a href="#intro">What we do</a></li>
+            <li><a href="#general-1">3D Configuration</a></li>
+            <li><a href="#parametric">Parametric Modeling</a></li>
+            <li><a href="#contact-us">Downloadables</a></li>
+            <li><a href="#augmented-reality">XAARCHIVE® AR</a></li>
+          </ul>
+        </li>
+
+        <div class="links-navbar"></div>
+          <a class="contact-us" href="#form">Contact Us</a>
+          
+          <a class="navbar-separator-languages">  </a>
+          <a class="languages" href="3Dconfiguration.html">ITA</a>
+          <a class="languages" > / </a>
+          <a class="languages" href="3Dconfiguration.html">ENG</a>
+          <a class="languages" > / </a>
+          <a class="languages" href="3Dconfiguration.html">ES</a>
+          <a class="navbar-separator-languages">  </a>
+        </nav>
+      </ul>
+
+
+
+    <div class="smooth-scroll-wrapper">
+
+      <!--  SECTION INTRODUCTION  -->
+        <section class="section-intro" id="intro">
+
+          <div class="intro-text">
+            <h1> WE HELP YOU BOOST YOUR SALES. </h1>
+            <p> An online 3D configurator is the perfect addition to your website.  </p>
+            <p> Utilizing advanced parametric design, we will create custom 3D models with real-time dimension & characteristics updates, providing a comprehensive product experience that will enhance customer engagement focused on personalization. </p>
+          </div>
+
+          
+          <div class="intro-3d">
+            <canvas class="canvas" id="canvas"></canvas>
+            
+            <!--  PRICE  -->
+            <div class="menu-container" id="menu-id" bis_skin_checked="1"> 
+              <!--  UNIT PRICE  -->
+                
+                <div id="info-menu" bis_skin_checked="1">
+<!--                  <div class="product"></div> -->
+                </div>
+              </div> 
+                
+              
+              <div id="menu" bis_skin_checked="1"> 
+                <div class="div" id="qty-value" hidden></div>
+              </div>
+              <div id="menu-buttons" bis_skin_checked="1"> </div>
+            
+          
+        </section>
+
+        <!--  SEPARATOR  ARROWS   -->
+        <div class="section-arrows">
+          <div class="separator-line"></div>
+            <img class="arrows" src="./contenido/3Dconfiguration/arrows.png"></img> 
+           <!--  <div class="arrows">> ></div>-->
+        </div>
+          
+
+        <!-- CLIENTS -->
+        <p class="clients-text"> We have worked with... </p>        
+        <div class="clients" id="clients">
+            <div class="client">
+              <img alt="Logo of a company based in Bern, Switzerland"  src="./contenido/3Dconfiguration/bern.jpeg"  id="bern-image"/>
+              <h5> Bern, Switzerland. </h5>
+            </div>
+            <div class="client">
+              <img alt="Logo of a company based in Dubai, Arab Emirates" src="./contenido/3Dconfiguration/abiya.png" id="abiya-image"/>
+              <h5> Dubai, Arab Emirates. </h5>
+            </div>
+            <div class="client">
+              <img alt="Logo of a company based in Milan, Italy" src="./contenido/3Dconfiguration/milano.jpg" id="milano-image"/>
+              <h5> Milan, Italy. </h5>
+            </div>
+            <div class="client">
+              <img alt="Logo of a company based in Stockholm, Sweden" src="./contenido/3Dconfiguration/stockholm.jpeg" id="stockholm-image"/>
+              <h5> Stockholm, Sweden.</h5>
+            </div>
+        </div>
+
+
+        <!-- SECTION 1  -->
+        <section class="section-general" id="general-1">
+          <div class="general-text">
+            <h2> XAARCHIVE's personalized 3D configurator </h2>
+            <h4> We have developed our own innovative real-time configuration system that  can be customized and adapted to perfectly fit the client’s product needs allowing for best experience available on the market.  </h4>
+            <h4> XAARCHIVE® 3D product configurator works with all mobile and desktop platforms. Show your customers all your products with all the choices available. Our platform will make selling more engaging therefore increasing your closing rate.  </h4>
+            <h4> Your customers are able to visualize LIVE all design changes while seeing the updated price. They can download the PDF of their specific iteration, images and BIM models. Eliminating the manual labour of personalizing the product and creating the  new offer. </h4>
+          </div>
+
+          <div class="general-image">
+            <img src="./contenido/3Dconfiguration/WEB COMPU + CELU PNG.png" id="general-1-image"/>
+          </div>
+
+        </section>
+        <div class="separator-section-white"> </div>
+
+
+
+        <!-- SECTION 2 PARAMETRIC  -->
+        <section class="section-general" id="parametric">
+          <div class="general-image">
+            <img src="./contenido/3Dconfiguration/PARAMETRIC DESIGN.png" id="parametric-image"/>
+          </div>
+
+          <div class="general-text">
+            <h2> Parametric Modeling </h2>
+            <h4> We empower businesses selling variable products to offer unparalleled customization and efficiency. Our parametric models allow for dynamic adjustments to dimensions, shapes, and features, enabling clients to easily tailor their products to customer specifications without starting from scratch each time. This means faster design iterations, precise customization, and a consistent quality across all product variations. </h4>
+            <h4> By leveraging our expertise, companies can enhance their product offerings, reduce maual design costs, and deliver a superior, personalized experience, ultimately driving increased customer satisfaction and higher sales. </h4>
+          </div>
+
+        </section>
+        <div class="separator-section-white"> </div>
+
+        <!-- SECTION 3 EXPORT TO PDF  -->
+        <section class="section-general" id="contact-us">
+          
+          <div class="general-text">
+            <h2> Export to PDF, DWG or others </h2>
+            <h4> Our platform can quickly create a downloadable 3D model with all the information of the iteration created by the user. It will include the pricing, dimensions and color requests so it can all be saved and the process of acquisition runs smoother than ever.</h4>
+            <h4> If desired, the DWG or 3D model iterations can be downloaded too, and added to on-going 3D plans and architecture renderings.</h4>
+          </div>
+          <div class="contact-us-space"> 
+            <img src="./contenido/3Dconfiguration/LAYOUT COMPU + PDF.png" id="contact-us-img"/>
+          </div>
+        </section>
+        <div class="separator-section-white"> </div>
+
+
+         <!-- SECTION 4 AR  -->
+         <section class="section-general" id="augmented-reality">
+          <div class="ar-image">
+            <img src="./contenido/3Dconfiguration/phonw Ar.png" id="augmented-reality-image"/>
+          </div>
+          <div class="general-text">
+            <h2> XAARCHIVE® AR </h2>
+            <h4> Imagine placing your ideal pergola exacty where you envision it. With XAARCHIVE® AR, you can easily position your custom pergolas in any outdoor environment. The photorealistic quality of XAARCHIVE®'s augmented reality makes a great way of seeing how they would look in reality.</h4>
+            <h4> Plus, you can enhance your website with WebAR, allowing customers to see your pergolas in 3D and instantly visualize them in their own space using their phones. No download or app required.</h4>
+          </div>
+
+        </section>
+        <div class="separator-section-white"> </div>
+
+
+        <!-- SECTION 5 FORM  -->
+         <section class="section-form" id="form">
+
+          <h2> CONTACT US For Pricing and Packages </h2>
+
+          <div class="form-container">
+
+            <form id="form" action="#" method="POST" >
+
+              <div class="form-group">
+                  <label for="company-name">Company Name</label>
+                  <input type="text" id="company-name" name="company-name"  placeholder="Can't be blank" required>
+                  
+              </div>
+              
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email"  placeholder="Can't be blank" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="country">Country</label>
+                  <input type="text" id="country" name="country"  placeholder="Can't be blank" required>
+              </div>
+
+              <div class="form-group">
+                  <label for="pricing-info">I want to receive Pricing information</label>
+                  <input type="checkbox" id="pricing-info" name="pricing-info">
+              </div>
+
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Can't be blank" required  ></textarea>
+              </div>
+
+              <div class="form-group">
+                <div class="btn-1"> <a class="submit-a" href="#" id="submit-link"><span id='span-submit' type="submit">SUBMIT</span></a> </div>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+
+
+      <!-- FOOTER  -->
+      <footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="footer-buttons">
+          <a href="https://www.instagram.com/xaarchive____" target="_blank"><button class="footer-social-button"><i class="fab fa-instagram"></i></button></a>
+          <a href="https://www.linkedin.com/company/xaarchive-studio/" target="_blank"><button class="footer-social-button"><i class="fab fa-linkedin"></i></button></a>
+          <a href="mailto:info@xaarchivestudio.com"><button class="footer-social-button"><i class="fas fa-envelope"></i></button></a>
+        </div>
+        <br>
+        <div class="footer-text">
+          <span>All rights reserved &copy; XAARCHIVE STUDIO</span>
+      </div>
+      <br>
+      </footer>
+    
+    </div>
+
+
+      <script  src="./contenido/3Dconfiguration/smooth-scroll.js"></script>
+      <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script src="./contenido/3Dconfiguration/form.js"></script>
+
+<script>
+
+  // NAVBAR NAVIGATION q desde html no funciona
+        document.querySelectorAll('.dropdown a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+
+
+  // ELIMINA EL ID DELA URL DE L NAVEFAROR
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+            });
+            history.pushState(null, null, ' ');
+
+          }
+        });
+      });
+
+</script>
+
+    </body>
+</html>

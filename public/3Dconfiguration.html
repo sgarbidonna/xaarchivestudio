@@ -120,7 +120,9 @@
           </div>
 
           <div class="general-image">
-            <img src="./contenido/3Dconfiguration/WEB COMPU + CELU PNG.png" id="general-1-image"/>
+            <div class="hiddenFromRight">
+              <img src="./contenido/3Dconfiguration/WEB COMPU + CELU PNG.png" id="general-1-image"/>
+            </div>
           </div>
 
         </section>
@@ -131,7 +133,9 @@
         <!-- SECTION 2 PARAMETRIC  -->
         <section class="section-general" id="parametric">
           <div class="general-image">
-            <img src="./contenido/3Dconfiguration/PARAMETRIC DESIGN.png" id="parametric-image"/>
+            <div class="hiddenFromLeft">
+              <img src="./contenido/3Dconfiguration/PARAMETRIC DESIGN.png" id="parametric-image"/>
+            </div>
           </div>
 
           <div class="general-text">
@@ -152,7 +156,9 @@
             <h4> If desired, the DWG or 3D model iterations can be downloaded too, and added to on-going 3D plans and architecture renderings.</h4>
           </div>
           <div class="contact-us-space"> 
-            <img src="./contenido/3Dconfiguration/LAYOUT COMPU + PDF.png" id="contact-us-img"/>
+            <div class="hiddenFromRight">
+              <img src="./contenido/3Dconfiguration/LAYOUT COMPU + PDF.png" id="contact-us-img"/>
+            </div>
           </div>
         </section>
         <div class="separator-section-white"> </div>
@@ -161,7 +167,9 @@
          <!-- SECTION 4 AR  -->
          <section class="section-general" id="augmented-reality">
           <div class="ar-image">
-            <img src="./contenido/3Dconfiguration/phonw Ar.png" id="augmented-reality-image"/>
+            <div class="hiddenFromLeft">
+              <img src="./contenido/3Dconfiguration/phonw Ar.png" id="augmented-reality-image"/>
+            </div>
           </div>
           <div class="general-text">
             <h2> XAARCHIVE® AR </h2>
@@ -280,6 +288,27 @@
           }
         });
       });
+
+</script>
+
+<script>
+  const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+        entry.target.classList.add('show');
+      } else{
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+
+  const hiddenElementsFR = document.querySelectorAll('.hiddenFromRight');
+  hiddenElementsFR.forEach((el) => observer.observe(el));
+
+  
+  const hiddenElementsFL = document.querySelectorAll('.hiddenFromLeft');
+  hiddenElementsFL.forEach((el) => observer.observe(el));
 
 </script>
 
