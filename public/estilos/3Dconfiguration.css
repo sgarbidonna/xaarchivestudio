@@ -588,7 +588,7 @@ ul li:hover ul.dropdown{
   #intro-3d{
     flex: 1;
     padding: 0 3vw;
-
+    max-width: 15px;
     display: flex !important;
     flex-direction: column !important;
     flex-wrap: nowrap !important;
@@ -652,6 +652,7 @@ ul li:hover ul.dropdown{
 
   .pattern-box{
     padding: 1vh 0 !important;
+    cursor: pointer;
   }
 
   #img-brilliant-white{
@@ -709,62 +710,6 @@ ul li:hover ul.dropdown{
     transform: translateX(0);
   }
   
-  
-/*--------------------------------------------------  INPUT SIDES  --------------------------------------------------*/
-/*
-  
-  .side-container input[type="checkbox"] {
-    visibility: hidden !important;
-    display: none !important;
-  }
-
-  .side-container .form-check-label {
-    display: block !important;
-    position: relative !important;
-    cursor: pointer !important;
-    font-size: 20px !important;
-    user-select: none !important;
-  }
-
-  .side-container .form-check-input {
-    position: relative !important;
-    top: 0 !important;
-    left: 0 !important;
-    height: 1.3em !important;
-    width: 1.3em !important;
-    background-color: #ccc !important;
-    border-radius: 100% !important;
-    background: #e8e8e8 !important;
-    box-shadow: 3px 3px 5px #c5c5c5,
-                -3px -3px 5px #ffffff !important;
-  }
-
-  .side-container .form-check-label input:checked ~ .form-check-input {
-    box-shadow: inset 3px 3px 5px #c5c5c5,
-                inset -3px -3px 5px #ffffff !important;
-  }
-
-  .side-container .form-check-input:after {
-    content: "" !important;
-    position: absolute !important;
-    opacity: 0 !important;
-  }
-
-  .side-container .form-check-label input:checked ~ .form-check-input:after {
-    opacity: 1 !important;
-  }
-
-  .side-container .form-check-label .form-check-input:after {
-    left: 0.45em !important;
-    top: 0.25em !important;
-    width: 0.25em !important;
-    height: 0.5em !important;
-    border: solid darkgray !important;
-    border-width: 0 0.15em 0.15em 0 !important;
-    transform: rotate(45deg) !important;
-    transition: all 250ms !important;
-  }
-*/
 
 /*--------------------------------------------------  SLIDER PARAMETERS  --------------------------------------------------*/
 
