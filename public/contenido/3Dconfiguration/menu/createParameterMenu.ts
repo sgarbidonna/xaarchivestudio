@@ -6,7 +6,8 @@ import {
 // import { createPatternDesignElement } from "../collapsables/createPatternDesign";
 import { createPatternColorElement } from "../collapsables/createPatternColor";
 import { createDimensionsElement } from "../collapsables/createDimensions";
-//import { createDensityElement } from "../collapsables/createDensity";
+/*
+import { createDensityElement } from "../collapsables/createDensity";
 import { createMenu, getPriceOutput } from "./menuCreation";
 import { createReferenceElement } from "../collapsables/createReference";
 import { createBaseShape } from "../collapsables/createBaseShape";
@@ -19,9 +20,7 @@ import { createTopCover } from "../collapsables/createTopCover";
 import { createBottomCover } from "../collapsables/createBottomCover";
 import { createBorders } from "../collapsables/createBorders";
 
-
-console.log('** estoy en createdParameterMenu ** ');
-    
+*/  
 
 export const createParameterMenu = async (
   session: ISessionApi,
