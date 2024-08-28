@@ -441,12 +441,12 @@ background: radial-gradient(circle at center, #101112, #000);
 }
 
 input[type="range"] {
-color: #f07167;
+color: #4b4b4b;
 --track-color: rgba(255, 255, 255, 0.1);
 }
 
 input[type="range"].win10-thumb {
-color: #3a86ff;
+color: #4b4b4b;
 }
 }
 
