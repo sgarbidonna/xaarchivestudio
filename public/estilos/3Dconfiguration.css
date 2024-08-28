@@ -33,7 +33,6 @@ body{
   }    
   
   #menu {
-    width: 41vw;
     font-size: x-small !important;
   }
   
@@ -49,12 +48,13 @@ body{
   .unit-price-label{
     font-size: x-small !important;
   }
-  .content{
+  #pattern-colors{
     position: relative !important;
-    top: 4vh !important;
+    top: -38vh !important;
     right: -75vw !important;
     height: 0 !important;
   }
+
 
   .clients-text {
     padding: 5vh 0 2vh 20vw !important;

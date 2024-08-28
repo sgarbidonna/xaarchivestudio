@@ -24,6 +24,7 @@ export const createPatternColorElement = (
 
   const contentElement = document.createElement("div") as HTMLDivElement;
   contentElement.className = "content";
+  contentElement.id = "pattern-colors";
   contentElement.style.position="absolute";
   contentElement.style.top="34vh";
   contentElement.style.right="2vw";
