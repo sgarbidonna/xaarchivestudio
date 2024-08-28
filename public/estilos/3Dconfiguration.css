@@ -45,7 +45,11 @@ body{
   .product{
     font-size: x-small !important;
   }
-    font-size: x-small !important;
+  .unit-price-label{
+    font-size: x-small !important;    
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 25% 75% !important;
   }
   #pattern-colors{
     position: relative !important;
