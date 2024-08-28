@@ -2886,7 +2886,9 @@ margin-top: 10px;
   nav{
     height: 3vh;
     display: grid;
-    grid-template-columns: 0% 12% 12% 2% 5% 1% 5% 1% 5%;
+    grid-template-columns: 0% 12% 11% 0% 5% 1% 5% 1% 5%;
+    text-align: center;
+
   }
 }
 @media only screen and (min-width: 2560px){
