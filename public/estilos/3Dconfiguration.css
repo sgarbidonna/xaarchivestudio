@@ -23,7 +23,7 @@ body{
     position: relative;
     max-width: 100vw;
     height: auto !important;
-    padding: 15vh 3vw 5vh 3vw !important;
+    padding: 15vh 3vw 12vh 3vw !important;
     flex-direction: column !important;
   }
   
@@ -45,7 +45,6 @@ body{
   .product{
     font-size: x-small !important;
   }
-  .unit-price-label{
     font-size: x-small !important;
   }
   #pattern-colors{
