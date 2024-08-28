@@ -1872,7 +1872,6 @@ transform: scaleX(0);
 }
 
 
-/* Laptop */
 @media only screen and (min-width: 1025px) {
  
   /*---------------------------------------------------- NAVBAR ------------------------------------------------------*/
@@ -2724,8 +2723,6 @@ transform: scaleX(0);
   }
 }
 
-
-
 /*-------------------------------------------------- DERECHOS Y LINKS INICIO -----------------------------------------------------*/
 
 @media only screen and (max-width: 767px) {
@@ -2873,6 +2870,23 @@ margin-top: 10px;
   #form-group-4{
     display: grid;
     grid-template-columns: 95% 5%;
+  }
+  .sides-label{
+    margin-left: 0.8vw;
+  }
+
+  .navbar-separator-languages{
+    margin-left: 0;
+  }
+
+  .languages{
+    margin-left:0;
+  }
+
+  nav{
+    height: 3vh;
+    display: grid;
+    grid-template-columns: 0% 12% 12% 2% 5% 1% 5% 1% 5%;
   }
 }
 @media only screen and (min-width: 2560px){
