@@ -194,7 +194,6 @@ function updatePrice(
       const convertedPrice = Number((priceProp.data * conversionRate) * Number(qty || 1)).toFixed(2);
       priceElement.innerText ="€ " + convertedPrice;
       labelWithPrice.appendChild(priceElement);
-      console.log('convertedPrice', convertedPrice); 
     }
   }
 }

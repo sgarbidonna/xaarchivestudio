@@ -1,4 +1,3 @@
-
 import { createSession, createViewport, VISIBILITY_MODE } from "@shapediver/viewer";
 import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createParameterMenu";
 //import { setupIcons } from "./contenido/3Dconfiguration/utils/setupIcons";

@@ -13,9 +13,6 @@
       
 </head>
     <body>
-      <script>
-        console.log(window.innerWidth);
-      </script>
 
       <!--- NAV BAR   -->
       <ul>
@@ -24,8 +21,6 @@
 
         <li>
           <a class="package-and-services" href="#">Package & Services</a>
-<!--          <a class="package-and-services" href="#">Package & Services ▼ </a> -->
-          
           <ul class="dropdown">
             <li><a href="#intro">What we do</a></li>
             <li><a href="#general-1">3D Configuration</a></li>
@@ -124,7 +119,7 @@
 
           <div class="general-image">
             <div class="hiddenFromRight">
-              <img src="./contenido/3Dconfiguration/WEB COMPU + CELU PNG.png" id="general-1-image"/>
+              <img src="./contenido/3Dconfiguration/1.png" id="general-1-image"/>
             </div>
           </div>
 
@@ -137,7 +132,7 @@
         <section class="section-general-2" id="parametric">
           <div class="general-image">
             <div class="hiddenFromLeft">
-              <img src="./contenido/3Dconfiguration/PARAMETRIC DESIGN.png" id="parametric-image"/>
+              <img src="./contenido/3Dconfiguration/2.png" id="parametric-image"/>
             </div>
           </div>
 
@@ -160,7 +155,7 @@
           </div>
           <div class="contact-us-space"> 
             <div class="hiddenFromRight">
-              <img src="./contenido/3Dconfiguration/LAYOUT COMPU + PDF.png" id="contact-us-img"/>
+              <img src="./contenido/3Dconfiguration/3.png" id="contact-us-img"/>
             </div>
           </div>
         </section>
@@ -258,36 +253,40 @@
 
       <script>
 
-        // NAVBAR NAVIGATION q desde html no funciona
-              document.querySelectorAll('.dropdown a').forEach(anchor => {
-              anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                  window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                  });
-                }
-              });
-            });
 
-        //navigation en arrows porq del html no funca
-        console.log('arrows',  document.getElementById('arrows'));
-          /*
-          document.getElementById('arrows').addEventListener('click', function(e){
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+        
+        // NAVBAR NAVIGATION q desde html no funciona
+          document.querySelectorAll('.dropdown a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+              const offsetHeight = 180;
+              const targetId = this.getAttribute('href').substring(1);
               const targetElement = document.getElementById(targetId);
+              const offset = targetElement.offsetTop - offsetHeight;
               if (targetElement) {
                 window.scrollTo({
-                  top: targetElement.offsetTop,
+                  top: offset,
                   behavior: 'smooth'
                 });
               }
+            });
           });
-*/
+
+        //navigation en arrows porq del html no funca
+          document.getElementById('arrows').addEventListener('click', function(e){
+            e.preventDefault();
+            const offsetHeight = 180;
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            const offset = targetElement.offsetTop - offsetHeight;
+            if (targetElement) {
+                window.scrollTo({
+                  top: offset,
+                  behavior: 'smooth'  
+                });
+              }
+          });
+
         // ELIMINA EL ID DELA URL DE L NAVEFAROR
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
               anchor.addEventListener('click', function(e) {
@@ -310,9 +309,10 @@
       </script>
 
       <script>
+
+        // ANIMACION IMAGENES
         const observer = new IntersectionObserver((entries) =>{
           entries.forEach((entry) => {
-            //console.log(entry)
             if (entry.isIntersecting){
               entry.target.classList.add('show');
             } else{
@@ -323,8 +323,6 @@
 
         const hiddenElementsFR = document.querySelectorAll('.hiddenFromRight');
         hiddenElementsFR.forEach((el) => observer.observe(el));
-
-        
         const hiddenElementsFL = document.querySelectorAll('.hiddenFromLeft');
         hiddenElementsFL.forEach((el) => observer.observe(el));
 
