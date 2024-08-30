@@ -92,19 +92,19 @@
         <div class="clients" id="clients">
             <div class="client">
               <img alt="Logo of a company based in Bern, Switzerland"  src="./contenido/3Dconfiguration/bern.jpeg"  id="bern-image"/>
-              <h5 id="client-text"> Bern, Switzerland. </h5>
+              <h5 id="client-text" class="text-bern"> Bern, Switzerland. </h5>
             </div>
             <div class="client">
               <img alt="Logo of a company based in Dubai, Arab Emirates" src="./contenido/3Dconfiguration/abiya.png" id="abiya-image"/>
-              <h5 id="client-text"> Dubai, Arab Emirates. </h5>
+              <h5 id="client-text" class="text-dubai"> Dubai, Arab Emirates. </h5>
             </div>
             <div class="client">
               <img alt="Logo of a company based in Milan, Italy" src="./contenido/3Dconfiguration/milano.jpg" id="milano-image"/>
-              <h5 id="client-text"> Milan, Italy. </h5>
+              <h5 id="client-text" class="text-milan"> Milan, Italy. </h5>
             </div>
             <div class="client">
               <img alt="Logo of a company based in Stockholm, Sweden" src="./contenido/3Dconfiguration/stockholm.jpeg" id="stockholm-image"/>
-              <h5 id="client-text"> Stockholm, Sweden.</h5>
+              <h5 id="client-text" class="text-stockholm"> Stockholm, Sweden.</h5>
             </div>
         </div>
 
@@ -315,12 +315,13 @@
 
         // ANIMACION IMAGENES
         const observer = new IntersectionObserver((entries) =>{
+        
           entries.forEach((entry) => {
             if (entry.isIntersecting){
               entry.target.classList.add('show');
-            } else{
+            } /*else{
               entry.target.classList.remove('show');
-            }
+            }*/
           });
         });
 
@@ -330,6 +331,15 @@
         hiddenElementsFL.forEach((el) => observer.observe(el));
 
       </script>
-
+<script>
+  $(document).ready(function () {
+  function reorient(e) {
+    var portrait = (window.orientation % 180 == 0);
+    $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+  }
+  window.onorientationchange = reorient;
+  window.setTimeout(reorient, 0);
+});
+</script>
     </body>
 </html>

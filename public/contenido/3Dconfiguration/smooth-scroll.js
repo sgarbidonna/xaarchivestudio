@@ -1,8 +1,21 @@
-
-const body = document.body,
+if (screen.width > 1300) {
+    var body = document.body,
     scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
     height = scrollWrap.getBoundingClientRect().height - 1,
-    speed = 0.04;
+    speed = 0.1 ;
+
+    console.log(speed);
+} else {
+    var body = document.body,
+    scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+    height = scrollWrap.getBoundingClientRect().height - 1,
+    speed = 1 ;
+
+    console.log(speed);
+}
+
+
+
 
 
 var offset = 0;
