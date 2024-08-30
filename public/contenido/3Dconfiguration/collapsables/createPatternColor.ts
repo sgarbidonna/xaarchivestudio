@@ -36,55 +36,10 @@ export const createPatternColorElement = (
   let selectedImage: HTMLImageElement | null = null;
 
 
-  const filtroYOrdenParameters = [parameterObject.choices[6],parameterObject.choices[0],parameterObject.choices[5],parameterObject.choices[9]];
-
-  filtroYOrdenParameters.forEach((choice, index) => {
-
-
-      const patternBox = document.createElement("div") as HTMLDivElement;
-      patternBox.className = "pattern-box color";
-  
-      const img = document.createElement("img") as HTMLImageElement;
-      img.src = getLink(colorLinks, String(choice.replace(" ", "x")));
-      img.id = `img-${choice.replace(" ", "-").toLowerCase()}`;
-      img.style.width = '15px';
-      if (index != 3) img.style.maskImage = img.style.mixBlendMode = 'darken';
-      if (img.src) patternBox.appendChild(img);
-      
-  /*
-      // NOMBRE DEL COLOR
-      const patternLabel = document.createElement("p") as HTMLParagraphElement;
-      patternLabel.textContent = choice;
-      patternBox.appendChild(patternLabel);
-  */
-  
-      contentElement.appendChild(patternBox);
-  
-      if (parameterObject.defval === index.toString()) {
-        img.classList.add("selected-pattern");
-        selectedImage = img;
-      }
-  
-      patternBox.addEventListener("click", async () => {
-        if (selectedImage) {
-          selectedImage.classList.remove("selected-pattern");
-        }
-        img.classList.add("selected-pattern");
-        selectedImage = img;
-  
-        parameterObject.value = index.toString();
-        await session.customize().then((data) => {
-          const event = new CustomEvent('priceUpdated')
-          document.dispatchEvent(event);
-        })
-    
-    });
-  
-  });
-  /*
   parameterObject.choices.forEach((choice, index) => {
 
     if (index === 0 || index === 5 || index === 6 || index === 9){
+      
       const patternBox = document.createElement("div") as HTMLDivElement;
       patternBox.className = "pattern-box color";
   
@@ -119,7 +74,7 @@ export const createPatternColorElement = (
     });
   }
   });
-*/
+
 
   parameterDiv.addEventListener("click", function (event) {
     collapsibleManager.toggleCollapsible(parameterDiv);
