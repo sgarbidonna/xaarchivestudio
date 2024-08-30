@@ -38,28 +38,34 @@
           <a class="contact-us" href="#form">Contact Us</a>
           
           <a class="navbar-separator-languages">  </a>
-          <a class="languages" href="3Dconfiguration.html">ITA</a>
+          <a class="languages" href="3Dconfiguration.html/it">ITA</a>
           <a class="languages" > / </a>
           <a class="languages" href="3Dconfiguration.html">ENG</a>
           <a class="languages" > / </a>
-          <a class="languages" href="3Dconfiguration.html">ES</a>
+          <a class="languages" href="3Dconfiguration.html/es">ES</a>
           <a class="navbar-separator-languages">  </a>
 
 
-          <ul class="dropdown-tablet">
-            <li><a href="#intro">What we do</a></li>
-            <li><a href="#general-1">3D Configuration</a></li>
-            <li><a href="#parametric">Parametric Modeling</a></li>
-            <li><a href="#contact-us">Downloadables</a></li>
-            <li><a href="#augmented-reality">XAARCHIVE® AR</a></li>
-          </ul>
+          <li>
+            <a class="menu-tablet" id="menu-tablet" href="#">...</a>
+            <ul class="dropdown-tablet" id="dropdown-tablet">
+              <li><a href="#intro" class="menu-options">What we do</a></li>
+              <li><a href="#general-1" class="menu-options">3D Configuration</a></li>
+              <li><a href="#parametric" class="menu-options">Parametric Modeling</a></li>
+              <li><a href="#contact-us" class="menu-options">Downloadables</a></li>
+              <li><a href="#form" class="menu-options">Contact us</a></li>
+              <li><a href="3Dconfiguration.html/it">ITA</a></li>
+              <li><a href="3Dconfiguration.html">ENG</a></li>
+              <li><a href="3Dconfiguration.html/es">ES</a></li>
+            </ul>
+          </li>
 
         </nav>
       </ul>
 
 
 
-    <div class="smooth-scroll-wrapper">
+    <div class="smooth-scroll-wrapper" id="smooth-scroll-wrapper">
 
       <!--  SECTION INTRODUCTION  -->
         <section class="section-intro" id="intro">
@@ -246,6 +252,11 @@
         <br>
         <br>
         <br>
+        <div class="footer-text">
+          <h5>
+            <a href="mailto:info@xaarchivestudio.com">info@xaarchivestudio.com</a>
+          </h5>
+        </div>
         <div class="footer-buttons">
           <a href="https://www.instagram.com/xaarchive____" target="_blank"><button class="footer-social-button"><i class="fab fa-instagram"></i></button></a>
           <a href="https://www.linkedin.com/company/xaarchive-studio/" target="_blank"><button class="footer-social-button"><i class="fab fa-linkedin"></i></button></a>
@@ -265,18 +276,25 @@
       <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script src="./contenido/3Dconfiguration/form.js"></script>
       <script type="module" src="./3Dconfiguration.ts"></script>
-
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("preload-screen").style.display = "none"; }, 3000); // Cambia este valor al tiempo de carga real de tu página
+        });
+    </script>
       <script>
 
 
         console.log(window.innerWidth , 'WIDTH');
         console.log(window.innerHeight , 'HEIGHT');
 
+        const offsetHeight = 140;
+
         // NAVBAR NAVIGATION q desde html no funciona
           document.querySelectorAll('.dropdown a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();
-              const offsetHeight = 180;
+             
               const targetId = this.getAttribute('href').substring(1);
               const targetElement = document.getElementById(targetId);
               const offset = targetElement.offsetTop - offsetHeight;
@@ -285,14 +303,51 @@
                   top: offset,
                   behavior: 'smooth'
                 });
+                history.pushState(null, null, ' ');
               }
             });
           });
 
-        //navigation en arrows porq del html no funca
+        // NAVBAR NAVIGATION q desde html no funciona
+          document.querySelectorAll('.contact-us').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+             
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              const offset = targetElement.offsetTop - offsetHeight;
+              if (targetElement) {
+                window.scrollTo({
+                  top: offset,
+                  behavior: 'smooth'
+                });
+                history.pushState(null, null, ' ');
+              }
+            });
+          });
+        
+          // NAVBAR NAVIGATION q desde html no funciona
+          document.querySelectorAll('.dropdown-tablet a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+             
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              const offset = targetElement.offsetTop - offsetHeight;
+              if (targetElement) {
+                closeMenu();
+                window.scrollTo({
+                  top: offset,
+                  behavior: 'smooth'
+                });
+                history.pushState(null, null, ' ');
+              }
+            });
+          });
+
+        //ARROWS NAVIGATION porq del html no funca
           document.getElementById('arrows').addEventListener('click', function(e){
             e.preventDefault();
-            const offsetHeight = 180;
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
             const offset = targetElement.offsetTop - offsetHeight;
@@ -301,27 +356,53 @@
                   top: offset,
                   behavior: 'smooth'  
                 });
+                history.pushState(null, null, ' ');
               }
           });
 
-        // ELIMINA EL ID DELA URL DE L NAVEFAROR
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-              anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+          const menuTablet = document.getElementById('menu-tablet');
+        const dropdownTablet =  document.getElementById('dropdown-tablet');
+        const screenMine = document.getElementById('smooth-scroll-wrapper');
+        let menuOpen = 0;
+        const heightScreen = window.innerHeight - 75;
 
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+        menuTablet.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (menuOpen == 0){
+            openMenu();
+            } else {
+              closeMenu();
+            }
+        });
 
-                if (targetElement) {
-                  window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                  });
-                  history.pushState(null, null, ' ');
+        document.querySelectorAll('menu-options').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+              console.log('entro al closemenu de menuoptions');
+              closeMenu();
+          })
+        });
 
-                }
-              });
-            });
+          function openMenu(){
+            menuOpen = 1;
+            
+            menuTablet.style.rotate='0deg';
+            menuTablet.style.fontSize='xx-large';
+            menuTablet.textContent = 'x';
+            
+            dropdownTablet.style.height= heightScreen.toString() + 'px'; 
+            dropdownTablet.style.display='grid';
+          }
+
+          function closeMenu(){
+              menuOpen = 0;
+              menuTablet.style.rotate='-90deg';
+              menuTablet.style.fontSize='xxx-large';
+              menuTablet.textContent = '...';
+
+              dropdownTablet.style.height='0vh'  
+              dropdownTablet.style.display='none';
+            };
+          
 
       </script>
 
@@ -345,15 +426,23 @@
         hiddenElementsFL.forEach((el) => observer.observe(el));
 
       </script>
-<script>
-  $(document).ready(function () {
-  function reorient(e) {
-    var portrait = (window.orientation % 180 == 0);
-    $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
-  }
-  window.onorientationchange = reorient;
-  window.setTimeout(reorient, 0);
-});
-</script>
-    </body>
+<!--
+      <script>
+          $(document).ready(function () {
+          function reorient(e) {
+            var portrait = (window.orientation % 180 == 0);
+            $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+          }
+          window.onorientationchange = reorient;
+          window.setTimeout(reorient, 0);
+        });
+      </script>
+    
+  -->
+      <script>
+
+        
+      </script>
+  
+  </body>
 </html>
