@@ -47,10 +47,16 @@ h5  a:-webkit-any-link {
 }
 
 .dropdown-tablet{
-  -webkit-transition: all 1s ;
--moz-transition: all 1s ;
--o-transition: all 1s ;
-transition: all 1s ;
+  -webkit-transition: all 0.8s ;
+-moz-transition: all 0.8s ;
+-o-transition: all 0.8s ;
+transition: all 0.8s ;
+}
+.dropdown-tablet a{
+  -webkit-transition: all 1.2s ;
+-moz-transition: all 1.2s ;
+-o-transition: all 1.2s ;
+transition: all 1.2s ;
 }
 
 @media only screen and (max-width: 768px) {
@@ -73,7 +79,8 @@ transition: all 1s ;
 }
 
   .dropdown-tablet{
-    display: none;
+    display: grid;
+    opacity: 0;
     width: 105vw;
     background-color: #f1f1f1;
     height: 0;
@@ -87,6 +94,12 @@ transition: all 1s ;
     left: -5vw;
   }
 
+  .dropdown-tablet a{
+    opacity: 0;
+  }
+  .languages-tablet{
+    display: flex;
+  }
   .section-intro{
     position: relative;
     max-width: 100vw;

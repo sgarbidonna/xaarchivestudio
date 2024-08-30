@@ -54,9 +54,13 @@
               <li><a href="#parametric" class="menu-options">Parametric Modeling</a></li>
               <li><a href="#contact-us" class="menu-options">Downloadables</a></li>
               <li><a href="#form" class="menu-options">Contact us</a></li>
-              <li><a href="3Dconfiguration.html/it">ITA</a></li>
-              <li><a href="3Dconfiguration.html">ENG</a></li>
-              <li><a href="3Dconfiguration.html/es">ES</a></li>
+              <li class="languages-tablet">
+                <a href="3Dconfiguration.html/it">ITA</a>
+                <a> / </a>
+                <a href="3Dconfiguration.html">ENG</a>
+                <a> / </a>
+                <a href="3Dconfiguration.html/es">ES</a>
+              </li>
             </ul>
           </li>
 
@@ -276,12 +280,7 @@
       <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script src="./contenido/3Dconfiguration/form.js"></script>
       <script type="module" src="./3Dconfiguration.ts"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                document.getElementById("preload-screen").style.display = "none"; }, 3000); // Cambia este valor al tiempo de carga real de tu página
-        });
-    </script>
+
       <script>
 
 
@@ -364,7 +363,8 @@
         const dropdownTablet =  document.getElementById('dropdown-tablet');
         const screenMine = document.getElementById('smooth-scroll-wrapper');
         let menuOpen = 0;
-        const heightScreen = window.innerHeight - 75;
+//        const heightScreen = window.innerHeight - 75;
+        const heightScreen = (window.innerHeight /2) + (window.innerHeight /5);
 
         menuTablet.addEventListener('click', function(e) {
           e.preventDefault();
@@ -377,7 +377,6 @@
 
         document.querySelectorAll('menu-options').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-              console.log('entro al closemenu de menuoptions');
               closeMenu();
           })
         });
@@ -390,7 +389,10 @@
             menuTablet.textContent = 'x';
             
             dropdownTablet.style.height= heightScreen.toString() + 'px'; 
-            dropdownTablet.style.display='grid';
+            dropdownTablet.style.opacity='100';
+            document.querySelectorAll('.dropdown-tablet a').forEach( element => {
+              element.style.opacity='1';
+            });
           }
 
           function closeMenu(){
@@ -400,7 +402,10 @@
               menuTablet.textContent = '...';
 
               dropdownTablet.style.height='0vh'  
-              dropdownTablet.style.display='none';
+              dropdownTablet.style.opacity='0';
+              document.querySelectorAll('.dropdown-tablet a').forEach( element => {
+                element.style.opacity='0';
+            });
             };
           
 
