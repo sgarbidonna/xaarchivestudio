@@ -25,7 +25,7 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
 
     const session = await createSession({
         
-        ticket: "0a8d1ff88bb479a200bbf89214c5c858c8589af73aad4e7f55a3f4cedca7c5a372a2cdf09d80082d62388bfbe0f2ff19bfc89048ca22f26d3193e1be9183f886b7e75d6416824232b48a2c4e5381eeedca034d4cca366bc37f4707959364f0c064e27bafb89efe-d8ca2f63685f593856d73494f4759cea",
+        ticket: "155162dcc6be40d0efd1f33d6fd112726e67431e3a51ddfe4055f9ee3742526d97120ab75f29e41e1ca91e60deb181e474e29d110ee57a562bafdbc06a7e3229960b3ecd66d8e6aaa9b7d99c37d30779df5335e4958597a6425dd26d4dd068c9fb444b2a9458ce-991f18a5227aa23c59a6d44f8dcecb55",
         modelViewUrl: "https://sdr7euc1.eu-central-1.shapediver.com",
         id: "Test-Donni-Session1"
     })

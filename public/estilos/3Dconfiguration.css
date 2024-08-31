@@ -66,7 +66,7 @@ transition: all 1.2s ;
   .languages{
     display: none;
   }
-
+  
   #menu-tablet{
     font-size: xxx-large;/*
     -webkit-transform: rotate(90deg);
