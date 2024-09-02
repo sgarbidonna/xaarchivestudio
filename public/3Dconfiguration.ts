@@ -25,9 +25,9 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
 
     const session = await createSession({
         
-        ticket: "155162dcc6be40d0efd1f33d6fd112726e67431e3a51ddfe4055f9ee3742526d97120ab75f29e41e1ca91e60deb181e474e29d110ee57a562bafdbc06a7e3229960b3ecd66d8e6aaa9b7d99c37d30779df5335e4958597a6425dd26d4dd068c9fb444b2a9458ce-991f18a5227aa23c59a6d44f8dcecb55",
+        ticket: "e18b776a78927fd246006e8a3af6f2e05fcd0d965d4d54a6b2715000d6edb8139efffdc3d9f49a034cb0ffb4706eda8dc842fe069e1a8ab7949c0585ec3386c45f932cb99c9f1241d8a1dd1ff62ef6c89c9ce7eaac091c4fcb680460a90a249b65c14feea64f8a-650f593ddd1f746b8146a2b16ae27022",
         modelViewUrl: "https://sdr7euc1.eu-central-1.shapediver.com",
-        id: "Test-Donni-Session1"
+        id: "xaarchives"
     })
 
     createParameterMenu(session, viewport);
