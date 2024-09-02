@@ -383,7 +383,7 @@
 
           function openMenu(){
             menuOpen = 1;
-            
+            dropdownTablet.style.zIndex='15';
             menuTablet.style.rotate='0deg';
             menuTablet.style.fontSize='xx-large';
             menuTablet.textContent = 'x';
@@ -396,6 +396,7 @@
           }
 
           function closeMenu(){
+            dropdownTablet.style.zIndex='1';
               menuOpen = 0;
               menuTablet.style.rotate='-90deg';
               menuTablet.style.fontSize='xxx-large';

@@ -94,7 +94,7 @@ export const createDimensionsElement = (
       const lengthElement = document.createElement("div");
       lengthElement.className = "sd-control spacer";
       lengthElement.style.display="grid";
-      lengthElement.style.gridTemplateColumns="20% 60% 20%"
+      //lengthElement.style.gridTemplateColumns="20% 50% 30%"
       lengthElement.style.gap="10px";
       lengthElement.style.alignItems="center";
 
