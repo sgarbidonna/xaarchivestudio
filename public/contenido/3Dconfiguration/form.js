@@ -6,11 +6,23 @@ document.getElementById('submit-link').addEventListener('click', function(event)
     
     const form = document.getElementById('form');
     // const submitLink = document.getElementById('submit-link');
-    
+
+
     if (validateForm()) {
       sendEmail(document.querySelector('form'));
+      clearPlaceholders();
     } 
 
+
+    function clearPlaceholders(){
+        document.getElementById('name').value ="";
+        document.getElementById('company-name').value ="";
+        document.getElementById('email').value ="";
+        document.getElementById('country').value ="";
+        document.getElementById('message').value ="";
+        document.getElementById('pricing-info').checked  = false;
+        
+    }
 
     function cantBeBlankPlaceholder(elements, color) {
       elements.forEach(element => {
@@ -93,3 +105,7 @@ document.getElementById('submit-link').addEventListener('click', function(event)
                 console.log(JSON.stringify(err));
              });
     }
+
+
+    
+ 

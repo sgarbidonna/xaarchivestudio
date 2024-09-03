@@ -18,7 +18,7 @@
       <ul>
         <nav class="navbar navbar-light bg-light">
           <li>
-            <a class="xaa-logo" href="#intro"> 
+            <a class="xaa-logo" href="#intro" id="xaa-logo"> 
               <img src="contenido\logos\icon.png" alt="Logo" class="logo"> 
             </a>
           </li>
@@ -39,9 +39,9 @@
           
           <a class="navbar-separator-languages">  </a>
           <a class="languages" href="3Dconfiguration.html/it">ITA</a>
-          <a class="languages" > / </a>
+          <a class="languages-separator" > / </a>
           <a class="languages" href="3Dconfiguration.html">ENG</a>
-          <a class="languages" > / </a>
+          <a class="languages-separator" > / </a>
           <a class="languages" href="3Dconfiguration.html/es">ES</a>
           <a class="navbar-separator-languages">  </a>
 
@@ -213,6 +213,12 @@
 
             <form action="#" method="POST" >
 
+              <div class="form-group" id="form-group-7">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name"  placeholder="Can't be blank" required>
+                  
+              </div>
+
               <div class="form-group" id="form-group-1">
                   <label for="company-name">Company Name</label>
                   <input type="text" id="company-name" name="company-name"  placeholder="Can't be blank" required>
@@ -307,7 +313,7 @@
             });
           });
 
-        // NAVBAR NAVIGATION q desde html no funciona
+        // NAVBAR NAVIGATION CONTACT US q desde html no funciona
           document.querySelectorAll('.contact-us').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();
@@ -325,7 +331,7 @@
             });
           });
         
-          // NAVBAR NAVIGATION q desde html no funciona
+          // NAVBAR NAVIGATION  DROPDOWN TABLET q desde html no funciona
           document.querySelectorAll('.dropdown-tablet a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();
@@ -359,7 +365,28 @@
               }
           });
 
-          const menuTablet = document.getElementById('menu-tablet');
+        //LOGO NAVIGATION porq del html no funca
+          document.getElementById('xaa-logo').addEventListener('click', function(e){
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+//            const offset = targetElement.offsetTop - offsetHeight;
+            if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop,
+                  behavior: 'smooth'  
+                });
+                history.pushState(null, null, ' ');
+              }
+          });
+
+        
+        
+
+
+
+// NAV MENU P DISPOSITIVOS MOVIILES Y TABLET
+        const menuTablet = document.getElementById('menu-tablet');
         const dropdownTablet =  document.getElementById('dropdown-tablet');
         const screenMine = document.getElementById('smooth-scroll-wrapper');
         let menuOpen = 0;
@@ -409,6 +436,7 @@
             });
             };
           
+
 
       </script>
 
