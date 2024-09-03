@@ -15,7 +15,7 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
     const viewport = await createViewport({
         canvas: canvasElement,
         visibility: VISIBILITY_MODE.MANUAL,
-        id: "Test-Donni-Viewport1", 
+        id: "viewport-en", 
         branding:{
 //            logo:'./contenido/logos/Loading.gif'
             logo: null
@@ -27,7 +27,7 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
         
         ticket: "e18b776a78927fd246006e8a3af6f2e05fcd0d965d4d54a6b2715000d6edb8139efffdc3d9f49a034cb0ffb4706eda8dc842fe069e1a8ab7949c0585ec3386c45f932cb99c9f1241d8a1dd1ff62ef6c89c9ce7eaac091c4fcb680460a90a249b65c14feea64f8a-650f593ddd1f746b8146a2b16ae27022",
         modelViewUrl: "https://sdr7euc1.eu-central-1.shapediver.com",
-        id: "xaarchives"
+        id: "xaarchives-en"
     })
 
     createParameterMenu(session, viewport);
