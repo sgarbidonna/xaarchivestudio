@@ -14,6 +14,14 @@
 </head>
     <body>
 
+        <!-- PRELOAD -->
+        <div id="preload-screen">
+          <img src="contenido/logos/Loading.gif" class="imagen-fondo">
+        </div>
+
+
+
+
       <!--- NAV BAR   -->
       <ul>
         <nav class="navbar navbar-light bg-light">
@@ -38,14 +46,14 @@
           <a class="contact-us" href="#form">Contact Us</a>
           
           <a class="navbar-separator-languages">  </a>
-          <a class="languages" href="3Dconfiguration-it.html">ITA</a>
+          <a class="languages" href="3Dconfiguration-it.html" style="margin-left: -0.2vw !important;">ITA</a>
           <a class="languages-separator" > / </a>
           <a class="languages" href="3Dconfiguration.html">ENG</a>
           <a class="languages-separator" > / </a>
           <a class="languages" href="3Dconfiguration-es.html">ES</a>
           <a class="navbar-separator-languages">  </a>
 
-
+    <!-- NAV BAR P TABLET Y CELU -->
           <li>
             <a class="menu-tablet" id="menu-tablet" href="#">...</a>
             <ul class="dropdown-tablet" id="dropdown-tablet">
@@ -56,11 +64,11 @@
               <li><a href="#augmented-reality" class="menu-options">XAARCHIVE® AR</a></li>
               <li><a href="#form" class="menu-options">Contact us</a></li>
               <li class="languages-tablet">
-                <a href="3Dconfiguration-it.html/">ITA</a>
+                <a id="ita" href="3Dconfiguration-it.html">ITA</a>
                 <a> / </a>
-                <a href="3Dconfiguration.html">ENG</a>
+                <a id="eng" href="3Dconfiguration.html">ENG</a>
                 <a> / </a>
-                <a href="3Dconfiguration-es.html/">ES</a>
+                <a id="es" href="3Dconfiguration-es.html">ES</a>
               </li>
             </ul>
           </li>
@@ -236,7 +244,7 @@
                   <input type="text" id="country" name="country"  placeholder="Can't be blank" required>
               </div>
 
-              <div class="form-group" id="form-group-8">
+              <div class="form-group" id="form-group-1">
                   <label for="phone-number">Phone Number</label>
                   <input type="text" id="phone-number" name="phone-number"  placeholder="" >
               </div>
@@ -295,12 +303,9 @@
 
       <script>
 
-
-
-
         const offsetHeight = 140;
 
-        // NAVBAR NAVIGATION q desde html no funciona
+        // NAVBAR NAVIGATION
           document.querySelectorAll('.dropdown a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();
@@ -318,7 +323,7 @@
             });
           });
 
-        // NAVBAR NAVIGATION CONTACT US q desde html no funciona
+        // NAVBAR NAVIGATION CONTACT US 
           document.querySelectorAll('.contact-us').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();
@@ -336,11 +341,11 @@
             });
           });
         
-          // NAVBAR NAVIGATION  DROPDOWN TABLET q desde html no funciona
+          // NAVBAR NAVIGATION  DROPDOWN TABLET 
           document.querySelectorAll('.dropdown-tablet a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+           if (anchor.className == 'menu-options' ){
+              anchor.addEventListener('click', function(e) {
               e.preventDefault();
-             
               const targetId = this.getAttribute('href').substring(1);
               const targetElement = document.getElementById(targetId);
               const offset = targetElement.offsetTop - offsetHeight;
@@ -353,9 +358,31 @@
                 history.pushState(null, null, ' ');
               }
             });
+            } 
           });
 
-        //ARROWS NAVIGATION porq del html no funca
+
+          // NAVBAR NAVIGATION  DROPDOWN TABLET LANGUAGES
+
+          document.getElementById('ita').addEventListener('click', function(e) {
+              location.href =this.getAttribute('href');
+          });
+      
+
+          document.getElementById('eng').addEventListener('click', function(e) {
+              location.href =this.getAttribute('href');
+          });
+      
+
+          document.getElementById('es').addEventListener('click', function(e) {
+              location.href =this.getAttribute('href');
+          });
+      
+
+
+
+
+        //ARROWS NAVIGATION
           document.getElementById('arrows').addEventListener('click', function(e){
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
@@ -370,7 +397,7 @@
               }
           });
 
-        //LOGO NAVIGATION porq del html no funca
+        //LOGO NAVIGATION 
           document.getElementById('xaa-logo').addEventListener('click', function(e){
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
@@ -421,6 +448,7 @@
             menuTablet.textContent = 'x';
             
             dropdownTablet.style.height= heightScreen.toString() + 'px'; 
+            dropdownTablet.style.top='75px';
             dropdownTablet.style.opacity='100';
             document.querySelectorAll('.dropdown-tablet a').forEach( element => {
               element.style.opacity='1';
@@ -435,6 +463,7 @@
               menuTablet.textContent = '...';
 
               dropdownTablet.style.height='0vh'  
+              dropdownTablet.style.top='-100vh'  
               dropdownTablet.style.opacity='0';
               document.querySelectorAll('.dropdown-tablet a').forEach( element => {
                 element.style.opacity='0';
@@ -478,10 +507,7 @@
       </script>
     
   -->
-      <script>
-
-        
-      </script>
+        <script src="./contenido/3Dconfiguration/preload.js"></script>
   
   </body>
 </html>

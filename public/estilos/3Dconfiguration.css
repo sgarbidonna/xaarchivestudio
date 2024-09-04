@@ -3,6 +3,7 @@ body{
   background-color: #f1f1f1;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -60,6 +61,32 @@ transition: all 0.8s ;
 transition: all 1.2s ;
 }
 
+
+/* Estilos para la pantalla de carga */
+#preload-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Color de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Asegura que esté por encima de todo */
+}
+
+#preload-screen img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#content {
+  display: none; /* Oculta el contenido hasta que se haya cargado */
+}
+
+
+
 @media only screen and (max-width: 768px) {
   
   .package-and-services,
@@ -88,8 +115,7 @@ transition: all 1.2s ;
     background-color: #f1f1f1;
     height: 0;
     position: fixed;
-    top: 75px;
-    left: 0;
+    top: -100vh;
     align-items: start;
     justify-content: space-around;
     align-content: stretch;
@@ -260,7 +286,7 @@ ul li ul.dropdown{
 width: 80%;
 font-size: small;
 position: absolute;
-z-index: 9999;
+/*z-index: 9999;*/
 display: none;
 background: linear-gradient(to top, #ffffff, #f6f6f6);
 }
@@ -273,10 +299,9 @@ ul li:hover ul.dropdown{
 /*--------------------------------------------------  SECTIONS TODOS JUNTOS ------------------------------------------------*/
 .smooth-scroll-wrapper{
   position: fixed;
-  z-index: 2;
+  z-index: 7;
   top: 0;
   left: 0;
-
   overflow: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -431,7 +456,7 @@ position: absolute;
 top: 12vh;
 right: 18vw;
 background-color: #f1f1f1;
-z-index: 10;
+/*z-index: 10;*/
 }
 .package-and-services:hover .links-navbar{
 display: block !important; 
@@ -857,6 +882,10 @@ grid-template-columns: 30% 70%;
 #form-group-6{
 display: grid;
 }
+#form-group-7{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  }
 
 .form-group label {
   flex: 1;
@@ -878,6 +907,7 @@ border: none;
 border-radius: 18px;
 background-color: #fff;
 width: 45vw;
+height: 2vh;
 }
 .form-group input[type="checkbox"] {
 height: 20px;
@@ -1089,14 +1119,14 @@ mix-blend-mode: multiply !important;
   background-color: #f1f1f1;
   height: 0;
   position: fixed;
-  top: 75px;
+  top: -100vh;
   left: 0;
   align-items: start;
   justify-content: space-around;
   align-content: stretch;
   justify-items: center;
   left: -5vw;
-  z-index: 1;
+
 }
   
 .dropdown-tablet a{
@@ -1112,7 +1142,7 @@ mix-blend-mode: multiply !important;
   top: 12vh;
   right: 18vw;
   background-color: #f1f1f1;
-  z-index: 10;
+  /*z-index: 10;*/
 }
 .links-navbar a {
   color: black;
@@ -1185,7 +1215,7 @@ ul li ul.dropdown{
   width: 80%;
   font-size: small;
   position: absolute;
-  z-index: 9999;
+  /*z-index: 9999;*/
   display: none;
   background: linear-gradient(to top, #ffffff, #f6f6f6);
 }
@@ -1199,7 +1229,7 @@ ul li:hover ul.dropdown{
 /*--------------------------------------------------  SECTIONS TODOS JUNTOS ------------------------------------------------*/
 .smooth-scroll-wrapper{
   position: fixed;
-  z-index: 2;
+  z-index: 7;
   top: 0;
   left: 0;
 
@@ -1209,7 +1239,7 @@ ul li:hover ul.dropdown{
   scroll-behavior: smooth;
 }
 .section-intro{
-  z-index: 10;
+/*  z-index: 10;*/
   position:relative;
   max-width: 100vw;
   height: 90vh;
@@ -1411,7 +1441,7 @@ p{
   top: 12vh;
   right: 18vw;
   background-color: #f1f1f1;
-  z-index: 10;
+  /*z-index: 10;*/
 }
 .package-and-services:hover .links-navbar{
   display: block !important; 
@@ -1827,7 +1857,10 @@ width: 5vh;
   display: grid;
   grid-template-columns: 77% 23%;
 }
-
+#form-group-7{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  }
 .form-group label {
   flex: 1;
   font-size: 18px;
@@ -2037,7 +2070,7 @@ transform: scaleX(0);
     width: 100%;
     height: 50px;
     display: grid;
-    grid-template-columns: 0% 14% 13% 0% 3% 1% 3% 1% 5%;
+    grid-template-columns: 0% 14% 13% 0% 3% 1% 3% 1% 3%;
     justify-content: flex-end;
     align-items: center;
     padding-block: 2.5vh;
@@ -2055,7 +2088,7 @@ transform: scaleX(0);
     width: 100%;
     height: 50px;
     display: grid;
-    grid-template-columns: 0% 11% 15% 0% 3% 1% 3% 1% 5%;
+    grid-template-columns: 0% 11% 15% 0% 3% 1% 3% 1% 3%;
     justify-content: flex-end;
     align-items: center;
     padding-block: 2.5vh;
@@ -2073,8 +2106,11 @@ transform: scaleX(0);
   .languages{
       margin-left: -2vh;
   }
-  .languages-separator{
-      margin-left: -2vh;
+  .languages-separator {
+    margin-left: -1vw;
+  }
+  .languages-separator:hover {
+    color: #000;
   }
   .contact-us{
       margin: 0 3vh;
@@ -2733,16 +2769,25 @@ transform: scaleX(0);
       margin: 0.4em 0 !important;
     
     }
-  
-    languages-h4{
+    .h4-es{
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
       font-style: normal;
       text-align: justify;
-      font-size: 0.85rem;
+      font-size: 0.97rem;
       margin: 0.4em 0 !important;
     
     }
+    .h4-it{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      text-align: justify;
+      font-size: 0.97rem;
+      margin: 0.4em 0 !important;
+    
+    }
+  
   
   
     .separator-section-white{
@@ -2763,9 +2808,10 @@ transform: scaleX(0);
     text-align: left;
   }
   .form-container {
+    padding-top: 20px;
+    margin-left: -3vw;
+}
 
-    padding: 20px;
-  }    
   #text-form{
       width: 100vw;
       text-align: -webkit-center;
@@ -2777,33 +2823,21 @@ transform: scaleX(0);
     margin-bottom: 20px;
   }
 
-  #form-group-1{
+  #form-group-1,
+  #form-group-2,
+  #form-group-3,
+  #form-group-5,
+  #form-group-7{
     display: grid;
-    grid-template-columns: 30% 70%;
-  }
-  #form-group-2{
-    display: grid;
-    grid-template-columns: 30% 70%;
-  }
-  #form-group-3{
-    display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 35% 65%;
   }
   #form-group-4{
     display: grid;
     grid-template-columns: 90% 10%;
   }
-  #form-group-5{
-    display: grid;
-    grid-template-columns: 30% 70%;
-  }
   #form-group-6{
     display: grid;
     grid-template-columns: 77% 23%;
-  }
-  #form-group-7{
-    display: grid;
-    grid-template-columns: 30% 70%;
   }
 
   .form-group label {
@@ -2815,6 +2849,7 @@ transform: scaleX(0);
     font-size: small;
     text-align: left;
     margin: 0 2vh;
+    font-size: 0.6rem;
   }
   .form-group input[type="text"],
   .form-group input[type="email"],
@@ -2825,6 +2860,7 @@ transform: scaleX(0);
     border-radius: 18px;
     background-color: #fff;
     width: 19vw;
+    height: 1vh;
   }
   .form-group input[type="checkbox"] {
     height: 20px;
@@ -3063,9 +3099,19 @@ margin-top: 10px;
 }
 
 
-/*-------------------------------------------------- DERECHOS Y LINKS FIN -----------------------------------------------------*/
 @media only screen and (min-width: 1920px){
-  
+  nav {
+    height: 3vh;
+    display: grid;
+    grid-template-columns: 0% 12% 11% 0% 4% 0% 4% 0% 4%;
+    text-align: center;
+  }
+  .languages-separator {
+      margin-left: -1vh;
+  }
+  .languages-separator {
+    margin-left: -0.65vw;
+}
   #form-group-4{
     display: grid;
     grid-template-columns: 95% 5%;
@@ -3082,13 +3128,7 @@ margin-top: 10px;
     margin-left:0;
   }
 
-  nav{
-    height: 3vh;
-    display: grid;
-    grid-template-columns: 0% 12% 11% 0% 5% 1% 5% 1% 5%;
-    text-align: center;
 
-  }
 }
 @media only screen and (min-width: 2560px){
   
@@ -3096,4 +3136,16 @@ margin-top: 10px;
     display: grid;
     grid-template-columns: 99% 5%;
   }
+
+  .navbar{
+    grid-template-columns: 0% 8% 15% 0% 2% 1% 2% 1% 2%;
+  }
+
+  .navbar-es{
+    grid-template-columns: 0% 6% 15% 0% 2% 1% 2% 1% 2%;
+  }
+  .languages-separator {
+    margin-left: -0.15vw;
+}
+
 }

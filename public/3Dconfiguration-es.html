@@ -35,17 +35,18 @@
           </li>
 
           <div class="links-navbar"></div>
-          <a class="contact-us" href="#form">CONTÁCTANOS</a>
+          <a class="contact-us" href="#form"  style="margin-left: 3vw !important;">CONTÁCTANOS</a>
           
           <a class="navbar-separator-languages">  </a>
-          <a class="languages" href="3Dconfiguration-it.html">ITA</a>
+          <a class="languages" href="3Dconfiguration-it.html" style="margin-left: -0.2vw !important;">ITA</a>
           <a class="languages-separator" > / </a>
           <a class="languages" href="3Dconfiguration.html">ENG</a>
           <a class="languages-separator" > / </a>
           <a class="languages" href="3Dconfiguration-es.html">ES</a>
           <a class="navbar-separator-languages">  </a>
 
-
+<!-- NAV BAR TABLETS Y CELU-->
+    
           <li>
             <a class="menu-tablet" id="menu-tablet" href="#">...</a>
             <ul class="dropdown-tablet" id="dropdown-tablet">
@@ -56,11 +57,11 @@
               <li><a href="#augmented-reality" class="menu-options">XAARCHIVE® AR</a></li>
               <li><a href="#form" class="menu-options">Contact us</a></li>
               <li class="languages-tablet">
-                <a href="3Dconfiguration-it.html">ITA</a>
+                <a id='ita' href="3Dconfiguration-it.html">ITA</a>
                 <a> / </a>
-                <a href="3Dconfiguration.html">ENG</a>
+                <a id='eng' href="3Dconfiguration.html">ENG</a>
                 <a> / </a>
-                <a href="3Dconfiguration-es.html">ES</a>
+                <a id='es' href="3Dconfiguration-es.html">ES</a>
               </li>
             </ul>
           </li>
@@ -237,7 +238,12 @@
                   <input type="text" id="country" name="country"  placeholder="Can't be blank" required>
               </div>
 
-              <div class="form-group" id="form-group-4">
+              <div class="form-group" id="form-group-1">
+                <label for="phone-number">Número de Contacto</label>
+                <input type="text" id="phone-number" name="phone-number"  placeholder="" >
+            </div>
+            
+              <div class="form-group" id="form-group-4" style="grid-template-columns: 86% 10% !important;">
                   <label for="pricing-info">Quiero recibir información sobre los precios</label>
                   <input type="checkbox" id="pricing-info" name="pricing-info">
               </div>
@@ -297,7 +303,7 @@
 
         const offsetHeight = 140;
 
-        // NAVBAR NAVIGATION q desde html no funciona
+        // NAVBAR NAVIGATION q 
           document.querySelectorAll('.dropdown a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();
@@ -315,7 +321,7 @@
             });
           });
 
-        // NAVBAR NAVIGATION CONTACT US q desde html no funciona
+        // NAVBAR NAVIGATION CONTACT US q 
           document.querySelectorAll('.contact-us').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
               e.preventDefault();
@@ -333,11 +339,11 @@
             });
           });
         
-          // NAVBAR NAVIGATION  DROPDOWN TABLET q desde html no funciona
+          // NAVBAR NAVIGATION  DROPDOWN TABLET 
           document.querySelectorAll('.dropdown-tablet a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+           if (anchor.className == 'menu-options' ){
+              anchor.addEventListener('click', function(e) {
               e.preventDefault();
-             
               const targetId = this.getAttribute('href').substring(1);
               const targetElement = document.getElementById(targetId);
               const offset = targetElement.offsetTop - offsetHeight;
@@ -350,9 +356,23 @@
                 history.pushState(null, null, ' ');
               }
             });
+            } 
           });
 
-        //ARROWS NAVIGATION porq del html no funca
+
+          // NAVBAR NAVIGATION  DROPDOWN TABLET LANGUAGES
+
+          document.getElementById('ita').addEventListener('click', function(e) {
+              location.href =this.getAttribute('href');
+          });
+          document.getElementById('eng').addEventListener('click', function(e) {
+              location.href =this.getAttribute('href');
+          });
+          document.getElementById('es').addEventListener('click', function(e) {
+              location.href =this.getAttribute('href');
+          });
+      
+        //ARROWS NAVIGATION 
           document.getElementById('arrows').addEventListener('click', function(e){
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
@@ -367,7 +387,7 @@
               }
           });
 
-        //LOGO NAVIGATION porq del html no funca
+        //LOGO NAVIGATION 
           document.getElementById('xaa-logo').addEventListener('click', function(e){
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
@@ -392,7 +412,6 @@
         const dropdownTablet =  document.getElementById('dropdown-tablet');
         const screenMine = document.getElementById('smooth-scroll-wrapper');
         let menuOpen = 0;
-//        const heightScreen = window.innerHeight - 75;
         const heightScreen = (window.innerHeight /2) + (window.innerHeight /5);
 
         menuTablet.addEventListener('click', function(e) {
@@ -419,6 +438,7 @@
             
             dropdownTablet.style.height= heightScreen.toString() + 'px'; 
             dropdownTablet.style.opacity='100';
+            dropdownTablet.style.top='75px';
             document.querySelectorAll('.dropdown-tablet a').forEach( element => {
               element.style.opacity='1';
             });
@@ -433,6 +453,7 @@
 
               dropdownTablet.style.height='0vh'  
               dropdownTablet.style.opacity='0';
+              dropdownTablet.style.top='-100vh';
               document.querySelectorAll('.dropdown-tablet a').forEach( element => {
                 element.style.opacity='0';
             });
@@ -462,23 +483,7 @@
         hiddenElementsFL.forEach((el) => observer.observe(el));
 
       </script>
-<!--
-      <script>
-          $(document).ready(function () {
-          function reorient(e) {
-            var portrait = (window.orientation % 180 == 0);
-            $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
-          }
-          window.onorientationchange = reorient;
-          window.setTimeout(reorient, 0);
-        });
-      </script>
-    
-  -->
-      <script>
 
-        
-      </script>
-  
+
   </body>
 </html>
