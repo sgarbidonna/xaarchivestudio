@@ -1,3 +1,6 @@
+console.log(window.innerWidth , 'WIDTH');
+console.log(window.innerHeight , 'HEIGHT');
+
 if (screen.width > 1300) {
     var body = document.body,
     scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
