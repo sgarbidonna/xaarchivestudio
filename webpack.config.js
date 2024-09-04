@@ -68,14 +68,14 @@ module.exports = {
         },
         {
           from: "./public",
-          to: "/es",
+          to: ".dist/es",
           globOptions: {
             ignore: ["**/3Dconfiguration-es.html"],
           },
         },
         {
           from: "./public",
-          to: "/it",
+          to: ".dist/it",
           globOptions: {
             ignore: ["**/3Dconfiguration-it.html"],
           },
