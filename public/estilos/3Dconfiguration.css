@@ -87,6 +87,7 @@ transition: all 1.2s ;
   gap: 10px;
   align-items: center;
   justify-content: space-around;
+  
 }
 
 
@@ -175,6 +176,11 @@ transition: all 1.2s ;
   .sides-label{
     margin-left: -0.9em !important;
   }
+  .sides-container {
+    margin-left: 25px !important;
+    
+  }
+  
   .product{
     font-size: x-small !important;
     font-family: "Montserrat", sans-serif !important;
@@ -1478,6 +1484,7 @@ p{
   align-items: center;
   justify-content: space-around;
 }
+
 #menu{
   width: 41vw;
   font-family: "Montserrat", sans-serif !important;
