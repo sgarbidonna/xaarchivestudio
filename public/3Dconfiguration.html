@@ -245,8 +245,8 @@
                   <input type="text" id="phone-number" name="phone-number"  placeholder="" >
               </div>
 
-              <div class="form-group" id="form-group-4">
-                  <label for="pricing-info">I want to receive Pricing information</label>
+              <div class="form-group" id="form-group-4-en">
+                  <label for="pricing-info" >I want to receive Pricing information</label>
                   <input type="checkbox" id="pricing-info" name="pricing-info">
               </div>
 
@@ -255,7 +255,7 @@
                   <textarea id="message" name="message" placeholder="Can't be blank" required  ></textarea>
               </div>
 
-              <div class="form-group" id="form-group-6">
+              <div class="form-group" id="form-group-6-en">
                 <label></label>
                 <div class="btn-1"> <a class="submit-a" href="#" id="submit-link"><span id='span-submit' type="submit">SUBMIT</span></a> </div>
               </div>
@@ -296,200 +296,11 @@
       <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script src="./contenido/3Dconfiguration/form.js"></script>
       <script type="module" src="./3Dconfiguration.ts"></script>
-
-      <script>
-
-        const offsetHeight = 140;
-
-        // NAVBAR NAVIGATION
-          document.querySelectorAll('.dropdown a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-              e.preventDefault();
-             
-              const targetId = this.getAttribute('href').substring(1);
-              const targetElement = document.getElementById(targetId);
-              const offset = targetElement.offsetTop - offsetHeight;
-              if (targetElement) {
-                window.scrollTo({
-                  top: offset,
-                  behavior: 'smooth'
-                });
-                history.pushState(null, null, ' ');
-              }
-            });
-          });
-
-        // NAVBAR NAVIGATION CONTACT US 
-          document.querySelectorAll('.contact-us').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-              e.preventDefault();
-             
-              const targetId = this.getAttribute('href').substring(1);
-              const targetElement = document.getElementById(targetId);
-              const offset = targetElement.offsetTop - offsetHeight;
-              if (targetElement) {
-                window.scrollTo({
-                  top: offset,
-                  behavior: 'smooth'
-                });
-                history.pushState(null, null, ' ');
-              }
-            });
-          });
-        
-          // NAVBAR NAVIGATION  DROPDOWN TABLET 
-          document.querySelectorAll('.dropdown-tablet a').forEach(anchor => {
-           if (anchor.className == 'menu-options' ){
-              anchor.addEventListener('click', function(e) {
-              e.preventDefault();
-              const targetId = this.getAttribute('href').substring(1);
-              const targetElement = document.getElementById(targetId);
-              const offset = targetElement.offsetTop - offsetHeight;
-              if (targetElement) {
-                closeMenu();
-                window.scrollTo({
-                  top: offset,
-                  behavior: 'smooth'
-                });
-                history.pushState(null, null, ' ');
-              }
-            });
-            } 
-          });
-
-
-          // NAVBAR NAVIGATION  DROPDOWN TABLET LANGUAGES
-
-          document.getElementById('ita').addEventListener('click', function(e) {
-              location.href =this.getAttribute('href');
-          });
+      <script src="./contenido/3Dconfiguration/link-navigations.js"></script>
+      <script src="./contenido/3Dconfiguration/nav-menu-tablet.js"></script>
+      <script src="./contenido/3Dconfiguration/next-on-enter.js"></script>
+      <script src="./contenido/3Dconfiguration/img-animations.js"></script>
       
-
-          document.getElementById('eng').addEventListener('click', function(e) {
-              location.href =this.getAttribute('href');
-          });
-      
-
-          document.getElementById('es').addEventListener('click', function(e) {
-              location.href =this.getAttribute('href');
-          });
-      
-
-
-
-
-        //ARROWS NAVIGATION
-          document.getElementById('arrows').addEventListener('click', function(e){
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            const offset = targetElement.offsetTop - offsetHeight;
-            if (targetElement) {
-                window.scrollTo({
-                  top: offset,
-                  behavior: 'smooth'  
-                });
-                history.pushState(null, null, ' ');
-              }
-          });
-
-        //LOGO NAVIGATION 
-          document.getElementById('xaa-logo').addEventListener('click', function(e){
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-//            const offset = targetElement.offsetTop - offsetHeight;
-            if (targetElement) {
-                window.scrollTo({
-                  top: targetElement.offsetTop,
-                  behavior: 'smooth'  
-                });
-                history.pushState(null, null, ' ');
-              }
-          });
-
-        
-        
-
-
-
-// NAV MENU P DISPOSITIVOS MOVIILES Y TABLET
-        const menuTablet = document.getElementById('menu-tablet');
-        const dropdownTablet =  document.getElementById('dropdown-tablet');
-        const screenMine = document.getElementById('smooth-scroll-wrapper');
-        let menuOpen = 0;
-//        const heightScreen = window.innerHeight - 75;
-        const heightScreen = (window.innerHeight /2) + (window.innerHeight /5);
-
-        menuTablet.addEventListener('click', function(e) {
-          e.preventDefault();
-          if (menuOpen == 0){
-            openMenu();
-            } else {
-              closeMenu();
-            }
-        });
-
-        document.querySelectorAll('menu-options').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-              closeMenu();
-          })
-        });
-
-          function openMenu(){
-            menuOpen = 1;
-            dropdownTablet.style.zIndex='15';
-            menuTablet.style.rotate='0deg';
-            menuTablet.style.fontSize='xx-large';
-            menuTablet.textContent = 'x';
-            
-            dropdownTablet.style.height= heightScreen.toString() + 'px'; 
-            dropdownTablet.style.top='75px';
-            dropdownTablet.style.opacity='100';
-            document.querySelectorAll('.dropdown-tablet a').forEach( element => {
-              element.style.opacity='1';
-            });
-          }
-
-          function closeMenu(){
-            dropdownTablet.style.zIndex='1';
-              menuOpen = 0;
-              menuTablet.style.rotate='-90deg';
-              menuTablet.style.fontSize='xxx-large';
-              menuTablet.textContent = '...';
-
-              dropdownTablet.style.height='0vh'  
-              dropdownTablet.style.top='-100vh'  
-              dropdownTablet.style.opacity='0';
-              document.querySelectorAll('.dropdown-tablet a').forEach( element => {
-                element.style.opacity='0';
-            });
-            };
-          
-
-
-      </script>
-
-      <script>
-
-        // ANIMACION IMAGENES
-        const observer = new IntersectionObserver((entries) =>{
-        
-          entries.forEach((entry) => {
-            if (entry.isIntersecting){
-              entry.target.classList.add('show');
-            } /*else{
-              entry.target.classList.remove('show');
-            }*/
-          });
-        });
-
-        const hiddenElementsFR = document.querySelectorAll('.hiddenFromRight');
-        hiddenElementsFR.forEach((el) => observer.observe(el));
-        const hiddenElementsFL = document.querySelectorAll('.hiddenFromLeft');
-        hiddenElementsFL.forEach((el) => observer.observe(el));
-
-      </script>
 <!--
       <script>
           $(document).ready(function () {
@@ -504,6 +315,8 @@
     
   -->
 
-  
+  <script>
+
+  </script>
   </body>
 </html>
