@@ -300,8 +300,24 @@
       <script src="./contenido/3Dconfiguration/nav-menu-tablet.js"></script>
       <script src="./contenido/3Dconfiguration/next-on-enter.js"></script>
       <script src="./contenido/3Dconfiguration/img-animations.js"></script>
-      
-<!--
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.21/ua-parser.min.js'></script>
+      <script>
+          window.workaroundBackgroundBlendMode = (function() {
+            var ua = UAParser()
+            var isWebKit = (ua.engine.name === "WebKit")
+            var isIOS = (ua.os.name === "iOS")
+            var debug = false //|| true
+            var shouldActivate = (isWebKit && isIOS) || debug;
+
+            if (shouldActivate) {
+              document.body.classList.add("is-ios-webkit")
+            }
+
+            // You can inspect this returned object afterwards
+            return {isWebKit, isIOS, debug, shouldActivate, ua}
+          })()
+      </script>
+      <!--
       <script>
           $(document).ready(function () {
           function reorient(e) {
