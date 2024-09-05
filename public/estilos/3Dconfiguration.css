@@ -3253,6 +3253,10 @@ margin-top: 10px;
   .languages-separator {
     margin-left: -0.65vw;
 }
+
+#pattern-colors.content{
+  right: 5vw !important ;
+}
   #form-group-4-en{
     display: grid;
     grid-template-columns: 104% 5%;
