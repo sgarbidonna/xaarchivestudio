@@ -19,6 +19,7 @@ document.getElementById('submit-link').addEventListener('click', function(event)
         document.getElementById('company-name').value ="";
         document.getElementById('email').value ="";
         document.getElementById('country').value ="";
+        document.getElementById('phone-number').value ="";
         document.getElementById('message').value ="";
         document.getElementById('pricing-info').checked  = false;
         
