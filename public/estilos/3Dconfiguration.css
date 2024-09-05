@@ -706,10 +706,6 @@ justify-content: center;
 }
 
 
-.clients-text{
-background-color: #F1F1F1;
-}
-
 
 .client img {
 filter: grayscale(1);
@@ -863,7 +859,7 @@ grid-template-columns: 30% 70%;
 }
 #form-group-4-en{
 display: grid;
-grid-template-columns: 78% 20%;
+grid-template-columns: 84% 20%;
 }
 #form-group-4-it{
 display: grid;
