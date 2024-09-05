@@ -840,7 +840,7 @@ input{
 color: #333;
 font-family: "Montserrat", sans-serif;
 font-weight: 400;
-font-size: 12px;
+font-size: 16px;
 text-align: left;
 width: 5vh;
 }
@@ -915,8 +915,7 @@ grid-template-columns: 30% 70%;
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-
-font-size: 12px;
+  font-size: 16px;
 border: none;
 border-radius: 18px;
 background-color: #fff;
@@ -1530,7 +1529,7 @@ p{
 /*--------------------------------------------------  SLIDER PARAMETERS  --------------------------------------------------*/
 
 input[type="range"] {
-  font-size: 1.5rem;
+  font-size: 16px;
   width: 12.5em;
   color: #4b4b4b;
   --thumb-height: 0.8em;
@@ -1861,7 +1860,7 @@ input{
 color: #333;
 font-family: "Montserrat", sans-serif;
 font-weight: 400;
-font-size: 12px;
+font-size: 16px;
 text-align: left;
 width: 5vh;
 }
@@ -1933,7 +1932,7 @@ width: 5vh;
 .form-group input[type="email"],
 .form-group textarea {
 
-  font-size: 12px;
+  font-size: 16px;
   border: none;
   border-radius: 18px;
   background-color: #fff;
@@ -2146,7 +2145,25 @@ transform: scaleX(0);
     width: 100%;
     height: 50px;
     display: grid;
-    grid-template-columns: 0% 11% 15% 0% 3% 1% 3% 1% 3%;
+    grid-template-columns: 0% 7% 15% 0% 3% 1% 3% 1% 3%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-block: 2.5vh;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-it {
+    z-index: 50;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 0% 7% 15% 0% 3% 1% 3% 1% 3%;
     justify-content: flex-end;
     align-items: center;
     padding-block: 2.5vh;
@@ -2862,7 +2879,7 @@ transform: scaleX(0);
     color: #333;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
     text-align: left;
   }
   .form-container {
@@ -2929,7 +2946,7 @@ transform: scaleX(0);
   .form-group input[type="email"],
   .form-group textarea {
 
-    font-size: 12px;
+    font-size: 16px;
     border: none;
     border-radius: 18px;
     background-color: #fff;
@@ -3175,6 +3192,18 @@ margin-top: 10px;
 
 @media only screen and (min-width: 1920px){
   nav {
+    height: 3vh;
+    display: grid;
+    grid-template-columns: 0% 12% 11% 0% 4% 0% 4% 0% 4%;
+    text-align: center;
+  }
+  .navbar-it{
+    height: 3vh;
+    display: grid;
+    grid-template-columns: 0% 12% 11% 0% 4% 0% 4% 0% 4%;
+    text-align: center;
+  }
+  .navbar-es{
     height: 3vh;
     display: grid;
     grid-template-columns: 0% 12% 11% 0% 4% 0% 4% 0% 4%;

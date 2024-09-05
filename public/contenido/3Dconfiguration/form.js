@@ -98,9 +98,12 @@ document.getElementById('submit-link').addEventListener('click', function(event)
          
             emailjs.sendForm(serviceID, templateID, form)
              .then(() => {
-                document.getElementById('span-submit').textContent= 'SENT!';
-                document.getElementById('span-submit').style.fontWeigth='900'; // no funciona
-                document.getElementById('submit-link').style.border= '1px solid rgba(0,0,0,0)';
+                let submitButton = document.getElementById('span-submit');
+                submitButton.textContent= 'SENT!';
+                setTimeout(() => {       
+                    submitButton.textContent = 'SUBMIT';
+                  }, 3000);
+
              }, (err) => {
                 console.log(JSON.stringify(err));
              });

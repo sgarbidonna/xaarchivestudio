@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     inputs.forEach((input, index) => {
       input.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') { // Comprueba si se presiona Enter
-          event.preventDefault(); // Evita que el formulario se envíe
-          const nextInput = inputs[index + 1]; // Selecciona el siguiente campo
+        if (event.key === 'Enter') { 
+          event.preventDefault(); 
+          const nextInput = inputs[index + 1]; 
           if (nextInput) {
-            nextInput.focus(); // Mueve el foco al siguiente campo
+            nextInput.focus(); 
           }
       }
     });
