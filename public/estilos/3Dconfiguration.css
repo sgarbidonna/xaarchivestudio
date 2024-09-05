@@ -142,8 +142,8 @@ transition: all 1.2s ;
   }
   
   #canvas{
-    width: 62vw !important;
-    height: 51vw !important;
+    width: 63vw !important;
+    height: 49vw !important;
     mix-blend-mode: multiply !important;
     margin-left: 16vw;
   }
