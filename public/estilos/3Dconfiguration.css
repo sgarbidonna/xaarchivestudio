@@ -10,7 +10,12 @@ body{
   display: none;
 }
 
-
+.sdv-logo-container {
+  position: relative;
+  height: 0px !important;
+  width: 0px !important;
+  background-color: transparent !important;
+}
 input[type="range"]::-moz-range-progress {
   background-color: #4b4b4b; 
 }
@@ -136,10 +141,10 @@ transition: all 1.2s ;
   }
   
   #canvas{
-    width: 68vw !important;
-    height: 50vw !important;
+    width: 62vw !important;
+    height: 51vw !important;
     mix-blend-mode: multiply !important;
-    margin-left: 12vw;
+    margin-left: 16vw;
   }
   .sd-control{
     grid-template-columns: 17% 64% 25%;
@@ -188,7 +193,7 @@ transition: all 1.2s ;
   }
   #pattern-colors {
     position: relative !important;
-    top: -45vh !important;
+    top: -43vh !important;
     right: -80vw !important;
     height: 0 !important;
 }
@@ -2415,14 +2420,18 @@ transform: scaleX(0);
       flex-direction: column !important;
       flex-wrap: nowrap !important;
       align-items: center !important;
+      max-width:50vw;
+      height:90vh;
+      justify-content:center;
       }
      
       
       #canvas{
-        width: 68vw !important;
-        height: 50vw !important;
+        width:34vw !important;
+        height:21vw !important;
+        padding:25px;
         mix-blend-mode: multiply !important;
-        margin-left: 12vw;
+        
       
       }
       .sd-control{
