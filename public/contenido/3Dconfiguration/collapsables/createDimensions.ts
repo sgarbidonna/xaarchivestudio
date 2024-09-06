@@ -51,6 +51,7 @@ export const createDimensionsElement = (
   sidesContainer.style.gap="10px";
   sidesContainer.style.alignItems="center";
   sidesContainer.style.justifyContent="space-around";
+  sidesContainer.style.maxWidth="76vw";
 
 
   filterSides.forEach((side) => {
