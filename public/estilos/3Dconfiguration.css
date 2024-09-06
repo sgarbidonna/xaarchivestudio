@@ -74,6 +74,13 @@ transition: all 1.2s ;
 }
 
 
+
+.content.length {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+}
+
 .sides-container {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;

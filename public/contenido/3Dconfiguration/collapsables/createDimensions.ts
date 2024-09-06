@@ -19,7 +19,8 @@ export const createDimensionsElement = (
   contentElement.style.display = "grid";
   contentElement.style.gridTemplateRows = "auto auto auto";
   contentElement.style.gap = "10px";
-  
+  contentElement.style.paddingTop = "10px";
+
   parentDiv.appendChild(contentElement);
 
   const filterSides = Object.values(parameterObject).filter(
