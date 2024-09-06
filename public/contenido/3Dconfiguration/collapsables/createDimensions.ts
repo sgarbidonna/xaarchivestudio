@@ -17,7 +17,7 @@ export const createDimensionsElement = (
   contentElement.className = "content length";
   contentElement.style.maxWidth = "80vw";
   contentElement.style.display = "grid";
-  contentElement.style.gridTemplateRows = "auto auto auto";
+//  contentElement.style.gridTemplateRows = "auto auto auto";
   contentElement.style.gap = "10px";
   contentElement.style.paddingTop = "10px";
 
