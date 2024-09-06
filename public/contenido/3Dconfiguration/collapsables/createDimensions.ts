@@ -15,12 +15,9 @@ export const createDimensionsElement = (
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
-  contentElement.style.maxWidth = "80vw";
   contentElement.style.display = "grid";
-//  contentElement.style.gridTemplateRows = "auto auto auto";
+  contentElement.style.gridTemplateRows = "auto auto auto";
   contentElement.style.gap = "10px";
-  contentElement.style.paddingTop = "10px";
-
   parentDiv.appendChild(contentElement);
 
   const filterSides = Object.values(parameterObject).filter(
@@ -48,10 +45,10 @@ export const createDimensionsElement = (
   sidesContainer.appendChild(sidesLabel);
 
   sidesContainer.style.display="grid";
+  sidesContainer.style.gridTemplateColumns="20% 20% 20% 20% 20%";
   sidesContainer.style.gap="10px";
   sidesContainer.style.alignItems="center";
   sidesContainer.style.justifyContent="space-around";
-
 
   filterSides.forEach((side) => {
     const sideBox = document.createElement("div");
@@ -97,6 +94,7 @@ export const createDimensionsElement = (
       const lengthElement = document.createElement("div");
       lengthElement.className = "sd-control spacer";
       lengthElement.style.display="grid";
+      //lengthElement.style.gridTemplateColumns="20% 50% 30%"
       lengthElement.style.gap="10px";
       lengthElement.style.alignItems="center";
 
