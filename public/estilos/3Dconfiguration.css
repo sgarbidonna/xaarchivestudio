@@ -160,11 +160,14 @@ transition: all 1.2s ;
     margin-top: 2em !important;
     display: grid !important;
     grid-template-rows: 55% !important;
+    height: auto;
+    max-height: 80vw;
   }
   #info-menu {
     max-width: 100vw !important;
     grid-template-columns: 45% 50% !important;
-    margin-bottom: 2vh !important;
+    margin-top: 1vh !important;
+    margin-bottom: 1vh !important;
     height: 5vh;
     display: grid;
     align-content: space-between;
@@ -2443,8 +2446,6 @@ transform: scaleX(0);
         height:21vw !important;
         padding:25px;
         mix-blend-mode: multiply !important;
-        
-      
       }
       .sd-control{
         grid-template-columns: 20% 60% 20%;

@@ -82,8 +82,9 @@ export const createPanelSize = (
 
     contentElement.appendChild(lengthElement);
   });
-
+/*
   parameterDiv.addEventListener("click", function (event) {
     collapsibleManager.toggleCollapsible(parameterDiv);
 });
+*/
 };
