@@ -1,9 +1,13 @@
 import { createSession, createViewport, VISIBILITY_MODE } from "@shapediver/viewer";
 import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createParameterMenu";
 //import { setupIcons } from "./contenido/3Dconfiguration/utils/setupIcons";
-//https://shapediver-model.vercel.app/?ticket=31a9568985181ba0a1969a45484dc5eb3dc41941ad9904a7b20e5b4442d1f778d1879ada4c5ebe3784937a9d2b913d1752535bd8dfd28f6c770ed91f899035aff9b2ae923da41d84bc0c7bfa502c321822e249d618a37eef635f3b7901f2d2d3a41799999788c6-8be8497e7d1fe9a6148502e02c563995
+//https://shapediver-model.vercel.app/?ticket=31a9568985181ba0a1969a45484dc5eb3dc41941ad9904a7b20e5b4442d1f778d1879ada4c5ebe3784937a9d2b913d1752535bd8dfd28f6c770ed91f899035aff9b2ae923da41d84bc0c7bfa502c321822e249d618a37eef635f3b7901f2d2d3a41799999788c6-8be8497e7d1fe9a6148502e02c56399
 
 
+
+function isMobileDevice(): boolean {
+    return /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent);
+  }
 
 (async () => {
     const canvasElement = document.getElementById("canvas") as HTMLCanvasElement;
@@ -34,7 +38,7 @@ import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createPara
     viewport.automaticResizing = true;
     viewport.show = true;
 
-    
+
 
      //setupIcons(canvasElement, viewport);
 

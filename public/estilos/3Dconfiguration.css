@@ -942,7 +942,7 @@ gap: 8px;
   border-radius: 18px;
   background-color: #fff;
   width: 45vw;
-  height: 2vh;
+  max-height: 2vh;
 }
 .form-group input[type="checkbox"] {
 height: 20px;
