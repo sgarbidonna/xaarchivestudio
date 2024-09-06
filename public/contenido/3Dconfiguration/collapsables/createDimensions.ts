@@ -15,6 +15,7 @@ export const createDimensionsElement = (
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
+  contentElement.style.width = "76vw";
   contentElement.style.maxWidth = "76vw";
   contentElement.style.display = "grid";
   contentElement.style.gridTemplateRows = "auto auto auto";
@@ -52,7 +53,7 @@ export const createDimensionsElement = (
   sidesContainer.style.alignItems="center";
   sidesContainer.style.justifyContent="space-around";
   sidesContainer.style.maxWidth="76vw";
-
+//  sidesContainer.style.gridTemplateColumns = "20% 20% 20% 20% 20%";
 
   filterSides.forEach((side) => {
     const sideBox = document.createElement("div");
