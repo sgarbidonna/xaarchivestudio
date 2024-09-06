@@ -330,7 +330,7 @@ ul li:hover ul.dropdown{
 
 .section-clients{
   height: 15vh;
-  background-color: #F1F1F1;
+  background-color: white;
 }
 
 
@@ -1782,7 +1782,7 @@ justify-content: center;
 
 .clients-text{
   padding: 0px 0 2vh 20vw;
-  background-color: #F1F1F1;
+  background-color: white;
 }
 
 .clients {
@@ -1792,7 +1792,7 @@ justify-content: center;
   flex-wrap: wrap;
   
   height: auto;
-  background-color: #F1F1F1;
+  background-color: white;
   padding: 0vh 20vw 0px 20vw;
 }
 
@@ -2779,7 +2779,7 @@ transform: scaleX(0);
   
     .clients-text{
       padding: 0px 0 2vh 20vw;
-      background-color: #F1F1F1;
+      background-color: white;
     }
   
     .clients {
@@ -2788,7 +2788,7 @@ transform: scaleX(0);
       align-items: center;
       flex-wrap: wrap;
       height: auto;
-      background-color: #F1F1F1;
+      background-color: white;
       padding: 0vh 20vw 0px 20vw;
     }
   
