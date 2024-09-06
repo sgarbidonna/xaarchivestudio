@@ -8,6 +8,9 @@ export const createPanelSize = (
   parentDiv: HTMLDivElement,
   groupName: string
 ) => {
+  const canvas = document.getElementById('canvas');
+  canvas.style.maxHeight= '49vw';
+
   const parameterDiv = createParameterDiv(parameterObject[0], parentDiv, groupName);
 
   const contentElement = document.createElement("div");
@@ -50,6 +53,8 @@ export const createPanelSize = (
     };
 
     const rangeInputElement = document.createElement("input");
+    
+    
     rangeInputElement.className = "slider";
     rangeInputElement.type = "range";
     rangeInputElement.min = String(param.min);
@@ -59,10 +64,12 @@ export const createPanelSize = (
 
     rangeInputElement.addEventListener("input", () => {
       numberInputElement.value = rangeInputElement.value;
+      
     });
 
     numberInputElement.addEventListener("input", () => {
       rangeInputElement.value = numberInputElement.value;
+      
     });
 
     rangeInputElement.onchange = async () => {
@@ -82,9 +89,9 @@ export const createPanelSize = (
 
     contentElement.appendChild(lengthElement);
   });
-/*
+
   parameterDiv.addEventListener("click", function (event) {
     collapsibleManager.toggleCollapsible(parameterDiv);
 });
-*/
+
 };
