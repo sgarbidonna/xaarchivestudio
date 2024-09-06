@@ -1,5 +1,5 @@
 import { IParameterApi, ISessionApi } from "@shapediver/viewer";
-import { createParameterDiv } from "../menu/createParamDiv";
+import { createParameterDiv } from '../menu/createParamDiv';
 import { collapsibleManager } from "../utils/collapsableLogic";
 import { getLink } from "../utils/getLink";
 
@@ -80,5 +80,4 @@ export const createPatternColorElement = (
     collapsibleManager.toggleCollapsible(parameterDiv);
   });
 
-  
 };

@@ -56,7 +56,6 @@ document.getElementById('submit-link').addEventListener('click', function(event)
         if (!validateEmail(emailField.value)) {
             cantBeBlankPlaceholder([emailField], '0 0px 12px 0 red');
             setPlaceholderColor(emailField, 'red');
-            setPlaceholderMessage(emailField, 'Invalid email address');
             isValid = false;
         } else {
           cantBeBlankPlaceholder([emailField], '0 0px 0px 0 #ffffff');
@@ -82,7 +81,7 @@ document.getElementById('submit-link').addEventListener('click', function(event)
       }
 
       function setPlaceholderMessage(element, message) {
-          element.value=' ' ;
+          element.value= message ;
           element.setAttribute('placeholder', message);
       }
 
