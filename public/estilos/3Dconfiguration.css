@@ -147,11 +147,12 @@ transition: all 1.2s ;
     mix-blend-mode: multiply !important;
     margin-left: 16vw;
   }
+  /*
   .sd-control{
     grid-template-columns: 17% 64% 25%;
     
     }
-  
+  */
   #menu {
     font-size: x-small !important;
   }

@@ -42,6 +42,11 @@ export const createDimensionsElement = (
   sidesLabel.innerText = "SIDES";
   sidesContainer.appendChild(sidesLabel);
 
+  sidesContainer.style.display="grid";
+  sidesContainer.style.gap="10px";
+  sidesContainer.style.alignItems="center";
+  sidesContainer.style.justifyContent="space-around";
+
 
   filterSides.forEach((side) => {
     const sideBox = document.createElement("div");

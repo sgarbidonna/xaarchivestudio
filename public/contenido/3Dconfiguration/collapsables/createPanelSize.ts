@@ -24,6 +24,9 @@ export const createPanelSize = (
   dimensionsParams.forEach((param) => {
     const lengthElement = document.createElement("div");
     lengthElement.className = "sd-control spacer";
+    lengthElement.style.display="grid";
+    lengthElement.style.gap="10px";
+    lengthElement.style.alignItems="center";
 
     const sliderInfoElement = document.createElement("div");
     sliderInfoElement.className = "sd-slider-info";
