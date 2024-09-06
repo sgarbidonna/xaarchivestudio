@@ -15,14 +15,15 @@ export const createDimensionsElement = (
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
+
   if (window.matchMedia("(max-width: 767px)").matches) {
-      
     contentElement.style.width = "76vw";
     contentElement.style.maxWidth = "76vw";
   } else{
     contentElement.style.width = "40vw";
     contentElement.style.maxWidth = "40vw";
   }
+
   contentElement.style.display = "grid";
   contentElement.style.gridTemplateRows = "auto auto auto";
   contentElement.style.gap = "10px";
@@ -53,9 +54,12 @@ export const createDimensionsElement = (
   sidesLabel.className = "sides-label";
   sidesLabel.innerText = "SIDES";
   sidesContainer.appendChild(sidesLabel);
+
   if (window.matchMedia("(max-width: 767px)").matches) {
     sidesContainer.style.marginLeft="25px";
+    console.log('margin left mobile');
   } 
+
   sidesContainer.style.display="grid";
   sidesContainer.style.gap="10px";
   sidesContainer.style.alignItems="center";
