@@ -47,7 +47,9 @@ export const createDimensionsElement = (
   sidesLabel.className = "sides-label";
   sidesLabel.innerText = "SIDES";
   sidesContainer.appendChild(sidesLabel);
-
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    sidesContainer.style.marginLeft="25px";
+  } 
   sidesContainer.style.display="grid";
   sidesContainer.style.gap="10px";
   sidesContainer.style.alignItems="center";
