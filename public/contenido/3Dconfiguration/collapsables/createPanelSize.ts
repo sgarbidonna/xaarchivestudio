@@ -15,6 +15,9 @@ export const createPanelSize = (
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
+  contentElement.style.display = "grid";
+  contentElement.style.gridTemplateRows = "auto auto auto";
+  contentElement.style.gap = "10px";
   parentDiv.appendChild(contentElement);
 
   const dimensionsParams = Object.values(parameterObject).filter(
