@@ -77,8 +77,7 @@ transition: all 1.2s ;
 
 .content.length {
   display: grid;
-  grid-template-rows: auto auto auto;
-  gap: 10px;
+
 }
 
 .sides-container {
