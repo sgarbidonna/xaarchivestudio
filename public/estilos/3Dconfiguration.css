@@ -166,7 +166,7 @@ transition: all 1.2s ;
   #info-menu {
     max-width: 100vw !important;
     grid-template-columns: 45% 50% !important;
-    margin-top: 1vh !important;
+    margin-top: 3vh !important;
     margin-bottom: 1vh !important;
     height: 5vh;
     display: grid;
