@@ -16,6 +16,9 @@ export const createDimensionsElement = (
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
   contentElement.style.maxWidth = "80vw";
+  contentElement.style.display = "grid";
+  contentElement.style.gridTemplateRows = "auto auto auto";
+  contentElement.style.gap = "10px";
   
   parentDiv.appendChild(contentElement);
 
