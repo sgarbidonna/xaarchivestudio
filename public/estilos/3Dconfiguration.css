@@ -161,7 +161,7 @@ transition: all 1.2s ;
     display: grid !important;
     grid-template-rows: 55% !important;
     height: auto;
-    max-height: 76vw;
+    max-height: 100vh;
   }
 
   #info-menu {
