@@ -176,6 +176,7 @@ transition: all 1.2s ;
     align-items: center;
     justify-items: stretch;
     margin-left: 50px;
+    max-width:-webkit-fill-available;
 }
   .sides-label{
     margin-left: -0.9em !important;
