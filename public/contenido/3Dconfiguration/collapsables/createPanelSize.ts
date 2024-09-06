@@ -30,7 +30,6 @@ export const createPanelSize = (
     lengthElement.style.display="grid";
     lengthElement.style.gap="10px";
     lengthElement.style.alignItems="center";
-    lengthElement.style.maxWidth="76vw";
 
     const sliderInfoElement = document.createElement("div");
     sliderInfoElement.className = "sd-slider-info";
