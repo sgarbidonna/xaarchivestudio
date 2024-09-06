@@ -15,6 +15,7 @@ export const createDimensionsElement = (
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
+  contentElement.style.maxWidth = "80vw";
   
   parentDiv.appendChild(contentElement);
 

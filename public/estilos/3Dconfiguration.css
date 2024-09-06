@@ -163,7 +163,6 @@ transition: all 1.2s ;
     grid-template-rows: 55% !important;
     height: auto;
     max-height: 80vw;
-    max-width:-webkit-fill-available;
   }
   #info-menu {
     max-width: 100vw !important;
@@ -177,7 +176,6 @@ transition: all 1.2s ;
     align-items: center;
     justify-items: stretch;
     margin-left: 50px;
-    max-width:-webkit-fill-available;
 }
   .sides-label{
     margin-left: -0.9em !important;
