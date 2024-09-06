@@ -8,10 +8,16 @@ export const createPanelSize = (
   parentDiv: HTMLDivElement,
   groupName: string
 ) => {
+  const canvas = document.getElementById('canvas');
+  canvas.style.maxHeight= '49vw';
+
   const parameterDiv = createParameterDiv(parameterObject[0], parentDiv, groupName);
 
   const contentElement = document.createElement("div");
   contentElement.className = "content length";
+  contentElement.style.display = "grid";
+  contentElement.style.gridTemplateRows = "auto auto auto";
+  contentElement.style.gap = "10px";
   parentDiv.appendChild(contentElement);
 
   const dimensionsParams = Object.values(parameterObject).filter(
@@ -21,6 +27,10 @@ export const createPanelSize = (
   dimensionsParams.forEach((param) => {
     const lengthElement = document.createElement("div");
     lengthElement.className = "sd-control spacer";
+    lengthElement.style.display="grid";
+    lengthElement.style.gap="10px";
+    lengthElement.style.alignItems="center";
+    lengthElement.style.maxWidth="76vw";
 
     const sliderInfoElement = document.createElement("div");
     sliderInfoElement.className = "sd-slider-info";
@@ -50,6 +60,8 @@ export const createPanelSize = (
     };
 
     const rangeInputElement = document.createElement("input");
+    
+    
     rangeInputElement.className = "slider";
     rangeInputElement.type = "range";
     rangeInputElement.min = String(param.min);
@@ -59,10 +71,12 @@ export const createPanelSize = (
 
     rangeInputElement.addEventListener("input", () => {
       numberInputElement.value = rangeInputElement.value;
+      
     });
 
     numberInputElement.addEventListener("input", () => {
       rangeInputElement.value = numberInputElement.value;
+      
     });
 
     rangeInputElement.onchange = async () => {
@@ -86,4 +100,5 @@ export const createPanelSize = (
   parameterDiv.addEventListener("click", function (event) {
     collapsibleManager.toggleCollapsible(parameterDiv);
 });
+
 };
