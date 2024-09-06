@@ -77,7 +77,7 @@ transition: all 1.2s ;
 
 .content.length {
   display: grid;
-max-width: 76vw;
+  max-width: 76vw;
 }
 
 .sides-container {
