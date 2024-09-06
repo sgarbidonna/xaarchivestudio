@@ -175,7 +175,7 @@ transition: all 1.2s ;
     margin-left: -0.9em !important;
   }
   .sides-container {
-    margin-left: 25px !important;
+   /* margin-left: 25px !important;*/
     
   }
   
