@@ -91,6 +91,11 @@ a:hover {
   .item {
      font-size: 25px;
   }
+  nav{ 
+    width: 90vh;
+    font-size: 0.9rem;
+
+  }
 }
 
 /* Tablet */

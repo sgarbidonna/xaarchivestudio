@@ -1,7 +1,11 @@
 /* TEXTO E IMAGENES */
 /* Móvil */
 @media only screen and (max-width: 767px) {
+  nav{ 
+    width: 90vh;
+    font-size: 0.9rem;
 
+  }
   .fixed img {
     position: fixed;
     max-width: 90%;

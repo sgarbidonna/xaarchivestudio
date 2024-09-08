@@ -1785,13 +1785,15 @@ justify-content: center;
 
 .clients {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
-  
   height: auto;
   background-color: white;
-  padding: 0vh 20vw 0px 20vw;
+/* padding: 0vh 20vw 0px 20vw; */
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: 20% 20% 20% 20%;
+  max-width: 100vw;
 }
 
 .client {
