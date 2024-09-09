@@ -1431,8 +1431,8 @@ p{
   }
 
 #canvas{
-  width: 35vw !important;
-  height: 23vw !important;
+  width: 34vw !important;
+  height: 19vw !important;
   mix-blend-mode: multiply !important;
   margin-left:-6vw !important;
 }
@@ -1799,6 +1799,12 @@ justify-content: center;
 .client {
   text-align: center;
   margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .client img {
@@ -1809,11 +1815,13 @@ justify-content: center;
 #bern-image{
   height: 8vh;
 }
-    #abiya-image {
-        height: 5vh;
-        width: 16vw;
-        margin: 1vh;
-    }
+    
+#abiya-image {
+    height: 5vh;
+/*    width: 16vw; */
+    margin: 1vh;
+}
+
 #milano-image{
   height: 12vh;
   margin: -2.6vh 0;
