@@ -10,8 +10,6 @@ function isTabletOrIpadInPortrait() {
   
     if (isIpadOrTablet && isPortrait) {
       console.log("Estás utilizando una tablet o iPad en modo vertical.");
-      
-    alert('si');
       return true;
     } else {
       console.log("No estás usando una tablet o el dispositivo está en modo horizontal.");
