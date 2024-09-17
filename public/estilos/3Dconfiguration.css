@@ -3353,9 +3353,9 @@ margin-top: 10px;
 }
 
 @media screen and (min-width: 767px) and (orientation: portrait) {
-nav{
-  height: 50px
-}
+  nav{
+    height: 50px
+  }
   .section-intro {
     position: relative;
     max-width: 100vw;
@@ -3377,7 +3377,7 @@ nav{
   }
 
   .intro-3d {
-    margin:2vw 3vw;
+    padding:2vw 3vw;
     display: grid;
     grid-template-rows: 55%;
     height: auto;
