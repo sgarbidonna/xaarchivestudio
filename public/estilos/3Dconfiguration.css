@@ -3377,7 +3377,7 @@ nav{
   }
 
   .intro-3d {
-    margin-top: 2em;
+    margin:2vw 3vw;
     display: grid;
     grid-template-rows: 55%;
     height: auto;
