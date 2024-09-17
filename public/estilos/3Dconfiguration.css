@@ -3388,7 +3388,7 @@ margin-top: 10px;
 
   #info-menu {
     grid-template-columns: 45% 50%;
-    padding: 2vh 10vw 2vh 10vw !important;
+    padding: 2vh 10vw 2vh 40vw !important;
     height: 5vh;
     display: grid;
     align-content: space-between;
