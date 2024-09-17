@@ -1,13 +1,13 @@
 function isTabletOrIpadInPortrait() {
     // Detectar si es un iPad o un dispositivo con pantalla táctil
-    const isIpadOrTablet = /iPad|Android/.test(navigator.userAgent) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 1) && (window.innerWidth > 767) ;
+    const isIpadOrTablet = /iPad|Android/.test(navigator.userAgent) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 1) && (window.innerWidth > 766) ;
     const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
     // opcion alternativa p ver si estoy o no con portrait const isPortrait = window.orientation === 0 || window.orientation === 180;
   
     if (isIpadOrTablet && isPortrait) {
       console.log("Estás utilizando una tablet o iPad en modo vertical.");
-      //alert('si');
+      alert('si');
             const sectionIntro = document.querySelector('.section-intro');
             const canvas = document.querySelector('#canvas');
             const sdControl = document.querySelector('.sd-control');
@@ -17,7 +17,7 @@ function isTabletOrIpadInPortrait() {
             const patternColors = document.querySelector('#pattern-colors');
 
 
-            
+
             patternColors.style.position = 'relative';
             patternColors.style.top = '-43vh';
             patternColors.style.right = '-80vw';
