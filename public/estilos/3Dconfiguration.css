@@ -3357,7 +3357,7 @@ margin-top: 10px;
       position: relative;
       max-width: 100vw;
       height: auto;
-      padding: 5vh 3vw;
+      padding: 1vh 3vw 8vh 3vw;
       flex-direction: column !important;
   }
 
@@ -3365,7 +3365,7 @@ margin-top: 10px;
     width: 65vw !important;/*
     max-width: 73vw !important;
     max-height: 90vw !important;*/
-    height: 40vw !important;
+    height: 38vw !important;
     mix-blend-mode: multiply !important;
     margin-left: 6vw !important;
   }
