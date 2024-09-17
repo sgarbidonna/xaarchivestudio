@@ -3378,7 +3378,7 @@ margin-top: 10px;
   }
 
   .intro-3d {
-    padding:2vw 1vw 2vw 3vw;
+    padding:2vw 3vw 2vw 1vw;
     display: grid;
     grid-template-rows: 55%;
     height: auto;
