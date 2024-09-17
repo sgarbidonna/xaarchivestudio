@@ -7,22 +7,30 @@ function isTabletOrIpadInPortrait() {
   
     if (isIpadOrTablet && isPortrait) {
       console.log("Estás utilizando una tablet o iPad en modo vertical.");
-      alert('si');
+      //alert('si');
             const sectionIntro = document.querySelector('.section-intro');
             const canvas = document.querySelector('#canvas');
             const sdControl = document.querySelector('.sd-control');
             const menu = document.querySelector('#menu');
             const intro3D = document.querySelector('.intro-3d');
             const infoMenu = document.querySelector('#info-menu');
+            const patternColors = document.querySelector('#pattern-colors');
 
-            // Aplicar estilos con JavaScript
+
+            
+            patternColors.style.position = 'relative';
+            patternColors.style.top = '-43vh';
+            patternColors.style.right = '-80vw';
+            patternColors.style.height = '0';
+            
+
             sectionIntro.style.position = 'relative';
             sectionIntro.style.maxWidth = '100vw';
             sectionIntro.style.height = 'auto';
             sectionIntro.style.padding = '15vh 3vw 12vh 3vw';
             sectionIntro.style.flexDirection = 'column';
 
-            canvas.style.maxWidth = '63vw';
+            canvas.style.maxWidth = '80vw';
             canvas.style.maxHeight = '49vw';
             canvas.style.mixBlendMode = 'multiply';
             canvas.style.marginLeft = '16vw';
