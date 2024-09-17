@@ -3357,12 +3357,14 @@ margin-top: 10px;
       position: relative;
       max-width: 100vw;
       height: auto;
-      padding: 9vh 3vw;
+      padding: 8vh 3vw;
       flex-direction: column !important;
   }
 
   #canvas {
+    width: 73vw !important;
     max-width: 73vw !important;
+    height: 90vw !important;
     max-height: 90vw !important;
     mix-blend-mode: multiply !important;
     margin-left: 6vw !important;
