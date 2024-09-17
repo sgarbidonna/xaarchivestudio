@@ -3394,8 +3394,7 @@ margin-top: 10px;
   }
   #info-menu {
     grid-template-columns: 45% 50%;
-    /*margin: 3vh 2vw 1vh 12vw;*/
-    padding: 2vh 10vw 2vh 30vw !important;
+   /* padding: 2vh 10vw 2vh 30vw !important;*/
     height: 5vh;
     display: grid;
     align-content: space-between;
