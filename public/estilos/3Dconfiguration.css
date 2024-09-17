@@ -3437,7 +3437,11 @@ top:     37vh !important;
     font-size: 10px !important;
   }
   .section-general-1
-  .section-general-2
+  .section-general-2{
+    height: 50vh;
+    padding: 2vh 13vw 0vh 3vw;
+
+  }
   .section-general-3{
     height: 50vh;
     padding: 2vh 13vw;
