@@ -8,7 +8,7 @@ function isTabletOrIpadInPortrait() {
     if (isIpadOrTablet && isPortrait) {
       console.log("Estás utilizando una tablet o iPad en modo vertical.");
       //alert('si');
-      // Seleccionar los elementos
+      
             const sectionIntro = document.querySelector('.section-intro');
             const canvas = document.querySelector('#canvas');
             const sdControl = document.querySelector('.sd-control');
