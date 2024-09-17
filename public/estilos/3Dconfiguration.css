@@ -3362,8 +3362,10 @@ margin-top: 10px;
   }
 
   #canvas {
-    max-width: 63vw !important;
-    max-height: 90vw !important;
+    /*max-width: 63vw !important;
+    max-height: 90vw !important;*/
+    width: 860px !important;
+    height: 674px !important;
     mix-blend-mode: multiply !important;
     margin-left: 6vw !important;
   }
