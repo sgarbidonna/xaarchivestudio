@@ -3437,4 +3437,13 @@ margin-top: 10px;
   .client h5 {
     font-size: 10px !important;
   }
+  .section-general-1
+  .section-general-2
+  .section-general-3{
+    min-height: 50vh;
+    max-height: fit-content;
+
+  }
+ 
+  
 }
