@@ -414,7 +414,7 @@ p{
   font-weight: 500;
   font-style: normal;
   text-align: justify;
-  font-size: small;;
+  font-size: small;
 }
 
 .intro-text{
@@ -1413,7 +1413,7 @@ p{
     font-weight: 500;
     font-style: normal;
     text-align: justify;
-    font-size: small;;
+    font-size: small;
 }
 
 .intro-text{
@@ -2414,7 +2414,7 @@ transform: scaleX(0);
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
         font-style: normal;
-        font-size: xxx-large;
+        font-size:49px;
         letter-spacing: 1px;
         word-spacing: 3px;
     }
@@ -2425,8 +2425,7 @@ transform: scaleX(0);
         font-weight: 500;
         font-style: normal;
         text-align: justify;
-        /* font-size: small; */
-        font-size: medium;
+        font-size: small; 
     }
   
     .intro-text{
@@ -3405,7 +3404,7 @@ margin-top: 10px;
   #pattern-colors {
     position: absolute !important;
     right: 7vw !important;
-    top: 45vh !important;
+    top: 55vh !important;
   }
 
   .content.length{
@@ -3440,10 +3439,26 @@ margin-top: 10px;
   .section-general-1
   .section-general-2
   .section-general-3{
-    min-height: 50vh;
-    max-height: fit-content;
+    height: 50vh;
+    padding: 2vh 13vw;
 
   }
  
+  .no-br{
+    font-size: xxx-large;
+    
+    font-size: 50px;
+  }
+
+  p{ 
+    font-size: 16px;
+  }
+  h2{
+    
+    font-size: 1.5rem;
+  }
+  h4{ 
+    font-size: 1rem;
+  }
   
 }

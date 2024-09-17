@@ -7,7 +7,19 @@ const menuTablet = document.getElementById('menu-tablet');
 const dropdownTablet =  document.getElementById('dropdown-tablet');
 const screenMine = document.getElementById('smooth-scroll-wrapper');
 let menuOpen = 0;
-const heightScreen = (window.innerHeight /2) + (window.innerHeight /5);
+let heightScreen = (window.innerHeight /2) + (window.innerHeight /5);
+
+const isIpadOrTablet = /iPad|Android/.test(navigator.userAgent) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 1) && (window.innerWidth > 766);
+const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+function isTabletOrIpadInPortrait() {
+  if (isIpadOrTablet && isPortrait) {
+    heightScreen = (window.innerHeight /2) - (window.innerHeight /5);
+  
+  }
+}
+
+isTabletOrIpadInPortrait();
 
 menuTablet.addEventListener('click', function(e) {
   e.preventDefault();
@@ -54,3 +66,7 @@ document.querySelectorAll('menu-options').forEach(anchor => {
     });
     };
   
+
+  
+  isTabletOrIpadInPortrait();
+  window.addEventListener("orientationchange", isTabletOrIpadInPortrait);
