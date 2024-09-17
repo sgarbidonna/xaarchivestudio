@@ -3356,6 +3356,7 @@ margin-top: 10px;
   nav{
     height: 50px
   }
+
   .section-intro {
     position: relative;
     max-width: 100vw;
@@ -3377,7 +3378,7 @@ margin-top: 10px;
   }
 
   .intro-3d {
-    padding:2vw 3vw;
+    padding:2vw 1vw 2vw 3vw;
     display: grid;
     grid-template-rows: 55%;
     height: auto;
