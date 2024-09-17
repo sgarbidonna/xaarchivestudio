@@ -3362,9 +3362,10 @@ margin-top: 10px;
   }
 
   #canvas {
-      max-width: 80vw !important;
-      max-height: 50vw !important;
-      mix-blend-mode: multiply;
+    max-width: 63vw !important;
+    max-height: 49vw !important;
+    mix-blend-mode: multiply !important;
+    margin-left: 16vw !important;
   }
 
   .sd-control {
@@ -3399,7 +3400,7 @@ margin-top: 10px;
   #pattern-colors {
     position: absolute !important;
      right: 7vw !important;
-    bottom: 20vw !important;
+    top: 70vw !important;
   }
 
   .content.length{
@@ -3408,5 +3409,9 @@ margin-top: 10px;
     gap: 10px;
     width: 42vw ;
     padding-top: 10px;
+  }
+
+  .section-general-3{
+    padding: 5vh 13vw 0px 13vw !important;
   }
 }
