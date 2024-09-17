@@ -3389,7 +3389,7 @@ margin-top: 10px;
     max-width: 100vw;
     grid-template-columns: 45% 50%;
     /*margin: 3vh 2vw 1vh 12vw;*/
-    margin: 2vh 30vw 2vh 10vw !important;
+    padding: 2vh 30vw 2vh 10vw !important;
     height: 5vh;
     display: grid;
     align-content: space-between;
