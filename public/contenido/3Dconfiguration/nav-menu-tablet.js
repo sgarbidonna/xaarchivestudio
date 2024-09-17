@@ -14,7 +14,8 @@ const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
 function isTabletOrIpadInPortrait() {
   if (isIpadOrTablet && isPortrait) {
-    heightScreen = (window.innerHeight /2) - (window.innerHeight /5);
+    heightScreen = (window.innerHeight /2);
+//    heightScreen = (window.innerHeight /2) - (window.innerHeight /5);
   
   }
 }
