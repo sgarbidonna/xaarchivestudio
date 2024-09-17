@@ -1367,7 +1367,7 @@ ul li:hover ul.dropdown{
   min-height: 72vh;
   max-height: fit-content;
   background: #f1f1f1;
-  padding: 5vh 13vw;
+  padding: 5vh 13vw 0vh 13vw;
     
   display: flex;
   justify-content: center;
@@ -3416,12 +3416,7 @@ margin-top: 10px;
     padding-top: 10px;
   }
 
-  .section-general-3{
-    padding: 5vh 13vw 0vh 13vw !important;
-  }
-  #augmented-reality{
-    padding: 5vh 13vw 0vh 13vw !important;
-  }
+
 
   #stockholm-image,
   #bern-image {
