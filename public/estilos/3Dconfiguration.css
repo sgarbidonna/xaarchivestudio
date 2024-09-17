@@ -3398,8 +3398,8 @@ margin-top: 10px;
 
   #pattern-colors {
     position: absolute !important;
-    top: 51vw !important;
-    right: 7vw !important;
+     right: 7vw !important;
+    bottom: 20vw !important;
   }
 
   .content.length{
