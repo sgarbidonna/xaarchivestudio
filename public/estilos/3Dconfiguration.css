@@ -3362,8 +3362,8 @@ margin-top: 10px;
   }
 
   #canvas {
-    width: 68vw !important;
-    height: 42vw !important;
+    width: 60vw !important;
+    height: 37vw !important;
     mix-blend-mode: multiply !important;
     margin-left: 6vw !important;
     padding: 25px;
@@ -3389,7 +3389,7 @@ margin-top: 10px;
     max-width: 100vw;
     grid-template-columns: 45% 50%;
     /*margin: 3vh 2vw 1vh 12vw;*/
-    margin: 2vh 20vw 2vh 15vw !important;
+    margin: 2vh 30vw 2vh 10vw !important;
     height: 5vh;
     display: grid;
     align-content: space-between;
@@ -3401,7 +3401,7 @@ margin-top: 10px;
   #pattern-colors {
     position: absolute !important;
     right: 7vw !important;
-    top: 82vw !important;
+    top: 75vh !important;
   }
 
   .content.length{
