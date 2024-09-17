@@ -3421,11 +3421,15 @@ nav{
 
   #stockholm-image,
   #bern-image {
-    height: 6vh;
-}
+    height: 5vh;
+  }
+
   #milano-image {
-      height: 8vh;
-}#abiya-image {
-  height: 4vh;
-}
+    height: 8vh;
+  }
+
+  #abiya-image {
+    height: 3vh;
+  } 
+
 }
