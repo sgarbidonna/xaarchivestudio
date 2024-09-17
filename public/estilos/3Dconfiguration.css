@@ -3416,11 +3416,11 @@ margin-top: 10px;
     padding-top: 10px;
   }
 
-.section-general-3{
-  
-  padding: 5vh 13vw -5vh 13vw;
-}
-
+  /*
+  .section-general-3{  
+    padding: 5vh 13vw -5vh 13vw;
+  }
+  */
   #stockholm-image,
   #bern-image {
     height: 5vh;
