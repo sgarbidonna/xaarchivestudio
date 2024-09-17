@@ -5,12 +5,13 @@ function isTabletOrIpadInPortrait() {
     // Verificar si la orientación es vertical (portrait)
     const isPortrait = window.matchMedia("(orientation: portrait)").matches;
 
-    alert('si');
     // Opción alternativa para detectar orientación
     // const isPortrait = window.orientation === 0 || window.orientation === 180;
   
     if (isIpadOrTablet && isPortrait) {
       console.log("Estás utilizando una tablet o iPad en modo vertical.");
+      
+    alert('si');
       return true;
     } else {
       console.log("No estás usando una tablet o el dispositivo está en modo horizontal.");
