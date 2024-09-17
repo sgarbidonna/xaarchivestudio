@@ -3362,7 +3362,7 @@ margin-top: 10px;
   }
 
   #canvas {
-    width: 65vw !important;/*
+    width: 45vw !important;/*
     max-width: 73vw !important;
     max-height: 90vw !important;*/
     height: 50vw !important;
@@ -3390,7 +3390,7 @@ margin-top: 10px;
       max-width: 100vw;
       grid-template-columns: 45% 50%;
       /*margin: 3vh 2vw 1vh 12vw;*/
-      margin: 3vh 2vw 4vh 15vw;
+      margin: 3vh 5vw 4vh 7vw;
       height: 5vh;
       display: grid;
       align-content: space-between;
