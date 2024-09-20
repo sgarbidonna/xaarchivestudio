@@ -1432,8 +1432,8 @@ p{
 
 #canvas{
   width: 34vw !important;
-  /* como estaba -> height: 19vw !important;*/
- /* como deberia estar segun web (tablet horizontal) */  height: 21vw !important;
+  /* como estaba -> */ height: 19vw !important;
+ /* como deberia estar segun web (tablet horizontal) height: 21vw !important; */  
   mix-blend-mode: multiply !important;
   margin-left:-6vw !important;
 }
