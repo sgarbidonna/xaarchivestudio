@@ -1432,7 +1432,8 @@ p{
 
 #canvas{
   width: 34vw !important;
-  height: 19vw !important;
+  /* como estaba -> height: 19vw !important;*/
+ /* como deberia estar segun web (tablet horizontal) */  height: 21vw !important;
   mix-blend-mode: multiply !important;
   margin-left:-6vw !important;
 }
@@ -3365,8 +3366,8 @@ margin-top: 10px;
   }
 
   #canvas {
-    width: 60vw !important;
-    height: 37vw !important;
+    width: 63vw !important;
+    height: 49vw !important;
     mix-blend-mode: multiply !important;
     margin-left: 6vw !important;
     padding: 25px;
