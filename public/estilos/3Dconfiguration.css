@@ -3403,9 +3403,14 @@ margin-top: 10px;
   }
 
   #pattern-colors {
-    position: absolute !important;
+   
+    /* position: relative !important;
     right: 7vw !important;
-    top: 43vh !important;
+    top: 43vh !important; */
+    
+    position: relative !important;
+    right: -64vw !important;
+    top: -43vh !important;
   }
 
   .content.length{
