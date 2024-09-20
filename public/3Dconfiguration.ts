@@ -1,8 +1,7 @@
 import { createSession, createViewport, VISIBILITY_MODE } from "@shapediver/viewer";
 import { createParameterMenu } from "./contenido/3Dconfiguration/menu/createParameterMenu";
-//import { setupIcons } from "./contenido/3Dconfiguration/utils/setupIcons";
+import { setupIcons } from "./contenido/3Dconfiguration/utils/setupIcons";
 //https://shapediver-model.vercel.app/?ticket=31a9568985181ba0a1969a45484dc5eb3dc41941ad9904a7b20e5b4442d1f778d1879ada4c5ebe3784937a9d2b913d1752535bd8dfd28f6c770ed91f899035aff9b2ae923da41d84bc0c7bfa502c321822e249d618a37eef635f3b7901f2d2d3a41799999788c6-8be8497e7d1fe9a6148502e02c56399
-
 
 import { collapsibleManager } from "./contenido/3Dconfiguration/utils/collapsableLogic";
 
@@ -40,7 +39,31 @@ function isMobileDevice(): boolean {
     viewport.show = true;
 
 
-     //setupIcons(canvasElement, viewport);
+
+
+  // get the camera of the viewer
+    console.log('camera', viewport.camera);
+
+    // const object = session.getOutputByName("Pergola");
+    // console.log('object',object);
+    
+  // get the output of the door
+
+//   const doorOutput = session
+//     .getOutputByName("Pergola") 
+//     .find((o) => !o.format.includes("material"))!;
+
+
+//   // zoom to the bounding box of the object
+//   await camera.zoomTo(doorOutput.node!.boundingBox);
+
+//   // reset the camera to the saved camera position and target
+//   await camera.reset();
+
+//   // zoom to the bounding box of the object multiplied by the zoomToFactor
+//   camera.zoomToFactor = 2;
+//   await camera.zoomTo(doorOutput.node!.boundingBox);
+// })();
 
 })();
 
